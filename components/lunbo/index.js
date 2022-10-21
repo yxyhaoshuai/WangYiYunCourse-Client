@@ -1,4 +1,5 @@
-import {Button} from "antd";
+import {Button, notification} from "antd";
+import 'antd/dist/antd.css';
 
 require("./index.less")
 
@@ -8,20 +9,26 @@ import React, {Component} from "react";
 class CategoryAdd extends Component {
 
 
+
     render() {
 
-        const contentStyle = {
-            height: '160px',
-            color: '#fff',
-            lineHeight: '160px',
-            textAlign: 'center',
-            background: '#364d79',
+        const openNotification = () => {
+            notification.open({
+                message: 'Notification Title',
+                description:
+                    'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+                onClick: () => {
+                    console.log('Notification Clicked!');
+                },
+            });
         };
 
         return (
 
-                <div>
-                    <Button type="primary">Primary Button</Button>
+                <div className={"nihao"}>
+                    <Button type="primary" className="caonma" onClick={openNotification}>
+                        Open the notification box
+                    </Button>
                 </div>
         )
     }
