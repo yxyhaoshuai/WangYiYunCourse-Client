@@ -1,0 +1,66 @@
+.live-streaming-card{
+  border-radius: 8px;
+  overflow: hidden;
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 0px grey;
+
+  }
+  .bottom{
+    .Live-time{
+      font-size: 14px;
+      color: black;
+      line-height: 24px;
+    }
+    .classify-intro{
+      line-height: 26px;
+      span{
+        font-size: 12px;
+      }
+      span:nth-child(1){
+       background-color: #ff3f29CC;
+        border-radius: 3px;
+        padding: 1px 3px;
+        color: #FFFFFF;
+      }
+      span:nth-child(2){
+        background-color: #70788999;
+        border-radius: 3px;
+        padding: 1px 3px;
+        color: #FFFFFF;
+        margin-left: 8px;
+      }
+      span:nth-child(3){
+        border-radius: 3px;
+        padding: 1px 3px;
+        margin-left: 8px;
+        font-size: 16px;
+      }
+
+    }
+    .teacher-name{
+      span:nth-child(1){
+        font-size: 14px;
+      }
+      span:nth-child(2){
+        color: #ff9830;
+        border: 0.5px solid rgba(255, 152, 48, 0.4);
+        margin-left: 12px;
+        border-radius: 3px;
+        padding: 0 3px;
+      }
+
+    }
+    .teacher-intro{
+      max-height: 18px;
+      line-height: 18px;
+      width: 235px;
+      font-size: 12px;
+      color: #666;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+}
