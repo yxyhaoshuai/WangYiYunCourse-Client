@@ -11,7 +11,6 @@ class Coursecardlayoutmore extends Component{
         return (
                 <Card
                     title={<h3>{this.props.titel}</h3>}
-                    extra={<a href="#"><h4 className={"iconfont"}>更多&nbsp;&#xe658;</h4></a>}
                     bodyStyle={{
                         padding: 10
                     }}
