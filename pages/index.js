@@ -9,6 +9,8 @@ import Coursecardlayout from "../components/coursecardlayout";
 import Coursecard from "../components/coursecard";
 import Microprofessionlcard from "../components/microprofessionalcard";
 import Activitytabslayout from "../components/activitytabslayout";
+import Selectionsort from "../components/selectionsort";
+import Seriesofcourses from "../components/seriesofcourses";
 
 require("./index.less")
 export default function Home() {
@@ -62,8 +64,24 @@ export default function Home() {
               </Coursecardlayoutmore>
           </div>
           <div className={"activitytabslayout bx"}>
-              <Activitytabslayout/>
+              <Coursecardlayout titel={"限时秒杀"}>
+                  <Activitytabslayout/>
+              </Coursecardlayout>
+
           </div>
+          <Selectionsort/>
+          <div className={"series-of-courses-bx bx"}>
+              <Coursecardlayout className="display-flex" titel={"系列课程"}>
+                  <div className={"display-flex"}>
+                      <Seriesofcourses/>
+                      <Seriesofcourses/>
+                      <Seriesofcourses/>
+                      <Seriesofcourses/>
+                  </div>
+              </Coursecardlayout>
+          </div>
+
+
 
       </>
 

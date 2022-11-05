@@ -1,0 +1,40 @@
+.aeries-of-courses{
+  height: 170px;
+  width: 286px;
+  background-color: #ff3f29;
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    cursor: pointer;
+  }
+  .j-href>.card>.img>img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out 0s;
+
+  }
+  &:hover img{
+    transform: scale(1.2,1.2);
+  }
+  .aeries-card-content{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 246px;
+    height: 76px;
+    background-image: url(/assets/images/contentbackground.png);
+    .uc-recomend-series-title{
+      height: 24px;
+      width: 236px;
+      line-height: 24px;
+      text-align: center;
+      margin-top: 14px;
+      font-size: 18px;
+      color: black;
+    }
+    .uc-recomend-series-intro{
+      text-align: center;
+      color: #666666;
+    }
+  }
+}

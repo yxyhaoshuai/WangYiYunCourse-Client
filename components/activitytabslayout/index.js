@@ -1,7 +1,9 @@
 import {Tabs} from "antd";
-
+import 'antd/dist/antd.css';
 require("./index.less")
 import React, {Component} from "react";
+import Microprofessionlcard from "../microprofessionalcard";
+import Killcard from "../killcard";
 
 class Activitytabslayout extends Component{
     render(){
@@ -10,18 +12,41 @@ class Activitytabslayout extends Component{
         };
         return (
             <>
-                <Tabs
-                    onChange={onChange}
-                    type="card"
-                    items={new Array(3).fill(null).map((_, i) => {
-                        const id = String(i + 1);
-                        return {
-                            label: `Tab ${id}`,
-                            key: id,
-                            children: `Content of Tab Pane ${id}`,
-                        };
-                    })}
-                />
+                <Tabs onChange={onChange} type="card" className="font-color">
+                    <Tabs.TabPane tab={
+                        <div>哈哈哈</div>
+                    } key="1">
+                        <div className={"display-flex"}>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                        </div>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="Tab 2" key="2">
+                        <div className={"display-flex"}>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                        </div>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="Tab 3" key="3">
+                        <div className={"display-flex"}>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                        </div>
+                    </Tabs.TabPane>
+                </Tabs>
+
+
+
+
 
             </>
         )
