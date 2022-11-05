@@ -1,0 +1,117 @@
+.course-card{
+  width: 290px;
+  height: 351px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  transition: all 0.1s linear 0s;
+  &:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0 grey;
+    transform: translateY(-2px);
+  }
+  .course-card_img{
+    height: 164px;
+    width: 100%;
+    overflow: hidden;
+
+    //等会测试一下
+    position: relative;
+    .course-card_img_jpk{
+      width: 100%;
+      height: 178px;
+      position: absolute;
+      left: 0;
+      top: -7px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .course-card_content{
+    .classify-intro{
+      line-height: 26px;
+      padding: 15px;
+      font-size: 16px;
+      color: #333333;
+
+
+
+
+
+    }
+    .course-card_info{
+      height: 17px;
+      font-size: 12px;
+      line-height: 17px;
+      color: #666;
+      margin-bottom: 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      .course-time{
+        padding: 0 12px;
+
+        span:nth-child(1){
+          padding-right: 10px;
+          border-right: 1px solid transparent;
+        }
+
+      }
+    }
+    .course-card_teacher{
+      margin-left: 12px;
+      padding-bottom: 14px;
+      border-bottom: 0.5px solid rgba(153, 153, 153, 0.15);
+      color: #666;
+      font-size: 12px;
+      line-height: 17px;
+    }
+    .excellent-buy-info{
+      display: flex;
+      justify-content: right;
+      padding: 0 12px;
+      padding-top: 20px;
+      .excellent-buy-info_left{
+        color: #818a92;
+        font-weight: 300;
+        font-size: 12px;
+        background-color: #FF8001;
+        border-radius: 14px;
+        text-align: center;
+        line-height: 28px;
+        width: 88px;
+        height: 28px;
+        margin-top: 3px;
+        margin-right: 15px;
+        span{
+          display: block;
+          width: 88px;
+          height: 28px;
+          font-size: 14px;
+          color: #FFFFFF;
+          font-weight: bolder;
+          //line-height: 28px;
+
+
+
+        }
+      }
+    }
+      .excellent-buy-info_right{
+        color: #FF1D00;
+        font-weight: bold;
+        span:nth-child(1){
+          font-size: 12px;
+        }
+        span:nth-child(2){
+          font-size: 22px;
+        }
+      }
+    }
+
+  }

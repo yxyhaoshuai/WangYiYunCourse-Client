@@ -11,6 +11,10 @@ import Microprofessionlcard from "../components/microprofessionalcard";
 import Activitytabslayout from "../components/activitytabslayout";
 import Selectionsort from "../components/selectionsort";
 import Seriesofcourses from "../components/seriesofcourses";
+import Excellentcoursecard from "../components/excellentcoursecard";
+import Newcoursecard from "../components/newcoursecard";
+import Gratiscoursecard from "../components/gratiscoursecard";
+import Footerad from "../components/footerad";
 
 require("./index.less")
 export default function Home() {
@@ -80,8 +84,39 @@ export default function Home() {
                   </div>
               </Coursecardlayout>
           </div>
-
-
+          <div className={"excellent-course-module_content bx"}>
+              <Coursecardlayout titel={"精选好课"}>
+                  <div className={"display"}>
+                      <Excellentcoursecard/>
+                      <Excellentcoursecard/>
+                      <Excellentcoursecard/>
+                      <Excellentcoursecard/>
+                  </div>
+              </Coursecardlayout>
+          </div>
+          <div className={"new-course-module_content bx"}>
+              <Coursecardlayout titel={"新课推荐"}>
+                  <div className={"display"}>
+                      <Newcoursecard/>
+                      <Newcoursecard/>
+                      <Newcoursecard/>
+                      <Newcoursecard/>
+                  </div>
+              </Coursecardlayout>
+          </div>
+          <div className={"Gratis-course-module_content bx"}>
+              <Coursecardlayout titel={"免费好课"}>
+                  <div className={"display"}>
+                      <Gratiscoursecard/>
+                      <Gratiscoursecard/>
+                      <Gratiscoursecard/>
+                      <Gratiscoursecard/>
+                  </div>
+              </Coursecardlayout>
+          </div>
+          <div className={"footer-setting bx"}>
+              <Footerad/>
+          </div>
 
       </>
 
