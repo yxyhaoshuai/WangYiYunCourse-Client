@@ -15,6 +15,7 @@ import Excellentcoursecard from "../components/excellentcoursecard";
 import Newcoursecard from "../components/newcoursecard";
 import Gratiscoursecard from "../components/gratiscoursecard";
 import Footerad from "../components/footerad";
+import Wangyiyunfooter from "../components/wangyiyunfooter";
 
 require("./index.less")
 export default function Home() {
@@ -117,6 +118,8 @@ export default function Home() {
           <div className={"footer-setting bx"}>
               <Footerad/>
           </div>
+
+          <Wangyiyunfooter/>
 
       </>
 
