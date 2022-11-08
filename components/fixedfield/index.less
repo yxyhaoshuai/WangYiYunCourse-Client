@@ -1,0 +1,196 @@
+.fixed-field{
+  width: 50px;
+  height: 200px;
+  background-color: #FFFFFF;
+  position: fixed;
+  right: 30px;
+  bottom: 190px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  .global-promotion-item{
+    bottom: 205px;
+    height: 95px;
+    width: 60px;
+    position: absolute;
+    flex-direction: column;
+    overflow:hidden;
+
+  }
+  .side-service-item-box{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    //overflow:hidden;
+    .side-service-item-one{
+      flex: 1;
+      background-color: #ff3f29;
+      border-radius: 8px 8px 0 0;
+      &:hover{
+        cursor: pointer;
+        z-index: 999;
+      }
+      .text-content{
+        width: 100%;
+        height: 100%;
+        span{
+          display: block;
+          width: 40px;
+          font-size: 14px;
+          text-align: center;
+          margin-top: 10px;
+          margin-left: 3px;
+          color: #FFFFFF;
+          padding-bottom: 10px;
+          z-index: 2;
+
+        }
+
+      }
+    }
+    .side-service-item-tow{
+      flex: 1;
+      background-color: #ff3f29;
+      position: relative;
+      &:hover .qrcode-box{
+        display: block;
+      }
+      .qrcode-box{
+        display: none;
+        .qrcode{
+          position: absolute;
+          width: 214px;
+          height: 134px;
+          background-color: #FFFFFF;
+          right: 56px;
+          top: -32px;
+          box-shadow: 0px 0px 13px 0px grey;
+          border: 1px solid #ddd;
+          box-sizing: content-box;
+          z-index: 99999;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .qrcode-content{
+            width: 90px;
+            height: 116px;
+            img{
+              width: 100%;
+            }
+            .text{
+              text-align: center;
+              line-height: 25px;
+            }
+          }
+          &::after{
+            content: "";
+            border: 8px solid transparent;
+            border-left-color: #ffffff;
+            position: absolute;
+            right: -16px;
+            top: 55px;
+            box-sizing: content-box;
+          }
+        }
+      }
+
+
+      &:hover{
+        cursor: pointer;
+        z-index: 999;
+      }
+      span{
+        display: block;
+        width: 40px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 3px;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+      }
+    }
+    .side-service-item-three{
+      background-color: #ff3f29;
+      flex: 1;
+      border-radius: 0 0 8px 8px;
+      &:hover{
+        cursor: pointer;
+        z-index: 999;
+      }
+      span{
+        display: block;
+        width: 40px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 3px;
+        color: #FFFFFF;
+      }
+    }
+
+  }
+  .icon-side-service-item-box{
+    flex-direction: column;
+    border-radius: 8px 8px 0 0;
+    width: 48px;
+    height: 66px;
+    overflow:hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 0;
+    border-bottom: 1px solid #cccccc;
+
+    img{
+      width: 30px;
+
+      margin-top: 18px;
+      margin-left: 8px;
+    }
+    &:hover{
+      display: none;
+    }
+  }
+  .icon-side-service-item-box-two{
+    flex-direction: column;
+    width: 48px;
+    height: 66px;
+    overflow:hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 66px;
+    border-bottom: 1px solid #cccccc;
+    img{
+      width: 30px;
+
+      margin-top: 18px;
+      margin-left: 8px;
+    }
+    &:hover{
+      display: none;
+    }
+  }
+  .icon-side-service-item-box-three{
+    flex-direction: column;
+    width: 48px;
+    height: 66px;
+    overflow:hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 132px;
+    border-radius: 0 0 8px 8px;
+    img{
+      width: 30px;
+
+      margin-top: 18px;
+      margin-left: 8px;
+    }
+    &:hover{
+      display: none;
+    }
+  }
+
+
+}
+

@@ -20,11 +20,16 @@ import Wangyiyunfooter from "../components/wangyiyunfooter";
 require("./index.less")
 
 import React, {Component} from "react";
+import Fixedfield from "../components/fixedfield";
 
 class Home extends Component{
-    state = {
-        showElem: false
+    constructor(props) {
+        super(props);
+        this.state = {
+            showElem: false
+        }
     }
+
     //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
     componentDidMount() {
         window.addEventListener('scroll', this.bindHandleScroll)
@@ -39,9 +44,9 @@ class Home extends Component{
         }) : this.setState({
             showElem:false
         });
-        console.log(document.documentElement.scrollTop)
     }
     render(){
+        const {showElem} =this.state
         return (
             <>
                 <div className={"nav bx"}>
@@ -146,7 +151,9 @@ class Home extends Component{
                 </div>
 
                 <Wangyiyunfooter/>
-
+                {
+                    showElem ? <Fixedfield/> : ''
+                }
             </>
         )
     }
