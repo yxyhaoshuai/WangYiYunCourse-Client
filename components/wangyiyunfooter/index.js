@@ -38,17 +38,23 @@ class Wangyiyunfooter extends Component{
                             <a href="#"></a>
                         </div>
                         <div className={"m-yktfoot_share"}>
-                            <span>关注我们：</span>
+                            <div className={"follow-me"}>关注我们：</div>
 
-                            <span>
+                            <div className={"follow-Wechat"}>
                                 <img src="/assets/images/weixin.png" alt=""/>
-                                <div className={"operation-pane"}></div>
-                            </span>
-                            <span>
+                                <div className={"follow-operation-pane"}>
+                                    <div className={"attention-wechat-account"}>关注云课堂官方微信号</div>
+                                    <div className={"intro"}>-领取课程免费福利，超值学习资料-</div>
+                                    <div className={"WeChat-QR-code"}>
+                                        <img src="assets/images/WechatQRcode.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
                                 <a href="#">
                                     <img src="/assets/images/weibo.png" alt=""/>
                                 </a>
-                            </span>
+                            </div>
 
                         </div>
 
