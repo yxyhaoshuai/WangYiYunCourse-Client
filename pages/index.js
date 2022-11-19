@@ -21,14 +21,10 @@ require("./index.less")
 
 import React, {Component} from "react";
 import Fixedfield from "../components/fixedfield";
+import Leftminiad from "../components/leftminiad";
+import Login from "../components/login";
 
 class Home extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            showElem: false
-        }
-    }
 
     //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
     componentDidMount() {
@@ -44,6 +40,12 @@ class Home extends Component{
         }) : this.setState({
             showElem:false
         });
+    }
+    constructor(props){
+        super(props);
+        this.state = {
+            showElem:true
+        }
     }
     render(){
         const {showElem} =this.state
@@ -154,6 +156,11 @@ class Home extends Component{
                 {
                     showElem ? <Fixedfield/> : ''
                 }
+
+                <Leftminiad/>
+                <Login/>
+
+
             </>
         )
     }

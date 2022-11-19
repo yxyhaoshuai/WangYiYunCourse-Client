@@ -2,7 +2,6 @@ import {Tabs} from "antd";
 import 'antd/dist/antd.css';
 require("./index.less")
 import React, {Component} from "react";
-import Microprofessionlcard from "../microprofessionalcard";
 import Killcard from "../killcard";
 
 class Activitytabslayout extends Component{
