@@ -22,9 +22,18 @@ require("./index.less")
 import React, {Component} from "react";
 import Fixedfield from "../components/fixedfield";
 import Leftminiad from "../components/leftminiad";
-import Login from "../components/login";
+import Login from "../components/coverlogin";
+import Loginpanel from "../components/coverlogin";
+import Coverlogin from "../components/coverlogin";
 
 class Home extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            showElem:true,
+            showCoverLogin: false
+        }
+    }
 
     //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
     componentDidMount() {
@@ -41,18 +50,25 @@ class Home extends Component{
             showElem:false
         });
     }
-    constructor(props){
-        super(props);
-        this.state = {
-            showElem:true
+    _loginShow = () =>{
+        if (this.state.showCoverLogin===false){
+            this.setState({
+                showCoverLogin : true
+            })
+        }else {
+            this.setState({
+                showCoverLogin : false
+            })
         }
+
     }
+
     render(){
-        const {showElem} =this.state
+        const {showElem ,showCoverLogin} =this.state;
         return (
             <>
                 <div className={"nav bx"}>
-                    <Navibar/>
+                    <Navibar  _loginShow={this._loginShow}/>
                 </div>
 
                 <div className={"content bx"}>
@@ -156,9 +172,14 @@ class Home extends Component{
                 {
                     showElem ? <Fixedfield/> : ''
                 }
-
                 <Leftminiad/>
-                <Login/>
+                {
+                    showCoverLogin ? <Coverlogin _loginShow={this._loginShow}/> : ''
+                }
+
+
+
+
 
 
             </>

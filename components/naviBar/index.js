@@ -1,7 +1,8 @@
 //引入样式
 require("./index.less")
 
-export default function Navibar(){
+export default function Navibar(props){
+    const _loginShow = props._loginShow
     return(
         <div className={"nav-bar"}>
             <div className={"nav-bar-middle"}>
@@ -86,7 +87,7 @@ export default function Navibar(){
                                 <img src={"assets/images/userInitHead.png"}/>
                                 <div className={"operation-pane"}>
                                     <ul className={"user-navuser-menu"}>
-                                        <li><a href={"#"}>游客,请登录...</a></li>
+                                        <li onClick={_loginShow}>游客,请登录...</li>
                                         <li>
                                             <a href={"#"}>
                                                 我的优惠卷
