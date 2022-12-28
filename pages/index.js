@@ -35,7 +35,7 @@ class Home extends Component{
         }
     }
 
-    //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
+    //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理=
     componentDidMount() {
         window.addEventListener('scroll', this.bindHandleScroll)
     }
