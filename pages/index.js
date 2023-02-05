@@ -105,8 +105,6 @@ class Home extends Component{
                         </Coursecardlayoutmore>
 
                     </div>
-
-
                 </div>
                 <div className={"course-module_content bx"}>
                     <Coursecardlayout titel={"精品课"}>
