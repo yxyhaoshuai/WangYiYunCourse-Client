@@ -99,7 +99,7 @@ class Coverlogin extends Component{
                                             },
                                         ]}
                                     >
-                                        <Input.Password placeholder="请确认密码" className={"register-password"}/>
+                                        <Input.Password placeholder="再次确认密码" className={"register-password"}/>
                                     </Form.Item>
                                     <Form.Item>
                                         <Button type="primary" htmlType="submit" className="login-form-button button_size">
