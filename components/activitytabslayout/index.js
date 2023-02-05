@@ -1,5 +1,5 @@
 import {Tabs} from "antd";
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 require("./index.less")
 import React, {Component} from "react";
 import Killcard from "../killcard";
