@@ -22,16 +22,16 @@ require("./index.less")
 import React, {Component} from "react";
 import Fixedfield from "../components/fixedfield";
 import Leftminiad from "../components/leftminiad";
-import Login from "../components/coverlogin";
-import Loginpanel from "../components/coverlogin";
 import Coverlogin from "../components/coverlogin";
+import Interest from "../components/interest";
 
 class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
             showElem:true,
-            showCoverLogin: false
+            showCoverLogin: false,
+            showInterest:false
         }
     }
 
@@ -62,15 +62,26 @@ class Home extends Component{
         }
 
     }
+    _InterestShow = () =>{
+        if (this.state.showInterest===false){
+            this.setState({
+                showInterest : true
+            })
+        }else {
+            this.setState({
+                showInterest : false
+            })
+        }
+
+    }
 
     render(){
-        const {showElem ,showCoverLogin} =this.state;
+        const {showElem ,showCoverLogin,showInterest} =this.state;
         return (
             <>
                 <div className={"nav bx"}>
                     <Navibar  _loginShow={this._loginShow}/>
                 </div>
-
                 <div className={"content bx"}>
                     <Categorylistings/>
                     <Lunbo/>
@@ -121,9 +132,10 @@ class Home extends Component{
                     <Coursecardlayout titel={"限时秒杀"}>
                         <Activitytabslayout/>
                     </Coursecardlayout>
-
                 </div>
-                <Selectionsort/>
+                <div onClick={this._InterestShow}>
+                    <Selectionsort/>
+                </div>
                 <div className={"series-of-courses-bx bx"}>
                     <Coursecardlayout className="display-flex" titel={"系列课程"}>
                         <div className={"display-flex"}>
@@ -167,7 +179,6 @@ class Home extends Component{
                 <div className={"footer-setting bx"}>
                     <Footerad/>
                 </div>
-
                 <Wangyiyunfooter/>
                 {
                     showElem ? <Fixedfield/> : ''
@@ -176,9 +187,9 @@ class Home extends Component{
                 {
                     showCoverLogin ? <Coverlogin _loginShow={this._loginShow}/> : ''
                 }
-
-
-
+                {
+                    showInterest ? <Interest _InterestShow={this._InterestShow}/> : ''
+                }
 
 
 

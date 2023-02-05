@@ -1,20 +1,19 @@
+require("./index.less")
 import {Tabs} from "antd";
 import 'antd/dist/antd.less';
-require("./index.less")
+
 import React, {Component} from "react";
 import Killcard from "../killcard";
 
 class Activitytabslayout extends Component{
     render(){
-        const onChange = (key) => {
+        const onTabClick = (key) => {
             console.log(key);
         };
         return (
             <>
-                <Tabs onChange={onChange} type="card" className="font-color">
-                    <Tabs.TabPane tab={
-                        <div>哈哈哈</div>
-                    } key="1">
+                <Tabs onTabClick={onTabClick} type="card" className="font-color">
+                    <Tabs.TabPane tab="今天 10:00开抢" key="1">
                         <div className={"display-flex"}>
                             <Killcard></Killcard>
                             <Killcard></Killcard>
@@ -23,7 +22,7 @@ class Activitytabslayout extends Component{
                             <Killcard></Killcard>
                         </div>
                     </Tabs.TabPane>
-                    <Tabs.TabPane tab="Tab 2" key="2">
+                    <Tabs.TabPane tab="今天 14:00开抢" key="2">
                         <div className={"display-flex"}>
                             <Killcard></Killcard>
                             <Killcard></Killcard>
@@ -32,7 +31,34 @@ class Activitytabslayout extends Component{
                             <Killcard></Killcard>
                         </div>
                     </Tabs.TabPane>
-                    <Tabs.TabPane tab="Tab 3" key="3">
+                    <Tabs.TabPane tab="今天 20:00开抢" key="3">
+                        <div className={"display-flex"}>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                        </div>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="明天 10:00开抢" key="4">
+                        <div className={"display-flex"}>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                        </div>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="明天 14:00开抢" key="5">
+                        <div className={"display-flex"}>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                            <Killcard></Killcard>
+                        </div>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="明天 20:00开抢" key="6">
                         <div className={"display-flex"}>
                             <Killcard></Killcard>
                             <Killcard></Killcard>

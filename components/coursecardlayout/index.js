@@ -3,7 +3,7 @@ import {Button, Card} from "antd";
 require("./index.less")
 
 import React, {Component} from "react";
-import Livestreamingcard from "../livestreamingcard";
+
 
 class Coursecardlayoutmore extends Component{
 
