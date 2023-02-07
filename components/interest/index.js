@@ -4,6 +4,7 @@ require("./index.less")
 import React, {Component} from "react";
 
 class Interest extends Component{
+
     render(){
         const _InterestShow = this.props._InterestShow;
         return (
@@ -20,10 +21,10 @@ class Interest extends Component{
                         <div className={"tabs"}>
                             <Tabs defaultActiveKey="1" size={"large"}>
                                 <Tabs.TabPane tab="有道英语" key="1">
-                                    <Button className={"classify-button"} type="primary" shape={"round"}>分类1</Button>
-                                    <Button className={"classify-button"} type="primary" shape={"round"}>分类2</Button>
-                                    <Button className={"classify-button"} type="primary" shape={"round"}>分类3</Button>
-                                    <Button className={"classify-button"} type="primary" shape={"round"}>分类4</Button>
+                                    <Button ghost={true} className={"classify-button"} type="primary" shape={"round"}>分类1</Button>
+                                    <Button ghost={true} className={"classify-button"} type="primary" shape={"round"}>分类2</Button>
+                                    <Button ghost={true} className={"classify-button"} type="primary" shape={"round"}>分类3</Button>
+                                    <Button ghost={true} className={"classify-button"} type="primary" shape={"round"}>分类4</Button>
                                 </Tabs.TabPane>
                                 <Tabs.TabPane tab="有道考研" key="2">
                                     Content of Tab Pane 2
@@ -51,6 +52,8 @@ class Interest extends Component{
                         </div>
                         <div className={"count"}>
                             已选0个:
+                            <Button ghost={true} className={"decide-classify-button"} type="primary" shape={"round"}>分类1</Button>
+
 
                         </div>
                         <div className={"interest-buttun"}>
