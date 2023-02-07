@@ -5,7 +5,7 @@ class Killcard extends Component{
     render(){
         return (
             <div className={"ux-sec-kill-card"}>
-                <a href="#">
+                <a href="components/card-category/killcard/index#">
                     <div className={"top"}>
                         <img src="assets/images/killcard.png"/>
                     </div>

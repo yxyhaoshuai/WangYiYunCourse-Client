@@ -1,4 +1,4 @@
-import Courseteachercard from "../courseteachercard";
+import Courseteachercard from "../card/courseteachercard";
 
 require("./index.less")
 export default function Categorylistings(){

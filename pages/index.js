@@ -2,18 +2,18 @@ import Lunbo from "../components/lunbo";
 import Navibar from "../components/naviBar";
 import Categorylistings from "../components/categorylistings";
 import PublicityItem from "../components/publicityitem";
-import Livestreamingcard from "../components/livestreamingcard";
-import Coursecardlayoutmore from "../components/coursecardlayoutmore";
+import Livestreamingcard from "../components/card/livestreamingcard";
+import Coursecardlayoutmore from "../components/layout/coursecardlayoutmore";
 import Teacheritem from "../components/teacheritem";
-import Coursecardlayout from "../components/coursecardlayout";
-import Coursecard from "../components/coursecard";
-import Microprofessionlcard from "../components/microprofessionalcard";
-import Activitytabslayout from "../components/activitytabslayout";
+import Coursecardlayout from "../components/layout/coursecardlayout";
+import Coursecard from "../components/card/coursecard";
+import Microprofessionlcard from "../components/card/microprofessionalcard";
+import Activitytabslayout from "../components/layout/activitytabslayout";
 import Selectionsort from "../components/selectionsort";
-import Seriesofcourses from "../components/seriesofcourses";
-import Excellentcoursecard from "../components/excellentcoursecard";
-import Newcoursecard from "../components/newcoursecard";
-import Gratiscoursecard from "../components/gratiscoursecard";
+import Seriesofcourses from "../components/card/seriesofcourses";
+import Excellentcoursecard from "../components/card/excellentcoursecard";
+import Newcoursecard from "../components/card/newcoursecard";
+import Gratiscoursecard from "../components/card/gratiscoursecard";
 import Footerad from "../components/footerad";
 import Wangyiyunfooter from "../components/wangyiyunfooter";
 
@@ -79,9 +79,7 @@ class Home extends Component{
         const {showElem ,showCoverLogin,showInterest} =this.state;
         return (
             <>
-                <div className={"nav bx"}>
                     <Navibar  _loginShow={this._loginShow}/>
-                </div>
                 <div className={"content bx"}>
                     <Categorylistings/>
                     <Lunbo/>

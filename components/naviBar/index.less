@@ -1,421 +1,409 @@
 @color:red;
-.nav-bar{
+.nav {
   background-color: #FFFFFF;
-  .nav-bar-middle{
-    margin: 0 auto;
-    //background-color: blueviolet;
-    height: 56px;
-    width: 1205px;
-    display: flex;
-    .nav-bar-middle-logo{
-      flex: 1;
-      //background-color: blue;
-      margin: auto;
-      :hover{
-        cursor: pointer;
-      }
-      a{
-        img{
-          width: 140px;
-          height: 42px;
-        }
-      }
-
-    }
-    .nav-search{
-      flex: 3;
-    }
-    .nav-bar-middle-search{
-      flex: 4;
-      position: relative;
-      margin: 8px 0 0 0;
-      float: left;
-      height: 40px;
-      width: 100%;
-      border: 1px solid #FF3F29;
-      box-sizing: border-box;
-      border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  .nav-bar {
+    background-color: #FFFFFF;
+    .nav-bar-middle {
+      margin: 0 auto;
+      //background-color: blueviolet;
+      height: 56px;
+      width: 1205px;
       display: flex;
-      margin-left: 10px;
-      .nav-bar-middle-search-type{
+      .nav-bar-middle-logo {
         flex: 1;
-        //background-color: #FFFFFF;
-        //overflow: hidden;
-        :hover{
+        //background-color: blue;
+        margin: auto;
+        :hover {
           cursor: pointer;
         }
-        select{
-          width: 60px;
-          height: 100%;
-          border: none;
-          border-radius: 6px;
-          //下面为外边框设置为none,一般外边框是由焦点outline
-          outline: none;
-          text-align:center;
-
-
-        }
-        //height: 38px;
-        //line-height: 38px;
-        //cursor: pointer;
-        //position: relative;
-        //margin-left: 12px;
-      }
-      .nav-bar-middle-search-input{
-        flex: 5;
-        //background-color: antiquewhite;
-        box-sizing: border-box;
-        outline: none;
-        input{
-          width: 100%;
-          height: 100%;
-          border: none;
-          padding: 0;
-          margin: 0 3px;
-          outline: none;
-        }
-      }
-      .nav-bar-middle-search-button{
-        flex: 1;
-        background-color: aqua;
-        display: block;
-        position: absolute;
-        right: -1px;
-        top: -1px;
-        width: 76px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        background: #FF3F29;
-        border-radius: 0px 6px 6px 0px;
-        cursor: pointer;
-        color: #fff;
-      }
-    }
-    .nav-bar-middle-right{
-      flex: 4;
-      display: flex;
-      //background-color: saddlebrown;
-      .downloadApp,
-      .fuLi,
-      .gouWuChe,
-      .xiaoXi
-      {
-        flex: 1;
-        text-align: center; /*水平居中 */
-        line-height: 56px; /*垂直居中 */
-        a{
-          cursor: pointer;
-          color: black;
-          &:hover{
-            color: #FF3F29;
+        a {
+          img {
+            width: 140px;
+            height: 42px;
           }
         }
-
       }
-      .downloadApp{
-        .iconfont-downloadPane{
-          width: 16px;
-          height: 16px;
-          margin: auto;
-          position: relative;
-          span{
-            font-size: 14px;
-            &:hover{
-              cursor:pointer;
-              color: #ff3f29;
+      .nav-search {
+        flex: 3;
+      }
+      .nav-bar-middle-search {
+        flex: 4;
+        position: relative;
+        margin: 8px 0 0 0;
+        float: left;
+        height: 40px;
+        width: 100%;
+        border: 1px solid #FF3F29;
+        box-sizing: border-box;
+        border-radius: 6px;
+        display: flex;
+        margin-left: 10px;
+        .nav-bar-middle-search-type {
+          flex: 1;
+          //background-color: #FFFFFF;
+          //overflow: hidden;
+          :hover {
+            cursor: pointer;
+          }
+          select {
+            width: 60px;
+            height: 100%;
+            border: none;
+            border-radius: 6px;
+            //下面为外边框设置为none,一般外边框是由焦点outline
+            outline: none;
+            text-align: center;
+          }
+
+          //height: 38px;
+          //line-height: 38px;
+          //cursor: pointer;
+          //position: relative;
+          //margin-left: 12px;
+        }
+        .nav-bar-middle-search-input {
+          flex: 5;
+          //background-color: antiquewhite;
+          box-sizing: border-box;
+          outline: none;
+          input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0;
+            margin: 0 3px;
+            outline: none;
+          }
+        }
+        .nav-bar-middle-search-button {
+          flex: 1;
+          background-color: aqua;
+          display: block;
+          position: absolute;
+          right: -1px;
+          top: -1px;
+          width: 76px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          background: #FF3F29;
+          border-radius: 0px 6px 6px 0px;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+      .nav-bar-middle-right {
+        flex: 4;
+        display: flex;
+        //background-color: saddlebrown;
+        .downloadApp,
+        .fuLi,
+        .gouWuChe,
+        .xiaoXi {
+          flex: 1;
+          text-align: center; /*水平居中 */
+          line-height: 56px; /*垂直居中 */
+          a {
+            cursor: pointer;
+            color: black;
+
+            &:hover {
+              color: #FF3F29;
             }
           }
-          &:hover .download-operation-pane{
-            display: block;
-          }
-          .download-operation-pane{
-            background-color: #FFFFFF;
-            width: 340px;
-            height: 183px;
-            box-shadow: 0px 0px 13px 0px grey;
-            position: absolute;
-            top:50px;
-            left: -103px;
-            display: none;
-            //加框框的阴影
-            border: 1px solid #ddd;
-            box-sizing: content-box;
-            z-index: 999;
-            //下面是伪元素箭头
-            .imgDiv{
-              display: flex;
-              justify-content: center;
-              flex-flow: row;
-              align-items: center;
-                img{
+        }
+        .downloadApp {
+          .iconfont-downloadPane {
+            width: 16px;
+            height: 16px;
+            margin: auto;
+            position: relative;
+            span {
+              font-size: 14px;
+              &:hover {
+                cursor: pointer;
+                color: #ff3f29;
+              }
+            }
+            &:hover .download-operation-pane {
+              display: block;
+            }
+            .download-operation-pane {
+              background-color: #FFFFFF;
+              width: 340px;
+              height: 183px;
+              box-shadow: 0px 0px 13px 0px grey;
+              position: absolute;
+              top: 50px;
+              left: -103px;
+              display: none;
+              //加框框的阴影
+              border: 1px solid #ddd;
+              box-sizing: content-box;
+              z-index: 999;
+              //下面是伪元素箭头
+              .imgDiv {
+                display: flex;
+                justify-content: center;
+                flex-flow: row;
+                align-items: center;
+                img {
                   width: 140px;
                   height: 140px;
                   //background-color: green;
                   margin-right: 20px;
                   margin-top: 20px;
                 }
-              .rightDownloadSrc{
-                width: 140px;
-                height: 140px;
-                //background-color: aqua;
-                margin-top: 20px;
-                .downloadText{
+                .rightDownloadSrc {
                   width: 140px;
-                  height: 28px;
-                  //background-color: saddlebrown;
-                  line-height: 28px;
-                }
-                .iosDownloadlink{
-                  width: 140px;
-                  height: 44px;
-                  outline: none;
-                  //background-color: blue;
-                  margin-top: 8px;
-                  overflow: hidden;
-                  position: relative;
-                  img{
-                    position: absolute;
-                    width: 185px;
-                    top: -44px;
-                    left: 0;
-                    height: 185px;
-
+                  height: 140px;
+                  //background-color: aqua;
+                  margin-top: 20px;
+                  .downloadText {
+                    width: 140px;
+                    height: 28px;
+                    //background-color: saddlebrown;
+                    line-height: 28px;
+                  }
+                  .iosDownloadlink {
+                    width: 140px;
+                    height: 44px;
+                    outline: none;
+                    //background-color: blue;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                      position: absolute;
+                      width: 185px;
+                      top: -44px;
+                      left: 0;
+                      height: 185px;
+                    }
+                  }
+                  .androidDownloadlink {
+                    width: 140px;
+                    height: 44px;
+                    //background-color: blueviolet;
+                    outline: none;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                      position: absolute;
+                      width: 185px;
+                      top: -88px;
+                      left: 0;
+                      height: 185px;
+                    }
                   }
                 }
-                .androidDownloadlink{
-                  width: 140px;
-                  height: 44px;
-                  //background-color: blueviolet;
-                  outline: none;
-                  margin-top: 8px;
-                  overflow: hidden;
-                  position: relative;
-                  img{
-                    position: absolute;
-                    width: 185px;
-                    top: -88px;
-                    left: 0;
-                    height: 185px;
-
-                  }
-                }
               }
-            }
-            &::after{
-              content: "";
-              border: 8px solid transparent;
-              border-bottom-color: #ffffff;
-              position: absolute;
-              left: 103px;
-              top: -16px;
-              box-sizing: content-box;
-            }
-
-          }
-
-        }
-
-
-      }
-      .fuLi{
-        .iconfont-fuliPane{
-          width: 16px;
-          height: 16px;
-          margin: auto;
-          position: relative;
-          span{
-            font-size: 14px;
-            &:hover{
-              cursor:pointer;
-              color: #ff3f29;
-            }
-          }
-          &:hover .fuli-operation-pane{
-            display: block;
-          }
-          .fuli-operation-pane{
-            background-color: #FFFFFF;
-            width: 220px;
-            height: 220px;
-            //background-color: #FF3F29;
-            box-shadow: 0px 0px 13px 0px grey;
-            border: 1px solid #ddd;
-            box-sizing: content-box;
-            position: absolute;
-            left: -109px;
-            top:50px;
-            display: none;
-            z-index: 999;
-            .attention-wechat-account{
-              //background-color: green;
-              height: 30px;
-              line-height: 30px;
-              outline: none;
-              font-size: 14px;
-              //padding: 10px;
-            }
-            .intro{
-              //background-color: yellow;
-              height: 26px;
-              line-height: 26px;
-              font-size: 12px;
-
-            }
-            .WeChat-QR-code{
-              width: 145px;
-              height: 145px;
-              margin: auto;
-
-              img{
-                width: 100%;
-                height: 100%;
-              }
-            }
-            //下面是伪元素箭头
-            &::after{
-              content: "";
-              border: 8px solid transparent;
-              border-bottom-color: #fff;
-              position: absolute;
-              right: 96px;
-              top: -16px;
-            }
-
-          }
-        }
-      }
-      .VipWeDengLu{
-        flex: 6;
-        margin: auto;
-        .VipWeDengLu-mini{
-          height: 32px;
-          display: flex;
-          .vip-mystudy-div{
-            padding: 0 12px;
-            border-left: 1px solid #333;
-            border-right: 1px solid #333;
-            height: 16px;
-            line-height: 16px;
-            margin-top: 7px;
-            display: flex;
-            flex: 6;
-            .vip{
-              flex: 1;
-              text-align:center;
-              a{
-                color: #333;
-                &:hover{
-                  color: #FF3F29;
-                }
-              }
-            }
-            .mystudy{
-              flex: 1;
-              text-align:center;
-              a{
-                color: #333;
-                &:hover{
-                  color: #FF3F29;
-                }
-              }
-            }
-          }
-
-          .login{
-            flex: 4;
-            display: flex;
-            text-align: center;
-            .login-register{
-              flex: 2;
-              //background-color: aqua;
-              line-height: 32px;
-              margin-left: 10px;
-              a{
-                color: #333;
-                &:hover{
-                  color: #FF3F29;
-                }
-              }
-            }
-            .user-head{
-              //background-color: #FF3F29;
-              flex: 1;
-              line-height: 32px;
-              position: relative;
-
-              //hover的时候控制自己子类的display为block显示
-              &:hover .operation-pane{
-                display: block;
-              }
-              .operation-pane{
-                background-color: #FFFFFF;
-                height: 180px;
-                width: 160px;
-                //background-color: aquamarine;
-                //absolute相对于父类
+              &::after {
+                content: "";
+                border: 8px solid transparent;
+                border-bottom-color: #ffffff;
                 position: absolute;
-                right: 0;
-                top: 43px;
-                display: none;
-                border: 1px solid #ddd;
-                box-shadow: 0px 0px 13px 0px grey;
-
-                z-index: 999;
-                ul{
-                  padding: 10px 10px;
-                  li{
-                    text-align: left;
-                    font-size: 12px;
-                    padding-left: 6px;
-                    a{
-                      display:block;
-                      width: 100%;
-                      height: 100%;
-                      color: black;
-                    }
-                    &:hover{
-                      background-color: #eeeeee;
-                      cursor: pointer;
-                    }
-                    span{
-                      margin-left: 20px;
-                    }
-
-                  }
-                  li:nth-child(1){
-                    border-bottom: 1px solid #ddd;
-                  }
-                  li:nth-child(2){
-                    span{
-                      float: right;
-                      color: #ff9600;
-                      margin-right: 10px;
-                    }
-
-                  }
-
-                }
-
-                //下面是伪元素箭头
-                &::after{
-                  content: "";
-                  border: 10px solid transparent;
-                  border-bottom-color: #ffffff;
-                  position: absolute;
-                  right: 11px;
-                  top: -20px;
-                }
+                left: 103px;
+                top: -16px;
+                box-sizing: content-box;
               }
-              img{
-                height: 100%;
-                border-radius: 16px
-              }
-
             }
           }
         }
+        .fuLi {
+          .iconfont-fuliPane {
+            width: 16px;
+            height: 16px;
+            margin: auto;
+            position: relative;
+            span {
+              font-size: 14px;
+              &:hover {
+                cursor: pointer;
+                color: #ff3f29;
+              }
+            }
+            &:hover .fuli-operation-pane {
+              display: block;
+            }
+            .fuli-operation-pane {
+              background-color: #FFFFFF;
+              width: 220px;
+              height: 220px;
+              //background-color: #FF3F29;
+              box-shadow: 0px 0px 13px 0px grey;
+              border: 1px solid #ddd;
+              box-sizing: content-box;
+              position: absolute;
+              left: -109px;
+              top: 50px;
+              display: none;
+              z-index: 999;
+              .attention-wechat-account {
+                //background-color: green;
+                height: 30px;
+                line-height: 30px;
+                outline: none;
+                font-size: 14px;
+                //padding: 10px;
+              }
+              .intro {
+                //background-color: yellow;
+                height: 26px;
+                line-height: 26px;
+                font-size: 12px;
+              }
+              .WeChat-QR-code {
+                width: 145px;
+                height: 145px;
+                margin: auto;
 
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              //下面是伪元素箭头
+              &::after {
+                content: "";
+                border: 8px solid transparent;
+                border-bottom-color: #fff;
+                position: absolute;
+                right: 96px;
+                top: -16px;
+              }
+            }
+          }
+        }
+        .VipWeDengLu {
+          flex: 6;
+          margin: auto;
+          .VipWeDengLu-mini {
+            height: 32px;
+            display: flex;
+            .vip-mystudy-div {
+              padding: 0 12px;
+              border-left: 1px solid #333;
+              border-right: 1px solid #333;
+              height: 16px;
+              line-height: 16px;
+              margin-top: 7px;
+              display: flex;
+              flex: 6;
+              .vip {
+                flex: 1;
+                text-align: center;
+                a {
+                  color: #333;
+                  &:hover {
+                    color: #FF3F29;
+                  }
+                }
+              }
+              .mystudy {
+                flex: 1;
+                text-align: center;
+                a {
+                  color: #333;
+                  &:hover {
+                    color: #FF3F29;
+                  }
+                }
+              }
+            }
+            .login {
+              flex: 4;
+              display: flex;
+              text-align: center;
+              .login-register {
+                flex: 2;
+                //background-color: aqua;
+                line-height: 32px;
+                margin-left: 10px;
+                a {
+                  color: #333;
+                  &:hover {
+                    color: #FF3F29;
+                  }
+                }
+              }
+              .user-head {
+                //background-color: #FF3F29;
+                flex: 1;
+                line-height: 32px;
+                position: relative;
+                //hover的时候控制自己子类的display为block显示
+                &:hover .operation-pane {
+                  display: block;
+                }
+                .operation-pane {
+                  background-color: #FFFFFF;
+                  height: 180px;
+                  width: 160px;
+                  //background-color: aquamarine;
+                  //absolute相对于父类
+                  position: absolute;
+                  right: 0;
+                  top: 43px;
+                  display: none;
+                  border: 1px solid #ddd;
+                  box-shadow: 0px 0px 13px 0px grey;
+                  z-index: 999;
+                  ul {
+                    padding: 10px 10px;
+                    li {
+                      text-align: left;
+                      font-size: 12px;
+                      padding-left: 6px;
+                      a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        color: black;
+                      }
+                      &:hover {
+                        background-color: #eeeeee;
+                        cursor: pointer;
+                      }
+                      span {
+                        margin-left: 20px;
+                      }
+                    }
+                    li:nth-child(1) {
+                      border-bottom: 1px solid #ddd;
+                    }
+                    li:nth-child(2) {
+                      span {
+                        float: right;
+                        color: #ff9600;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                  //下面是伪元素箭头
+                  &::after {
+                    content: "";
+                    border: 10px solid transparent;
+                    border-bottom-color: #ffffff;
+                    position: absolute;
+                    right: 11px;
+                    top: -20px;
+                  }
+                }
+                img {
+                  height: 100%;
+                  border-radius: 16px
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -5,7 +5,7 @@ class Seriesofcourses extends Component{
     render(){
         return (
             <div className={"aeries-of-courses"}>
-                <a href="#" className={"j-href"}>
+                <a href="components/card/seriesofcourses/index#" className={"j-href"}>
                     <div className={"card"}>
                         <div className={"img"}>
                             <img src="assets/images/coursecard.png" alt=""/>

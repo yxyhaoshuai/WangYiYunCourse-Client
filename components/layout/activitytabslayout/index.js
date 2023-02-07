@@ -3,7 +3,7 @@ import {Tabs} from "antd";
 import 'antd/dist/antd.less';
 
 import React, {Component} from "react";
-import Killcard from "../killcard";
+import Killcard from "../../card/killcard";
 
 class Activitytabslayout extends Component{
     render(){
