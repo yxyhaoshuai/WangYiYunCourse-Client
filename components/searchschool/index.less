@@ -1,0 +1,148 @@
+.school{
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  width: 1205px;
+  height: 290px;
+  margin-bottom: 30px;
+
+  .school-content{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    .school-content-top{
+      flex: 1;
+      display: flex;
+      position: relative;
+      .school-head{
+        height: 125px;
+        width: 125px;
+        overflow: hidden;
+        box-sizing: border-box;
+        img{
+          width: 100%;
+          height: 100%;
+          border: 1px solid #ddd;
+        }
+      }
+      .school-intro{
+        //background-color: #ff9600;
+        height: 100%;
+        width: 320px;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        overflow: hidden;
+        .school-name{
+          flex: 2;
+          //background-color: #ff9600;
+          .school-name-span{
+            font-size: 18px;
+            color: #333333;
+          }
+          .iconfont{
+            color: rgb(18,68,249);
+            font-size: 24px;
+          }
+        }
+        .school-intro-content{
+          flex: 4;
+          //background-color: #666666;
+          span{
+            color: #666666;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .school-content-bottom{
+      flex: 1;
+      //background-color: #51b257;
+      overflow: hidden;
+      color: #999999;
+      font-size: 14px;
+      padding-top: 20px;
+      padding-right: 20px;
+
+    }
+  }
+  .school-course{
+    flex: 3;
+    display: flex;
+    justify-content: flex-start;
+
+    .school-course-layout{
+      width: 220px;
+      height: 100%;
+      background-color: #666666;
+      border: #dddddd 1px solid;
+      .series-card{
+        //background-color: white;
+        &:hover{
+          cursor: pointer;
+          box-shadow: 0 0 4px 1px #c6c6c6;
+        }
+        &:hover .img-div>img{
+          transform: scale(1.2,1.2);
+        }
+        .img-div{
+          overflow: hidden;
+          position: relative;
+          img{
+            width: 101%;
+            height: 101%;
+            transition: all 0.3s ease-in-out 0s;
+          }
+          .is_series{
+            width: 76px;
+            height: 24px;
+            border-radius: 0 12px 12px 0;
+            background-color: #ff3f29;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+          }
+
+        }
+        .text-div{
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          height: 126px;
+
+          .title-div{
+            width: 100%;
+            color: #343d42;
+            font-size: 14px;
+            padding: 5px 10px;
+          }
+          .content-div{
+            width: 100%;
+            height: 75px;
+            padding: 5px 10px;
+            position: relative;
+            span{
+              position: absolute;
+              left: 10px;
+              bottom: 20px;
+              color: #555555;
+              font-size: 14px;
+              font-weight: bolder;
+            }
+
+          }
+
+        }
+
+      }
+    }
+    .school-course-layout:not(:nth-child(1)){
+      margin-left: 20px;
+    }
+  }
+}

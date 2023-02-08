@@ -5,50 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/card/seriescard/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/card/seriescard/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/crumb/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/crumb/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layout/flexLayout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layout/flexLayout/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/courses-search/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/provider-search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WangYiYunCourse-Client-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WangYiYunCourse-Client-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/searchschool/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/searchschool/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/provider-search/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/schoolimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/schoolimg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/sz.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/activitytabslayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/activitytabslayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/activitytabslayout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/activitytabslayout/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/categorylistings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorylistings/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/coursecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/coursecard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursecardlayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursecardlayout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayout/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursecardlayoutmore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursecardlayoutmore/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/courseteachercard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/courseteachercard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/courseteachercard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/courseteachercard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/excellentcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/excellentcoursecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/excellentcoursecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/excellentcoursecard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/fixedfield/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/fixedfield/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/gratiscoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/gratiscoursecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/gratiscoursecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/gratiscoursecard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/killcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/killcard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/killcard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/killcard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/livestreamingcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/livestreamingcard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/livestreamingcard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/livestreamingcard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/microprofessionalcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/microprofessionalcard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/microprofessionalcard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/microprofessionalcard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/seriesofcourses/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriesofcourses/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footerad/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footerad/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footerad/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/footerad/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/newcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/newcoursecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/newcoursecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/newcoursecard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/seriesofcourses/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriesofcourses/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/seriesofcourses/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriesofcourses/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/flexLayout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/layout/flexLayout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/provider-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/provider-search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/iconfont.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" afterDir="false" />
@@ -85,25 +62,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/WangYiYunCourse-Server-main",
-    "list.type.of.created.stylesheet": "Less",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YXY/Desktop/WangYiYunCourse-Server-main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\YXY\Desktop\WangYiYunCourse-Client-main" />
@@ -141,7 +118,8 @@
       <updated>1675611193197</updated>
       <workItem from="1675611195228" duration="1728000" />
       <workItem from="1675612955822" duration="671000" />
-      <workItem from="1675732346305" duration="12665000" />
+      <workItem from="1675732346305" duration="14735000" />
+      <workItem from="1675824759551" duration="27413000" />
     </task>
     <servers />
   </component>

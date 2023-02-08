@@ -37,7 +37,7 @@ class Home extends Component{
 
     //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
     componentDidMount() {
-        window.addEventListener('scroll', this.bindHandleScroll)
+        window.addEventListener('scroll', this.bindHandleScroll);
     }
     //在componentWillUnmount，进行scroll事件的注销
     componentWillUnmount() {
@@ -79,7 +79,7 @@ class Home extends Component{
         const {showElem ,showCoverLogin,showInterest} =this.state;
         return (
             <>
-                    <Navibar  _loginShow={this._loginShow}/>
+                <Navibar  _loginShow={this._loginShow}/>
                 <div className={"content bx"}>
                     <Categorylistings/>
                     <Lunbo/>
@@ -172,9 +172,7 @@ class Home extends Component{
                         </div>
                     </Coursecardlayout>
                 </div>
-                <div className={"footer-setting bx"}>
-                    <Footerad/>
-                </div>
+                <Footerad/>
                 <Wangyiyunfooter/>
                 {
                     showElem ? <Fixedfield/> : ''

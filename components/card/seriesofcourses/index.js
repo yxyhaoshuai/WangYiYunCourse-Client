@@ -9,7 +9,6 @@ class Seriesofcourses extends Component{
                     <div className={"card"}>
                         <div className={"img"}>
                             <img src="assets/images/coursecard.png" alt=""/>
-
                         </div>
 
 

@@ -81,7 +81,7 @@ export default function Navibar(props){
                                     </div>
                                 </div>
                                 <div className={"login"}>
-                                    <div className={"login-register"}>
+                                    <div className={"login-register"} onClick={_loginShow}>
                                         <a href="#">登录/注册</a>
                                     </div>
                                     <div className={"user-head"}>

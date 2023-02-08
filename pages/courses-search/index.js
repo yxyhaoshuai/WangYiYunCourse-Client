@@ -3,25 +3,29 @@ import FlexLayout from "../../layout/flexLayout";
 require("./index.less")
 import Crumb from "../../components/crumb";
 import Navibar from "../../components/naviBar";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Coverlogin from "../../components/coverlogin";
-import Seriescard from "../../components/card/seriescard";
+import Searchresultcard from "../../components/card/seriescard";
+import {BackTop, Tabs} from "antd";
+import Fixedfield from "../../components/fixedfield";
+import Footerad from "../../components/footerad";
+import Wangyiyunfooter from "../../components/wangyiyunfooter";
+import Leftminiad from "../../components/leftminiad";
 
 
 export default function ProviderSearch() {
     const [showCoverLogin, setshowCoverLogin] = useState(false)
-
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
 
     }
-
     return (
         <>
                 <Navibar  _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
+
             <Crumb/>
             <div className={"search-result-big"}>
                 <div className={"search-result-middle bx"}>
@@ -45,15 +49,43 @@ export default function ProviderSearch() {
             <div className={"series-result-card-big"}>
                 <div className={"series-result-card-middle bx"}>
                     <FlexLayout>
-                        <Seriescard/>
-                        <Seriescard/>
-                        <Seriescard/>
-                        <Seriescard/>
-                        <Seriescard/>
-                        <Seriescard/>
+                        <Searchresultcard count="column5"/>
+                        <Searchresultcard count="column5"/>
+                        <Searchresultcard count="column5"/>
+                        <Searchresultcard count="column5"/>
+                        <Searchresultcard count="column5"/>
+                        <Searchresultcard count="column5"/>
                     </FlexLayout>
                 </div>
             </div>
+            <div className={"series-result-tabs-bar bx"}>
+                <Tabs defaultActiveKey="1">
+                    <Tabs.TabPane tab="推荐" key="1">
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="畅销" key="2">
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="全部" key="3">
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="会员专享" key="4">
+                    </Tabs.TabPane>
+                </Tabs>
+
+            </div>
+            <div className={"series-result-tabs-card"}>
+                <div className={"series-result-card-middle bx"}>
+                    <FlexLayout>
+                        <Searchresultcard count="column5" is_score/>
+                        <Searchresultcard count="column5" is_score/>
+                        <Searchresultcard count="column5" is_score/>
+                        <Searchresultcard count="column5" is_score/>
+                        <Searchresultcard count="column5" is_score/>
+                        <Searchresultcard count="column5" is_score/>
+                    </FlexLayout>
+                </div>
+            </div>
+            <Wangyiyunfooter/>
+            <Leftminiad/>
+            <Fixedfield/>
         </>
     )
 }
