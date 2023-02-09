@@ -11,7 +11,7 @@ class Fixedfield extends Component{
             <div className={"fixed-field"}>
                 <div className={"global-promotion-item"}>
                     <a href="#">
-                        <img src="assets/images/fixedimg.png" alt=""/>
+                        <img src="/assets/images/fixedimg.png" alt=""/>
                     </a>
                 </div>
                 <div className={"side-service-item-box"}>
@@ -31,7 +31,7 @@ class Fixedfield extends Component{
                             <div className={"qrcode"}>
                                 <div className={"qrcode-content"}>
                                     <div className={"img"}>
-                                        <img src="assets/images/appDownloadQRCode.png" alt=""/>
+                                        <img src="/assets/images/appDownloadQRCode.png" alt=""/>
                                     </div>
                                     <div className={"text"}>
                                         下载App
@@ -39,7 +39,7 @@ class Fixedfield extends Component{
                                 </div>
                                 <div className={"qrcode-content"}>
                                     <div className={"img"}>
-                                        <img src="assets/images/WechatQRcode.png" alt=""/>
+                                        <img src="/assets/images/WechatQRcode.png" alt=""/>
                                     </div>
                                     <div className={"text"}>
                                         关注微信
@@ -58,14 +58,14 @@ class Fixedfield extends Component{
                     </div>
                 </div>
                 <div className={"icon-side-service-item-box"}>
-                    <img src="assets/images/24gf-headset.png" alt=""/>
+                    <img src="/assets/images/24gf-headset.png" alt=""/>
 
                 </div>
                 <div className={"icon-side-service-item-box-two"}>
-                    <img src="assets/images/ipad.png" alt=""/>
+                    <img src="/assets/images/ipad.png" alt=""/>
                 </div>
                 <div className={"icon-side-service-item-box-three"}>
-                    <img src="assets/images/uparrow.png" alt=""/>
+                    <img src="/assets/images/uparrow.png" alt=""/>
 
                 </div>
             </div>

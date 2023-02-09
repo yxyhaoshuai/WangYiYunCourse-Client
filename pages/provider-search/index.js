@@ -1,4 +1,4 @@
-import FlexLayout from "../../layout/flexLayout";
+
 
 require("./index.less")
 import Navibar from "../../components/naviBar";
@@ -8,7 +8,6 @@ import React, {useState} from "react";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import Leftminiad from "../../components/leftminiad";
 import Fixedfield from "../../components/fixedfield";
-import Searchresultcard from "../../components/card/seriescard";
 import Searchschool from "../../components/searchschool";
 
 export default function ProviderSearch() {
