@@ -13,12 +13,18 @@ class Seriescourseitem extends Component{
                 </div>
                 <div className={"course-card bx"}>
                     <div className={"course-img"}>
-                        <img src="/assets/images/aaaa.png" alt=""/>
+                        <a href="#">
+                            <img src="/assets/images/aaaa.png" alt=""/>
+                        </a>
+
                     </div>
                     <div className={"course-content"}>
                         <div className={"left-course-content"}>
                             <div className={"course-title"}>
-                                撩课-Python-爬虫系列-网络实战
+                                <a href="#">
+                                    撩课-Python-爬虫系列-网络实战
+                                </a>
+
                             </div>
                             <div className={"course-teacher"}>
                                 撩课-王顺子

@@ -79,6 +79,9 @@ class Home extends Component{
         const {showElem ,showCoverLogin,showInterest} =this.state;
         return (
             <>
+                {/*#####以下的代码在企业的实际开发当中会额外封装容器组件，但是在我这里没必要，要封装也是可以的#####*/}
+                {/*#####以下的代码在企业的实际开发当中会额外封装容器组件，但是在我这里没必要，要封装也是可以的#####*/}
+                {/*#####以下的代码在企业的实际开发当中会额外封装容器组件，但是在我这里没必要，要封装也是可以的#####*/}
                 <Navibar  _loginShow={this._loginShow}/>
                 <div className={"content bx"}>
                     <Categorylistings/>
@@ -184,9 +187,6 @@ class Home extends Component{
                 {
                     showInterest ? <Interest _InterestShow={this._InterestShow}/> : ''
                 }
-
-
-
             </>
         )
     }

@@ -1,6 +1,4 @@
 import Seriesimg from "../../components/seriesimg";
-
-require("./index.less")
 import React, {useState} from "react";
 import Seriesbar from "../../components/seriesbar";
 import Seriescourseitem from "../../components/seriescourseitem";
@@ -24,10 +22,12 @@ export default function ProviderSearch() {
             }
             <Seriesimg/>
             <Seriesbar/>
+
             <Seriescourseitem/>
             <Seriescourseitem/>
             <Seriescourseitem/>
             <Seriescourseitem/>
+
             <Wangyiyunfooter/>
             <Leftminiad/>
             <Fixedfield/>
