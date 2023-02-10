@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/components/orderitem/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/orderitem/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/orderlayout/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/orderlayout/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/orderprice/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/orderprice/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/order/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/ordercourseimg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/series/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/series/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/series/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/iconfont.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" afterDir="false" />
@@ -104,7 +110,7 @@
       <workItem from="1675732346305" duration="14735000" />
       <workItem from="1675824759551" duration="27982000" />
       <workItem from="1675857507637" duration="603000" />
-      <workItem from="1675914354589" duration="27468000" />
+      <workItem from="1675914354589" duration="37548000" />
     </task>
     <servers />
   </component>
