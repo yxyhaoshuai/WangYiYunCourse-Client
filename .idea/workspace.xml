@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/orderitem/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/orderitem/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/orderlayout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/orderlayout/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/orderprice/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/orderprice/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/order/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/ordercourseimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/course/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/course/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/course/introduction/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/course-overview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/coursedetail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/schoolimg3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/searchschool/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/searchschool/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/searchschool/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/searchschool/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/wangyiyunfooter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/wangyiyunfooter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/iconfont.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" afterDir="false" />
@@ -76,6 +81,7 @@
       <recent name="C:\Users\YXY\Desktop\WangYiYunCourse-Client-main\pages\provider-search" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\YXY\Desktop\WangYiYunCourse-Client-main\pages\course\introduction" />
       <recent name="C:\Users\YXY\Desktop\WangYiYunCourse-Client-main\components\card" />
       <recent name="C:\Users\YXY\Desktop\WangYiYunCourse-Client-main\components\layout" />
     </key>
@@ -110,7 +116,11 @@
       <workItem from="1675732346305" duration="14735000" />
       <workItem from="1675824759551" duration="27982000" />
       <workItem from="1675857507637" duration="603000" />
-      <workItem from="1675914354589" duration="37548000" />
+      <workItem from="1675914354589" duration="41144000" />
+      <workItem from="1676113213504" duration="4344000" />
+      <workItem from="1676117739062" duration="633000" />
+      <workItem from="1676432571841" duration="1642000" />
+      <workItem from="1676460171010" duration="21251000" />
     </task>
     <servers />
   </component>

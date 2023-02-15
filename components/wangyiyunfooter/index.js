@@ -46,7 +46,7 @@ class Wangyiyunfooter extends Component{
                                     <div className={"attention-wechat-account"}>关注云课堂官方微信号</div>
                                     <div className={"intro"}>-领取课程免费福利，超值学习资料-</div>
                                     <div className={"WeChat-QR-code"}>
-                                        <img src="assets/images/WechatQRcode.png"/>
+                                        <img src="/assets/images/WechatQRcode.png"/>
                                     </div>
                                 </div>
                             </div>

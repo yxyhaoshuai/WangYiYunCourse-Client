@@ -3,12 +3,11 @@ import FlexLayout from "../../layout/flexLayout";
 require("./index.less")
 import Crumb from "../../components/crumb";
 import Navibar from "../../components/naviBar";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Coverlogin from "../../components/coverlogin";
 import Searchresultcard from "../../components/card/seriescard";
-import {BackTop, Tabs} from "antd";
+import {Tabs} from "antd";
 import Fixedfield from "../../components/fixedfield";
-import Footerad from "../../components/footerad";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import Leftminiad from "../../components/leftminiad";
 

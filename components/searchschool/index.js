@@ -8,11 +8,13 @@ class Searchschool extends Component{
                 <div className={"school-content"}>
                     <div className={"school-content-top"}>
                         <div className={"school-head"}>
-                            <img src="/assets/images/schoolimg2.png" alt=""/>
+                            <a href="#">
+                                <img src="/assets/images/schoolimg2.png" alt=""/>
+                            </a>
                         </div>
                         <div className={"school-intro"}>
                             <div className={"school-name"}>
-                                <span className={"school-name-span"}>撩课-王顺子</span>
+                                <a href="#"><span className={"school-name-span"}>撩课-王顺子</span></a>
                                 <span className={"iconfont"}>&#xe6f3;</span>
                             </div>
                             <div className={"school-intro-content"}>
@@ -29,7 +31,7 @@ class Searchschool extends Component{
                 </div>
                 <div className={"school-course"}>
                     <div className={"school-course-layout"}>
-                        <div className={"series-card"}>
+                        <a href=""><div className={"series-card"}>
                             <div className={"img-div"}>
                                 <img src="assets/images/sz.png" alt=""/>
                                 <div className={"is_series"}>
@@ -47,11 +49,10 @@ class Searchschool extends Component{
 
                             </div>
 
-                        </div>
-
+                        </div></a>
                     </div>
                     <div className={"school-course-layout"}>
-                        <div className={"series-card"}>
+                        <a href=""><div className={"series-card"}>
                             <div className={"img-div"}>
                                 <img src="assets/images/sz.png" alt=""/>
                                 <div className={"is_series"}>
@@ -69,11 +70,10 @@ class Searchschool extends Component{
 
                             </div>
 
-                        </div>
-
+                        </div></a>
                     </div>
                     <div className={"school-course-layout"}>
-                        <div className={"series-card"}>
+                        <a href=""><div className={"series-card"}>
                             <div className={"img-div"}>
                                 <img src="assets/images/sz.png" alt=""/>
                                 <div className={"is_series"}>
@@ -91,8 +91,7 @@ class Searchschool extends Component{
 
                             </div>
 
-                        </div>
-
+                        </div></a>
                     </div>
                 </div>
             </div>

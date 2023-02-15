@@ -9,7 +9,7 @@ export default function Navibar(props){
                 <div className={"nav-bar-middle"}>
                     <div className={"nav-bar-middle-logo"}>
                         <a href={"#"}>
-                            <img src={"assets/images/logo.png"}/>
+                            <img src={"/assets/images/logo.png"}/>
                         </a>
                     </div>
                     <form className={"nav-search"} action="">
@@ -38,14 +38,14 @@ export default function Navibar(props){
                                 <span className={"iconfont"}>&#xe608;</span>
                                 <div className={"download-operation-pane"}>
                                     <div className={"imgDiv"}>
-                                        <img src={"assets/images/appDownloadQRCode.png"}/>
+                                        <img src={"/assets/images/appDownloadQRCode.png"}/>
                                         <div className={"rightDownloadSrc"}>
                                             <div className={"downloadText"}>扫码下载官方App</div>
                                             <div className={"iosDownloadlink"}>
-                                                <img src={"assets/images/appDownloadAndroidAndIos.png"}/>
+                                                <img src={"/assets/images/appDownloadAndroidAndIos.png"}/>
                                             </div>
                                             <div className={"androidDownloadlink"}>
-                                                <img src={"assets/images/appDownloadAndroidAndIos.png"}/>
+                                                <img src={"/assets/images/appDownloadAndroidAndIos.png"}/>
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@ export default function Navibar(props){
                                     <div className={"attention-wechat-account"}>关注云课堂官方微信号</div>
                                     <div className={"intro"}>-领取课程免费福利，超值学习资料-</div>
                                     <div className={"WeChat-QR-code"}>
-                                        <img src="assets/images/WechatQRcode.png"/>
+                                        <img src="/assets/images/WechatQRcode.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ export default function Navibar(props){
                                         <a href="#">登录/注册</a>
                                     </div>
                                     <div className={"user-head"}>
-                                        <img src={"assets/images/userInitHead.png"}/>
+                                        <img src={"/assets/images/userInitHead.png"}/>
                                         <div className={"operation-pane"}>
                                             <ul className={"user-navuser-menu"}>
                                                 <li onClick={_loginShow}>游客,请登录...</li>
