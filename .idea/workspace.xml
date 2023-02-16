@@ -5,26 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/course/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/introduction/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/course-overview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/coursedetail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/schoolimg3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailbelongingseries/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailbelongingseries/less.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailbread/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailbread/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailcatalogue/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailcatalogue/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailintro/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailintro/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetaillayout/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetaillayout/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailschool/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailschool/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailschoolconsult/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/coursedetailschoolconsult/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/searchschool/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/searchschool/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/searchschool/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/searchschool/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/wangyiyunfooter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/wangyiyunfooter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.less" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/iconfont.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/routers/client/categorysDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/routers/client/categorysDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/routers/client/courseDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/routers/client/courseDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/routers/client/courseSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/routers/client/courseSearch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/tool/sz_email.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/src/tool/sz_email.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/yarn.lock" afterDir="false" />
@@ -43,7 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../WangYiYunCourse-Server-main" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -120,7 +126,8 @@
       <workItem from="1676113213504" duration="4344000" />
       <workItem from="1676117739062" duration="633000" />
       <workItem from="1676432571841" duration="1642000" />
-      <workItem from="1676460171010" duration="21251000" />
+      <workItem from="1676460171010" duration="21730000" />
+      <workItem from="1676538395787" duration="10341000" />
     </task>
     <servers />
   </component>
