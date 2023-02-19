@@ -4,7 +4,10 @@ require("./index.less")
 import React, {Component} from "react";
 
 class Coursedetailcomment extends Component{
+
     render(){
+        const {_commentShow} = this.props;
+
         return (
             <div className={"comment"}>
                 <div className={"comment-school-consult-img"}>
@@ -86,7 +89,7 @@ class Coursedetailcomment extends Component{
                         </div>
                     </div>
                     <div className={"view-more"}>
-                        <a href="#">查看更多</a>
+                        <span onClick={_commentShow}>查看更多</span>
                     </div>
                 </div>
             </div>

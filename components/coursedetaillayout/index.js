@@ -1,4 +1,3 @@
-import {Rate} from "antd";
 
 require("./index.less")
 import React, {Component} from "react";
@@ -7,10 +6,13 @@ import Coursedetailschool from "../coursedetailschool";
 import Coursedetailschoolconsult from "../coursedetailschoolconsult";
 import Coursedetailbelongingseries from "../coursedetailbelongingseries";
 import Coursedetailcomment from "../coursedetailcomment";
-import Coursedetailintro from "../coursedetailintro";
+
 
 class Coursedetaillayout extends Component{
+
     render(){
+        const {_commentShow} = this.props;
+
         return (
             <div className={"layout bx"}>
 
@@ -23,7 +25,7 @@ class Coursedetaillayout extends Component{
                     <Coursedetailschool/>
                     <Coursedetailschoolconsult/>
                     <Coursedetailbelongingseries/>
-                    <Coursedetailcomment/>
+                    <Coursedetailcomment _commentShow={_commentShow}/>
                 </div>
 
             </div>
