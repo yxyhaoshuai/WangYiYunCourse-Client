@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/course/introduction/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetaillayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetaillayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/WangYiYunCourse-Server-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WangYiYunCourse-Server-main/.idea/vcs.xml" afterDir="false" />
@@ -116,7 +109,9 @@
       <workItem from="1676432571841" duration="1642000" />
       <workItem from="1676460171010" duration="21730000" />
       <workItem from="1676538395787" duration="10967000" />
-      <workItem from="1676788506049" duration="12724000" />
+      <workItem from="1676788506049" duration="15709000" />
+      <workItem from="1676810362999" duration="139000" />
+      <workItem from="1676810632767" duration="1025000" />
     </task>
     <servers />
   </component>
