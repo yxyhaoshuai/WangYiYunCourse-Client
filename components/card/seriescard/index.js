@@ -14,7 +14,7 @@ class Searchresultcard extends Component{
         return (
             <div className={`series-card ${count ? count : ""}`}>
                 <div className={"img-div"}>
-                    <img src="assets/images/sz.png" alt=""/>
+                    <img src="/assets/images/sz.png" alt=""/>
                     <div className={"is_series"}>
                         系列课程
                     </div>
