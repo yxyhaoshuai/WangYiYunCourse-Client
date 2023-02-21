@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/mycart/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mycart/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pagebx/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pagebx/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/message/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/message/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/messagetabitem/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/messagetabitem/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mycart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mycart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/message/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +55,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -112,7 +110,8 @@
       <workItem from="1676788506049" duration="15709000" />
       <workItem from="1676810362999" duration="139000" />
       <workItem from="1676810632767" duration="1025000" />
-      <workItem from="1676945374342" duration="3818000" />
+      <workItem from="1676945374342" duration="7692000" />
+      <workItem from="1676975292108" duration="3979000" />
     </task>
     <servers />
   </component>

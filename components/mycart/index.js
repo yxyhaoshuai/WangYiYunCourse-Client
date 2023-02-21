@@ -185,7 +185,6 @@ class Mycart extends Component{
                                 <span className={"iconfont"}>&#xe633;</span>
                             </div>
                         </div>
-
                     </div>
                     <div className={"total"}>
                         <div className={"total-position"}>
