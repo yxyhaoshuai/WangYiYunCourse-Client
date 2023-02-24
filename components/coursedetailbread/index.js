@@ -44,29 +44,36 @@ class Coursedetailbread extends Component{
                                     讲师：王顺子
                                 </div>
                             </div>
-                            <div className={"price"}>
-                                ¥ 188.00
 
-                            </div>
-                            <div className={"coupon"}>
-                                <a href="#">【福利】送80元购课通用红包></a>
+                            {
+                                this.props.ismystudy ? "" :
+                                    <>
+                                        <div className={"price"}>
+                                            ¥ 188.00
 
-                            </div>
-                            <div className={"three-button"}>
-                                <div className={"join-button"}>
-                                    立即参加
+                                        </div>
+                                        <div className={"coupon"}>
+                                            <a href="#">【福利】送80元购课通用红包></a>
 
-                                </div>
-                                <div className={"try-and-see"}>
-                                    免费试看
+                                        </div>
+                                        <div className={"three-button"}>
+                                            <div className={"join-button"}>
+                                                立即参加
 
-                                </div>
-                                <div className={"join-cart"}>
-                                    <span className={"iconfont"}>&#xe6d5;</span>
-                                    <span>加入购物车</span>
-                                </div>
+                                            </div>
+                                            <div className={"try-and-see"}>
+                                                免费试看
 
-                            </div>
+                                            </div>
+                                            <div className={"join-cart"}>
+                                                <span className={"iconfont"}>&#xe6d5;</span>
+                                                <span>加入购物车</span>
+                                            </div>
+
+                                        </div>
+                                    </>
+                            }
+
 
                         </div>
                     </div>
