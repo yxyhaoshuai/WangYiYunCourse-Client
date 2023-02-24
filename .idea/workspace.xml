@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/myinfo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/myinfo/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mypagecard/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mypagecard/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mypagelayout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mypagelayout/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mypagetabs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mypagetabs/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/my/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/my-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/my.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/userpages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/userpages/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/crown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/user-img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/flexLayout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/layout/flexLayout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/iconfont.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client",
-    "list.type.of.created.stylesheet": "Less",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client" />
@@ -120,7 +114,8 @@
       <workItem from="1676810362999" duration="139000" />
       <workItem from="1676810632767" duration="1025000" />
       <workItem from="1676945374342" duration="7692000" />
-      <workItem from="1676975292108" duration="14771000" />
+      <workItem from="1676975292108" duration="15082000" />
+      <workItem from="1677211696522" duration="4892000" />
     </task>
     <servers />
   </component>
@@ -144,7 +139,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/my/index.js</url>
           <line>32</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
