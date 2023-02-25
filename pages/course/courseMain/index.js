@@ -20,14 +20,10 @@ export default function ProviderSearch() {
         setshowCoverLogin(!showCoverLogin)
 
     }
-
-
     // 评论蒙版
     const [showcomment, setshowcomment] = useState(false)
     const _commentShow = () =>{
         setshowcomment(!showcomment)
-
-
     }
     return (
         <>

@@ -14,6 +14,110 @@
     }
     .comment-img-consult{
       padding: 16px 16px 0 16px;
+
+      .user-comment-textarea-latter{
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        .score{
+          //background-color: #ff3a00;
+          height: 30px;
+          width: 100%;
+          .rate-size{
+            width: 120px;
+            position: absolute;
+            left: 70px;
+            line-height: 18px;
+            span{
+              font-size: 16px;
+            }
+
+          }
+          .comment-latter{
+            position: absolute;
+            right: 0;
+            font-size: 12px;
+            color: #666666;
+            line-height: 25px;
+          }
+
+          .user-comment-textarea-text{
+            height: 30px;
+            color: #666666;
+            font-size: 12px;
+
+          }
+        }
+
+
+        .note-txt{
+          width: 100%;
+          display: block;
+          background: #FAFAFA;
+          border: 1px solid #DFDFDF;
+          box-shadow: inset 1px 1px 2px #dfdfdf;
+          height: 74px;
+          font-size: 12px;
+          /* 去除边框 */
+          resize: none;
+          /* 去除选中后的边框 */
+          outline:none;
+          padding: 6px;
+
+
+
+        }
+        .publish-button{
+          height: 50px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          position: relative;
+          .word-count{
+            font-size: 12px;
+            span:nth-child(2){
+              color: green;
+            }
+            span{
+              color: #c6c6c6;
+            }
+          }
+          .cancel{
+            padding: 5px 10px;
+            position: absolute;
+            right: 50px;
+            a{
+              color: #333333;
+              &:hover{
+                color: #ff3f29;
+              }
+            }
+
+
+          }
+          .publish{
+            background-color: rgb(255,78,53);
+            position: absolute;
+            right: 0;
+            a{
+              color: white;
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: 5px 10px;
+              &:hover{
+                background-color: rgb(255,100,65);
+
+              }
+
+            }
+          }
+
+        }
+
+
+
+      }
       .comment-comment{
         width: 100%;
         margin-bottom: 25px;
@@ -89,6 +193,10 @@
         }
 
       }
+
+
+
+
 
 
     }

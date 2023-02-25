@@ -2,11 +2,27 @@ import {Rate} from "antd";
 
 require("./index.less")
 import React, {Component} from "react";
+import Commenttextarea from "../commenttextarea";
 
 class Coursedetailcomment extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            publishButtonshow:false,
+            iscomment:true
+        };
+    }
 
     render(){
         const {_commentShow} = this.props;
+        const _publishButtonshow=()=>{
+            this.setState({
+                publishButtonshow: !this.state.publishButtonshow
+
+            })
+            console.log(this.state)
+
+        }
 
         return (
             <div className={"comment"}>
@@ -14,7 +30,31 @@ class Coursedetailcomment extends Component{
                     <div className={"comment-school-consult-intro"}>
                         评论
                     </div>
+
+
                     <div className={"comment-img-consult"}>
+
+
+                        {/*没有评价的状态*/}
+
+
+                        {
+                            this.state.iscomment?
+                                <Commenttextarea publishButtonshow={this.state.publishButtonshow} _publishButtonshow={_publishButtonshow}/>
+                                :
+                                <div className={"user-comment-textarea-latter"}>
+                                    <div className={"score"}>
+                                        <span className={"user-comment-textarea-text"}>我的评价：</span>
+                                        <Rate disabled  className={"rate-size"} allowHalf defaultValue={5} />
+                                        <span className={"comment-latter"}>已评价</span>
+                                    </div>
+                                </div>
+                        }
+                        {/*已评价的状态*/}
+
+
+
+
                         <div className={"comment-comment"}>
                             <div className={"comment-user-score"}>
                                 <div className={"user-img"}>
@@ -106,6 +146,7 @@ class Coursedetailcomment extends Component{
                             <div className={"comment-time"}>2022-4-28</div>
                         </div>
                     </div>
+
                     <div className={"view-more"}>
                         <span onClick={_commentShow}>查看更多</span>
                     </div>

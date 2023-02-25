@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/commentcover/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/commentcover/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/progressbar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/progressbar/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/courseMain/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/courseMain/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/jindutiao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/user-bcg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/commenttextarea/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/commenttextarea/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailbread/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailbread/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetaillayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetaillayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userpages/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/userpages/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course/courseMain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/courseMain/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +115,8 @@
       <workItem from="1677211696522" duration="5838000" />
       <workItem from="1677218599134" duration="62000" />
       <workItem from="1677239014589" duration="4393000" />
-      <workItem from="1677246335519" duration="6577000" />
+      <workItem from="1677246335519" duration="7096000" />
+      <workItem from="1677299846037" duration="8369000" />
     </task>
     <servers />
   </component>
