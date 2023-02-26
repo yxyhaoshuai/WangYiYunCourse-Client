@@ -1,6 +1,6 @@
-import {Tabs} from "antd";
 
-require("./index.less")
+
+
 import Navibar from "../../components/naviBar";
 import React, {useState} from "react";
 import Coverlogin from "../../components/coverlogin";

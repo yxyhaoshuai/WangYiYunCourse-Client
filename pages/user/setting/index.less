@@ -1,0 +1,97 @@
+.settings{
+  height: 1000px;
+  background-color: white;
+  margin-top: 76px;
+  box-shadow: 0 1px 2px #bbb;
+  display: flex;
+  flex-direction: column;
+  .tabs-bar{
+    height: 44px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    .get-focus{
+      background-color: #ff3f29;
+      height: 100%;
+      width: 120px;
+      font-size: 15px;
+      line-height: 44px;
+      text-align: center;
+      font-weight: bolder;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white;
+
+      }
+
+
+    }
+    .not-get-focus{
+      height: 100%;
+      width: 120px;
+      color: #333333;
+      font-size: 15px;
+      line-height: 44px;
+      text-align: center;
+      font-weight: bolder;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #333333;
+        &:hover{
+          color: #ff3f29;
+        }
+
+      }
+
+    }
+
+
+
+  }
+  .complete-information{
+    color: #cccccc;
+    font-size: 12px;
+    height: 40px;
+    //background-color: #ff3f29;
+    line-height: 40px;
+    padding: 0 20px;
+  }
+  .submit-form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    .top-div{
+      padding: 0 20px;
+      height: 808px;
+      width: 100%;
+
+    }
+    .bottom-div{
+      padding: 0 20px;
+      flex-grow: 1;
+      background-color: #fafafa;
+      border-top: 1px solid #eaeaea;
+      position: relative;
+      .save-button{
+        position: absolute;
+        top: 32px;
+        left: 110px;
+        height: 44px;
+        width: 88px;
+        font-size: 16px;
+        font-weight: bolder;
+      }
+
+    }
+  }
+
+
+
+}
+body{
+  background-color: #eeeeee;
+}

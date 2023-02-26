@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/commenttextarea/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/commenttextarea/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/usersettingbasic/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/usersettingbasic/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/setting/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/setting/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/courseMain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/courseMain/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.less" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Less File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -116,7 +117,9 @@
       <workItem from="1677218599134" duration="62000" />
       <workItem from="1677239014589" duration="4393000" />
       <workItem from="1677246335519" duration="7096000" />
-      <workItem from="1677299846037" duration="8369000" />
+      <workItem from="1677299846037" duration="10614000" />
+      <workItem from="1677323975369" duration="4463000" />
+      <workItem from="1677405381777" duration="12972000" />
     </task>
     <servers />
   </component>
