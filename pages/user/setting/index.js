@@ -1,5 +1,3 @@
-import Usersettingform from "../../../components/usersettingbasic";
-
 require("./index.less")
 import React, {useState} from "react";
 import Navibar from "../../../components/naviBar";
@@ -7,17 +5,24 @@ import Coverlogin from "../../../components/coverlogin";
 import Wangyiyunfooter from "../../../components/wangyiyunfooter";
 import Leftminiad from "../../../components/leftminiad";
 import Fixedfield from "../../../components/fixedfield";
-import {Button} from "antd";
+import Usersettingaddress from "../../../components/usersettingaddress";
+import Usersettingform from "../../../components/usersettingbasic"
 
 
 
 export default function ProviderSearch() {
+    const[settingshow,setsettingshow] = useState(true)
 
-
+    const [settingstyle,setsettingstyle] =useState(true)
 
     const [showCoverLogin, setshowCoverLogin] = useState(false)
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
+
+    }
+    const _setsettingshow = () => {
+        setsettingshow(!settingshow)
+        setsettingstyle(!settingstyle)
 
     }
 
@@ -32,25 +37,24 @@ export default function ProviderSearch() {
                 <div className={"tabs-bar"}>
 
                     {/*not-get-focus没有获取焦点的样式，get-focus是获取焦点的样式*/}
-                    <div className={"get-focus"}>
-                        <a href="#">资料设置</a>
+                    <div onClick={_setsettingshow} className={settingstyle ? "get-focus": "not-get-focus"}>
+                            资料设置
                     </div>
-                    <div className={"not-get-focus"}>
-                        <a href="#">收货地址设置</a>
+                    <div onClick={_setsettingshow} className={settingstyle ? "not-get-focus": "get-focus"}>
+                            收货地址设置
                     </div>
                 </div>
-                <div className={"complete-information"}>
-                    完善个人资料是让别人认识你的第一步
-                </div>
-                <div className={"submit-form"}>
-                    <div className={"top-div"}>
-                        <Usersettingform/>
-                    </div>
-                    <div className={"bottom-div"}>
-                        <Button className={"save-button"} type="primary">保存</Button>
-                    </div>
 
-                </div>
+                {
+                    settingshow ? <Usersettingform/>:<Usersettingaddress/>
+                }
+
+
+
+
+
+
+
 
             </div>
             <Wangyiyunfooter/>
