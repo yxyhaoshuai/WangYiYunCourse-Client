@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/settingspageslayout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/settingspageslayout/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/card/categorycard/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/card/categorycard/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/card/categoryfreecard/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/categorycardlayout/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/categorycardlayout/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/img-category.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/usersettingaddress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/usersettingaddress/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/setting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/setting/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/setting/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/livestreamingcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/livestreamingcard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/lunbo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/lunbo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/flexLayout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/layout/flexLayout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +130,13 @@
       <workItem from="1677422680100" duration="794000" />
       <workItem from="1677471384988" duration="5190000" />
       <workItem from="1677486724350" duration="10506000" />
-      <workItem from="1677502640939" duration="998000" />
+      <workItem from="1677502640939" duration="3264000" />
+      <workItem from="1677560764843" duration="2768000" />
+      <workItem from="1677564544915" duration="162000" />
+      <workItem from="1677564801324" duration="35000" />
+      <workItem from="1677588272090" duration="5400000" />
+      <workItem from="1677631648688" duration="7317000" />
+      <workItem from="1677670697168" duration="7109000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,66 @@
+.category-free-card{
+    background-color: white;
+    padding-bottom: 20px;
+    &:hover{
+      cursor: pointer;
+      box-shadow: 0 0 4px 1px #c6c6c6;
+    }
+    &:hover .img-div>img{
+      transform: scale(1.2,1.2);
+    }
+    .img-div{
+      overflow: hidden;
+      img{
+        width: 101%;
+        height: 101%;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+    }
+    .text-div{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100px;
+      .course-card{
+        padding: 8px;
+        height: 58px;
+        .is-self-innovate{
+          background-color: #ff7353;
+          padding: 0 4px  0 4px;
+          border-radius: 4px;
+          color: white;
+          font-size: 12px;
+
+        }
+        .course-title{
+          margin-left: 10px;
+        }
+
+      }
+      .score-div{
+        height: 17px;
+        line-height: 17px;
+        width: 100%;
+        padding: 0 8px;
+        span{
+          font-size: 12px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .score-figure{
+          margin-left: 6px;
+        }
+
+
+
+      }
+      .course-price{
+        padding: 0 8px 0 8px;
+
+      }
+    }
+
+  }
+

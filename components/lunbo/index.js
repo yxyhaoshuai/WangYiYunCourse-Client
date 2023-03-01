@@ -10,6 +10,8 @@ class Lunbo extends Component{
     _handlerNext = ()=>{
         this._DOM.next()
     }
+
+
     render(){
         const contentStyle = {
             height: '100%',
@@ -46,7 +48,7 @@ class Lunbo extends Component{
                     <a href={"#"}>
                         <img src={"assets/images/lunbo5.png"} style={contentStyle}/>
                     </a>
-                </div>
+                    </div>
                     <div>
                         <a href={"#"}>
                             <img src={"assets/images/lunbo6.png"} style={contentStyle}/>

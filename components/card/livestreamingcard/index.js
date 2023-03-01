@@ -7,8 +7,9 @@ import React, {Component} from "react";
 require("./index.less")
 class Livestreamingcard extends Component{
     render(){
+        const {count} = this.props;
         return (
-            <div className={"live-streaming"}>
+            <div className={`live-streaming ${count ? count : ""}`}>
                 <Card
                     className={"live-streaming-card"}
                     style={{
@@ -20,7 +21,7 @@ class Livestreamingcard extends Component{
                     cover={
                         <img
                             alt="example"
-                            src="assets/images/teachercard.png"
+                            src="/assets/images/teachercard.png"
                         />
                     }
 
