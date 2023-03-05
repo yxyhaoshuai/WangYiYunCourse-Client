@@ -1,3 +1,5 @@
+import {BaseURL} from "../../config/serverConfig";
+
 require("./index.less")
 
 import React, {Component} from "react";
@@ -12,10 +14,13 @@ class Lunbo extends Component{
     }
 
 
+
+
     render(){
         const contentStyle = {
             height: '100%',
         };
+        const lunbolist = this.props.lunbolist;
 
         return (
             <div className={"lunbo-component"}>
@@ -24,41 +29,18 @@ class Lunbo extends Component{
 
                 {/*下面的代码中dom=>this._DOM=dom让它变成受控组件*/}
                 <Carousel ref={dom=>this._DOM=dom} autoplay className="carousel-ul">
-                    <div>
+                    {
+                        lunbolist.map((item)=>{
+                            return <div>
 
-                            <img src={"assets/images/lunbo1.png"} style={contentStyle}/>
+                                <img key={item.id} src={BaseURL+item.ad_img_url} style={contentStyle}/>
 
-                    </div>
-                    <div>
-                        <a href={"#"}>
-                            <img src={"assets/images/lunbo2.png"} style={contentStyle}/>
-                        </a>
-                    </div>
-                    <div>
-                        <a href={"#"}>
-                            <img src={"assets/images/lunbo3.png"} style={contentStyle}/>
-                        </a>
-                    </div>
-                    <div>
-                        <a href={"#"}>
-                            <img src={"assets/images/lunbo4.png"} style={contentStyle}/>
-                        </a>
-                    </div>
-                    <div>
-                    <a href={"#"}>
-                        <img src={"assets/images/lunbo5.png"} style={contentStyle}/>
-                    </a>
-                    </div>
-                    <div>
-                        <a href={"#"}>
-                            <img src={"assets/images/lunbo6.png"} style={contentStyle}/>
-                        </a>
-                    </div>
-                    <div>
-                        <a href={"#"}>
-                            <img src={"assets/images/lunbo7.png"} style={contentStyle}/>
-                        </a>
-                    </div>
+                            </div>
+                        })
+                    }
+
+
+
 
                 </Carousel>
             </div>

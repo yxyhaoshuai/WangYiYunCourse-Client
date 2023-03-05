@@ -1,274 +1,62 @@
 import Courseteachercard from "../card/courseteachercard";
+import {useEffect} from "react";
 
 require("./index.less")
-export default function Categorylistings(){
+export default function Categorylistings({category}){
+
+    useEffect(() => {
+
+    });
+
+
     return(
         <div className={"category-listings"}>
             <div className={"category-listings-middle"}>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
+                {
+                    category.map((item,index)=>{
+                       return  <div key={index} className={"category-listings-middle-list"}>
+                           <span>{item[0].class_name1}</span>
+                           <span>/</span>
+                           <span>{item[0].class_name2}</span>
+                           <span>/</span>
+                           <span>{item[1].class_name2}</span>
+                           <span>/</span>
+                           <span>{item[1].class_name2}</span>
+                           <div className={"category-intro-operation-pane"}>
+                               <div className={"category-name"}>
                             <span className={"iconfont special"}>
-                                有道英语&#xe626;
+                                {item[0].class_name1}&#xe626;
                             </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
-                <div className={"category-listings-middle-list"}>
-                <span>有道英语</span>
-                <span>/</span>
-                <span>全面提升</span>
-                <span>/</span>
-                <span>口语训练</span>
-                <span>/</span>
-                <span>小语种</span>
-                <div className={"category-intro-operation-pane"}>
-                    <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                    </div>
-                    <div className={"category-intro"}>
-                        <div>
-                            <span>全面提升</span>
-                        </div>
-                        <div>
-                            <span>口语训练</span>
-                        </div>
-                        <div>
-                            <span>小语种</span>
-                        </div>
-                    </div>
-                    <div className={"category-course"}>精选好课</div>
-                    <div className={"category-course-card"}>
-                        <Courseteachercard/>
-                        <Courseteachercard/>
-                        <Courseteachercard/>
-                    </div>
-                </div>
-            </div>
-                <div className={"category-listings-middle-list"}>
-                    <span>有道英语</span>
-                    <span>/</span>
-                    <span>全面提升</span>
-                    <span>/</span>
-                    <span>口语训练</span>
-                    <span>/</span>
-                    <span>小语种</span>
-                    <div className={"category-intro-operation-pane"}>
-                        <div className={"category-name"}>
-                            <span className={"iconfont special"}>
-                                有道英语&#xe626;
-                            </span>
-                        </div>
-                        <div className={"category-intro"}>
-                            <div>
-                                <span>全面提升</span>
-                            </div>
-                            <div>
-                                <span>口语训练</span>
-                            </div>
-                            <div>
-                                <span>小语种</span>
-                            </div>
-                        </div>
-                        <div className={"category-course"}>精选好课</div>
-                        <div className={"category-course-card"}>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                            <Courseteachercard/>
-                        </div>
-                    </div>
-                </div>
+                               </div>
+                               <div className={"category-intro"}>
+                                   {
+                                       item.map((item2,index)=>{
+
+                                           return <div key={index}>
+                                               <span>{item2.class_name2}</span>
+                                           </div>
+                                       })
+                                   }
+
+                               </div>
+                               <div className={"category-course"}>精选好课</div>
+                               <div className={"category-course-card"}>
+                                   {
+                                       item.map((item3,index)=>{
+                                           if (item3.course_title!==null){
+                                               return <Courseteachercard coursetitle={item3.course_title} courseimg={item3.img_url} key={index}/>
+                                           }
+                                       })
+                                   }
+                                   {/*<Courseteachercard/>*/}
+                                   {/*<Courseteachercard/>*/}
+                                   {/*<Courseteachercard/>*/}
+
+                               </div>
+                           </div>
+                       </div>
+                    })
+                }
 
             </div>
         </div>

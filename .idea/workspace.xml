@@ -5,25 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/api/articleApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/courseApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/homeApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/searchApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/teacherApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/userApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/coursePlayer待改/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/coursePlayer待改/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/serverConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/courseLearn/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/courseLearn/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/course/play待改.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/临时video到时候删/01.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/arrayTool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/dateTool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WangYiYunCourse-Client-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WangYiYunCourse-Client-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/homeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/homeApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/courseteachercard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/courseteachercard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorylistings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorylistings/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorylistings/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorylistings/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/lunbo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/lunbo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/serverConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/serverConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/临时video到时候删/01.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client/config",
+    "last_opened_file_path": "C:/Users/YXY/Desktop/撩课项目完结/LXT-App-Client-main",
     "list.type.of.created.stylesheet": "Less",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -75,11 +70,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\public\assets" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\config" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\pages\course" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components" />
-      <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\public\assets\临时video" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\YXY\Desktop\WangYiYunCourse-Client-main\pages\course\introduction" />
@@ -145,7 +140,13 @@
       <workItem from="1677588272090" duration="5400000" />
       <workItem from="1677631648688" duration="7317000" />
       <workItem from="1677670697168" duration="8782000" />
-      <workItem from="1677911272409" duration="3532000" />
+      <workItem from="1677911272409" duration="4426000" />
+      <workItem from="1677919977722" duration="1117000" />
+      <workItem from="1677921167661" duration="364000" />
+      <workItem from="1677934491546" duration="3232000" />
+      <workItem from="1677938736448" duration="1694000" />
+      <workItem from="1678000062682" duration="15062000" />
+      <workItem from="1678022393262" duration="2055000" />
     </task>
     <servers />
   </component>

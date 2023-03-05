@@ -1,15 +1,17 @@
+import {BaseURL} from "../../../config/serverConfig";
+
 require("./index.less")
-export default function Courseteachercard(){
+export default function Courseteachercard({courseimg,coursetitle}){
     return(
         <div className={"course-teacher-card"}>
             <div className={"teacher-heard"}>
                 <a href="components/card-category/courseteachercard/index#">
-                    <img src="assets/images/teacherhead.png"/>
+                    <img  src={BaseURL + courseimg} />
                 </a>
             </div>
             <div className={"course-intro"}>
                 <a href="components/card-category/courseteachercard/index#">
-                    最强大脑,三天挑战极限记忆力
+                    {coursetitle}
                 </a>
 
             </div>
