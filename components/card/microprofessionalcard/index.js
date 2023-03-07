@@ -1,19 +1,22 @@
+import {BaseURL} from "../../../config/serverConfig";
+
 require("./index.less")
 import React, {Component} from "react";
 
 class Microprofessionlcard extends Component{
     render(){
+        const {data} = this.props;
         return (
             <div className={"course-card-micro"}>
                 <div className={"course-card_img"}>
                     <div className={"course-card_img_jpk"}>
-                        <img src="assets/images/microteachercardimg.png" alt=""/>
+                        <img src={BaseURL + data.img_url} alt=""/>
                     </div>
 
                 </div>
                 <div className={"course-card_content"}>
                     <div className={"classify-intro"}>
-                        网易数据分析高薪实战营【升职加薪】
+                        {data.course_title}
                     </div>
                 </div>
 

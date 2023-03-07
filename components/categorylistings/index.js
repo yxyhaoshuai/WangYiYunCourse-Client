@@ -2,7 +2,7 @@ import Courseteachercard from "../card/courseteachercard";
 import {useEffect} from "react";
 
 require("./index.less")
-export default function Categorylistings({category}){
+export default function Categorylistings({category,category2}){
 
     useEffect(() => {
 
@@ -21,7 +21,7 @@ export default function Categorylistings({category}){
                            <span>/</span>
                            <span>{item[1].class_name2}</span>
                            <span>/</span>
-                           <span>{item[1].class_name2}</span>
+                           <span>{item[2].class_name2}</span>
                            <div className={"category-intro-operation-pane"}>
                                <div className={"category-name"}>
                             <span className={"iconfont special"}>
@@ -41,16 +41,17 @@ export default function Categorylistings({category}){
                                </div>
                                <div className={"category-course"}>精选好课</div>
                                <div className={"category-course-card"}>
+
+                                   {/*该下面*/}
                                    {
-                                       item.map((item3,index)=>{
-                                           if (item3.course_title!==null){
-                                               return <Courseteachercard coursetitle={item3.course_title} courseimg={item3.img_url} key={index}/>
-                                           }
+                                       category2.filter((item)=>{
+                                           return item.categoryid===index+1
+                                       }).map((item2,index2)=>{
+
+                                           return <Courseteachercard data={item2} key={index2}/>
                                        })
                                    }
-                                   {/*<Courseteachercard/>*/}
-                                   {/*<Courseteachercard/>*/}
-                                   {/*<Courseteachercard/>*/}
+
 
                                </div>
                            </div>

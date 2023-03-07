@@ -1,23 +1,32 @@
+import {BaseURL} from "../../../config/serverConfig";
+
 require("./index.less")
 import React, {Component} from "react";
 
 class Seriesofcourses extends Component{
     render(){
+        const {data} = this.props;
         return (
             <div className={"aeries-of-courses"}>
                 <a href="components/card/seriesofcourses/index#" className={"j-href"}>
                     <div className={"card"}>
                         <div className={"img"}>
-                            <img src="assets/images/coursecard.png" alt=""/>
+                            <img src={BaseURL + data.series_fm_url} alt=""/>
                         </div>
 
 
                         <div className={"aeries-card-content"}>
                             <div className={"uc-recomend-series-title"}>
-                                全民一起玩Python+VBA
+                                {
+                                    data.title
+                                }
                             </div>
                             <div className={"uc-recomend-series-intro"}>
-                                <p>数据分析学这一门就够了</p>
+                                <p>
+                                    {
+                                        data.intro
+                                    }
+                                </p>
                             </div>
 
                         </div>

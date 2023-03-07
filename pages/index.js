@@ -24,7 +24,12 @@ import Fixedfield from "../components/fixedfield";
 import Leftminiad from "../components/leftminiad";
 import Coverlogin from "../components/coverlogin";
 import Interest from "../components/interest";
-import {getCategoryList, getLunBoList} from "../api/homeApi";
+import {
+    getCategoryList1, getCategoryList2,
+    getHomeCourseList,
+    getHomeSeriesCourseList,
+    getLunBoList
+} from "../api/homeApi";
 import Head from "next/head";
 
 class Home extends Component{
@@ -35,15 +40,35 @@ class Home extends Component{
             showCoverLogin: false,
             showInterest:false
         }
+
+
+
         //课程分类列表数据处理
-        const { categoryList, lunbolist} = this.props;
-        this.lunbolist=lunbolist
+        const {categoryList1, categoryList2, lunbolist, homeCourseList, homeSeriesCourseList} = this.props;
+
+
+
+        //初始化课程分类
+        this.categoryList1=categoryList1;
+        this.categoryList2=categoryList2;
+
+        //初始化轮播图列表
+        this.lunbolist=lunbolist;
+
+        //初始化首页课程列表
+        this.homeCourseList=homeCourseList;
+
+
+        //初始化系列课程
+        this.homeSeriesCourseList = homeSeriesCourseList;
+
 
         this.category = []
         for (let i = 1; i <= 8; i++) {
-            let categoryid =categoryList.filter(item=> item.id === i)
+            let categoryid =categoryList1.filter(item=> item.id1 === i)
             this.category.push(categoryid)
         }
+        console.log( this.categoryList2)
     }
     //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
     componentDidMount() {
@@ -101,7 +126,7 @@ class Home extends Component{
                 {/*#####以下的代码在企业的实际开发当中会额外封装容器组件，但是在我这里没必要，要封装也是可以的#####*/}
                 <Navibar  _loginShow={this._loginShow}/>
                 <div className={"content bx"}>
-                    <Categorylistings category={this.category}/>
+                    <Categorylistings category={this.category} category2={this.categoryList2}/>
                     <Lunbo lunbolist={this.lunbolist}/>
                 </div>
                 <PublicityItem/>
@@ -109,17 +134,21 @@ class Home extends Component{
                     <div className={"left"}>
                         <Coursecardlayoutmore titel={"直播公开课"} className={"card"}>
                             <div className={"display"}>
-                                <Livestreamingcard/>
-                                <Livestreamingcard/>
-                                <Livestreamingcard/>
+                                {
+                                    this.homeCourseList.filter((item=>item.is_live_open_course===1)).map((item2)=>{
+                                        return <Livestreamingcard key={item2.id} data={item2}/>
+                                    })
+                                }
                             </div>
                         </Coursecardlayoutmore>
                     </div>
                     <div className={"right"}>
                         <Coursecardlayoutmore titel={"课堂直播"}>
-                            <Teacheritem/>
-                            <Teacheritem/>
-                            <Teacheritem/>
+                            {
+                                this.homeCourseList.filter((item=>item.is_live===1)).map((item2)=>{
+                                    return <Teacheritem key={item2.id} data={item2}/>
+                                })
+                            }
                         </Coursecardlayoutmore>
 
                     </div>
@@ -127,20 +156,24 @@ class Home extends Component{
                 <div className={"course-module_content bx"}>
                     <Coursecardlayout titel={"精品课"}>
                         <div className={"display"}>
-                            <Coursecard/>
-                            <Coursecard/>
-                            <Coursecard/>
-                            <Coursecard/>
+                            {
+                                this.homeCourseList.filter((item=>item.special_course_categorys_id===2)).map((item2)=>{
+                                    return <Coursecard key={item2.id} data={item2}/>
+                                })
+                            }
+
                         </div>
                     </Coursecardlayout>
                 </div>
                 <div className={"course-module_content bx"}>
                     <Coursecardlayoutmore titel={"微专业"}>
                         <div className={"display special"}>
-                            <Microprofessionlcard/>
-                            <Microprofessionlcard/>
-                            <Microprofessionlcard/>
-                            <Microprofessionlcard/>
+                            {
+                                this.homeCourseList.filter((item=>item.special_course_categorys_id===4)).map((item2)=>{
+                                    return <Microprofessionlcard key={item2.id} data={item2}/>
+                                })
+                            }
+
                         </div>
                     </Coursecardlayoutmore>
                 </div>
@@ -155,10 +188,11 @@ class Home extends Component{
                 <div className={"series-of-courses-bx bx"}>
                     <Coursecardlayout className="display-flex" titel={"系列课程"}>
                         <div className={"display-flex"}>
-                            <Seriesofcourses/>
-                            <Seriesofcourses/>
-                            <Seriesofcourses/>
-                            <Seriesofcourses/>
+                            {
+                                this.homeSeriesCourseList.map((item)=>{
+                                    return <Seriesofcourses key={item.id} data={item}/>
+                                })
+                            }
                         </div>
                     </Coursecardlayout>
                 </div>
@@ -221,12 +255,16 @@ export const getServerSideProps = async (context) =>
 
 
     //如果同时发送好多个网络请求就在[]里填写网络请求方法，然后在下面的props中导出到页面的props
-    let result = await Promise.all([getCategoryList(),getLunBoList()])
-    const [categoryList,lunbolist] = result.map(item=>item.data)
+    let result = await Promise.all([getCategoryList1(),getCategoryList2(),getLunBoList(),getHomeCourseList(),getHomeSeriesCourseList()])
+    const [categoryList1,categoryList2,lunbolist,homeCourseList,homeSeriesCourseList] = result.map(item=>item.data)
     return {
         props: {
-            categoryList,
-            lunbolist
+            categoryList1,
+            categoryList2,
+            lunbolist,
+            homeCourseList,
+            homeSeriesCourseList
+
         }
     }
 }

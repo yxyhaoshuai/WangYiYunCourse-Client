@@ -31,9 +31,9 @@ class Lunbo extends Component{
                 <Carousel ref={dom=>this._DOM=dom} autoplay className="carousel-ul">
                     {
                         lunbolist.map((item)=>{
-                            return <div>
+                            return <div key={item.id}>
 
-                                <img key={item.id} src={BaseURL+item.ad_img_url} style={contentStyle}/>
+                                <img src={BaseURL+item.ad_img_url} style={contentStyle}/>
 
                             </div>
                         })
