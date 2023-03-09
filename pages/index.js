@@ -37,15 +37,13 @@ class Home extends Component{
         super(props);
         this.state = {
             showElem:true,
-            showCoverLogin: false,
-            showInterest:false
+            showCoverLogin:false,
+            showInterest:false,
+            myInterestArray:[]
         }
-
-
 
         //课程分类列表数据处理
         const {categoryList1, categoryList2, lunbolist, homeCourseList, homeSeriesCourseList} = this.props;
-
 
 
         //初始化课程分类
@@ -68,7 +66,6 @@ class Home extends Component{
             let categoryid =categoryList1.filter(item=> item.id1 === i)
             this.category.push(categoryid)
         }
-        console.log( this.categoryList2)
     }
     //在componentDidMount，进行scroll事件的注册，绑定一个函数，让这个函数进行监听处理
     componentDidMount() {
@@ -110,9 +107,28 @@ class Home extends Component{
 
     }
 
+    _pushInterestArray = (key) =>{
+        if(this.state.myInterestArray.indexOf(key)===-1){
+            this.state.myInterestArray.push(key)
+            this.forceUpdate()
+        }else{
+            this.state.myInterestArray.splice(this.state.myInterestArray.indexOf(key), 1)
+            //this.forceUpdate()强制刷新
+            this.forceUpdate()
+        }
+    }
+
+    _pushInterestNet = ()=>{
+        console.log("在这里发送网络请求",this.state.myInterestArray)
+        this.setState({
+            showInterest:!this.state.showInterest
+        })
+
+    }
 
     render(){
         const {showElem ,showCoverLogin,showInterest} =this.state;
+        const myInterestArray = this.state.myInterestArray;
         return (
             <>
                 <Head>
@@ -182,9 +198,12 @@ class Home extends Component{
                         <Activitytabslayout/>
                     </Coursecardlayout>
                 </div>
+
+
                 <div onClick={this._InterestShow}>
                     <Selectionsort/>
                 </div>
+
                 <div className={"series-of-courses-bx bx"}>
                     <Coursecardlayout className="display-flex" titel={"系列课程"}>
                         <div className={"display-flex"}>
@@ -236,7 +255,7 @@ class Home extends Component{
                     showCoverLogin ? <Coverlogin _loginShow={this._loginShow}/> : ''
                 }
                 {
-                    showInterest ? <Interest _InterestShow={this._InterestShow}/> : ''
+                    showInterest ? <Interest _pushInterestNet={this._pushInterestNet} myInterestArray={myInterestArray} _pushInterestArray={this._pushInterestArray} data={this.category} _InterestShow={this._InterestShow}/> : ''
                 }
             </>
         )
@@ -244,16 +263,6 @@ class Home extends Component{
 }
 export const getServerSideProps = async (context) =>
 {
-    // 此处发送网络请求
-    // let focusCourseData = await getFocusCourses()
-    //
-    // let hotCourseData = await getHotCourses()
-    //
-    // let starTeacherData = await getStarTeachers()
-    //
-    // let lastArticleData = await getLastArticle()
-
-
     //如果同时发送好多个网络请求就在[]里填写网络请求方法，然后在下面的props中导出到页面的props
     let result = await Promise.all([getCategoryList1(),getCategoryList2(),getLunBoList(),getHomeCourseList(),getHomeSeriesCourseList()])
     const [categoryList1,categoryList2,lunbolist,homeCourseList,homeSeriesCourseList] = result.map(item=>item.data)
