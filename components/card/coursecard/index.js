@@ -18,7 +18,7 @@ class Coursecard extends Component{
                 <div className={"course-card_content"}>
                     <div className={"classify-intro"}>
                         <span>自研</span>
-                        <span>{data.title}</span>
+                        <span>{data.class_name}</span>
                         <span>{data.course_title}</span>
                     </div>
                     <div className={"course-card_info"}>
