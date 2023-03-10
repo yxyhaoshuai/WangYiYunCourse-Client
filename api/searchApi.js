@@ -1,4 +1,4 @@
 import ajax from "../tools/ajax";
 
-export const getSearchResult = (category, key) => ajax("/api/client/search/"+category, {key})
+export const getSeriesCourses = (key) => ajax("/series-courses-search?keyword="+key)
 

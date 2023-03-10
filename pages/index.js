@@ -39,7 +39,9 @@ class Home extends Component{
             showElem:true,
             showCoverLogin:false,
             showInterest:false,
-            myInterestArray:[]
+            myInterestArray:[],
+            searchBoxValue : ""
+
         }
 
         //课程分类列表数据处理
@@ -151,8 +153,8 @@ class Home extends Component{
                         <Coursecardlayoutmore titel={"直播公开课"} className={"card"}>
                             <div className={"display"}>
                                 {
-                                    this.homeCourseList.filter((item=>item.specialid===10)).map((item2)=>{
-                                        return <Livestreamingcard key={item2.id} data={item2}/>
+                                    this.homeCourseList.filter((item=>item.specialid===10)).map((item2,index)=>{
+                                        return <Livestreamingcard key={index} data={item2}/>
                                     })
                                 }
                             </div>
@@ -161,8 +163,8 @@ class Home extends Component{
                     <div className={"right"}>
                         <Coursecardlayoutmore titel={"课堂直播"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===1)).map((item2)=>{
-                                    return <Teacheritem key={item2.id} data={item2}/>
+                                this.homeCourseList.filter((item=>item.specialid===1)).map((item2,index)=>{
+                                    return <Teacheritem key={index} data={item2}/>
                                 })
                             }
                         </Coursecardlayoutmore>
@@ -173,8 +175,8 @@ class Home extends Component{
                     <Coursecardlayout titel={"精品课"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===2)).map((item2)=>{
-                                    return <Coursecard key={item2.id} data={item2}/>
+                                this.homeCourseList.filter((item=>item.specialid===2)).map((item2,index)=>{
+                                    return <Coursecard key={index} data={item2}/>
                                 })
                             }
 
@@ -185,8 +187,8 @@ class Home extends Component{
                     <Coursecardlayoutmore titel={"微专业"}>
                         <div className={"display special"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===4)).map((item2)=>{
-                                    return <Microprofessionlcard key={item2.id} data={item2}/>
+                                this.homeCourseList.filter((item=>item.specialid===4)).map((item2,index)=>{
+                                    return <Microprofessionlcard key={index} data={item2}/>
                                 })
                             }
 
@@ -208,8 +210,8 @@ class Home extends Component{
                     <Coursecardlayout className="display-flex" titel={"系列课程"}>
                         <div className={"display-flex"}>
                             {
-                                this.homeSeriesCourseList.map((item)=>{
-                                    return <Seriesofcourses key={item.id} data={item}/>
+                                this.homeSeriesCourseList.map((item,index)=>{
+                                    return <Seriesofcourses key={index} data={item}/>
                                 })
                             }
                         </div>
@@ -219,8 +221,8 @@ class Home extends Component{
                     <Coursecardlayout titel={"精选好课"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===5)).map((item2)=>{
-                                    return <Excellentcoursecard key={item2.id} data={item2}/>
+                                this.homeCourseList.filter((item=>item.specialid===5)).map((item2,index)=>{
+                                    return <Excellentcoursecard key={index} data={item2}/>
                                 })
                             }
                         </div>
@@ -230,8 +232,8 @@ class Home extends Component{
                     <Coursecardlayout titel={"新课推荐"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===9)).map((item2)=>{
-                                    return <Newcoursecard key={item2.id} data={item2}/>
+                                this.homeCourseList.filter((item=>item.specialid===9)).map((item2,index)=>{
+                                    return <Newcoursecard key={index} data={item2}/>
                                 })
                             }
 
@@ -242,8 +244,8 @@ class Home extends Component{
                     <Coursecardlayout titel={"免费好课"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===8)).map((item2)=>{
-                                    return <Gratiscoursecard key={item2.id} data={item2}/>
+                                this.homeCourseList.filter((item=>item.specialid===8)).map((item2,index)=>{
+                                    return <Gratiscoursecard key={index} data={item2}/>
                                 })
                             }
 

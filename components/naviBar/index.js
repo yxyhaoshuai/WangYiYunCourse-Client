@@ -1,8 +1,29 @@
 //引入样式
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
+
 require("./index.less")
 
 export default function Navibar(props){
-    const _loginShow = props._loginShow
+
+    //登录逻辑
+    const _loginShow = props._loginShow;
+
+    //获取路由信息
+    const router = useRouter()
+    const {category="course",kw=""} = router.query;
+
+    const [kwV,setKwV] = useState(kw)
+    const [categoryV,setCategoryV] = useState(category)
+
+
+    useEffect(()=>{
+        setCategoryV(category)
+        setKwV(kw)
+
+    },[category,kw])
+
+
     return(
         <div className={"nav bx"}>
             <div className={"nav-bar"}>
@@ -12,21 +33,26 @@ export default function Navibar(props){
                             <img src={"/assets/images/logo.png"}/>
                         </a>
                     </div>
-                    <form className={"nav-search"} action="">
+                    <form className={"nav-search"} action="/courses-search">
                         <div className={"nav-bar-middle-search"}>
                             <div className={"nav-bar-middle-search-type"}>
                                 <label>
-                                    <select name={"category"}>
+                                    <select name={"category"} value={categoryV} onChange={(e)=>{
+                                        setCategoryV(e.target.value)
+                                    }}>
                                         <option value={"course"}>课程</option>
-                                        <option value={"network school"}>网校</option>
+                                        <option value={"network-school"}>网校</option>
                                     </select>
                                 </label>
                             </div>
                             <div className={"nav-bar-middle-search-input"}>
-                                <input type="text" className="j-input" placeholder={"请输入关键字"}/>
+                                <input type="text" className="j-input" name={"kw"} placeholder={"请输入关键字"} value={kwV} onChange={(e)=>{
+                                    setKwV(e.target.value)
+                                }}/>
                             </div>
+
                             <div className={"nav-bar-middle-search-button"}>
-                                搜索
+                                <input className={"button"} type="submit" value="搜索"/>
                             </div>
 
 

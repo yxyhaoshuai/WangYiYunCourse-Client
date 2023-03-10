@@ -3,24 +3,40 @@ import FlexLayout from "../../layout/flexLayout";
 require("./index.less")
 import Crumb from "../../components/crumb";
 import Navibar from "../../components/naviBar";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Coverlogin from "../../components/coverlogin";
 import Searchresultcard from "../../components/card/seriescard";
 import {Tabs} from "antd";
 import Fixedfield from "../../components/fixedfield";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import Leftminiad from "../../components/leftminiad";
+import {useRouter} from "next/router";
+import {getSeriesCourses} from "../../api/searchApi";
 
 
 export default function ProviderSearch() {
+    //获取路由信息
+    const router = useRouter()
+    const {category,kw} = router.query;
+
+
+    //登陆状态
     const [showCoverLogin, setshowCoverLogin] = useState(false)
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
 
     }
+
+    useEffect(()=>{
+        getSeriesCourses(kw).then((result)=>{
+            console.log(result)
+        })
+
+    },[category,kw])
+
     return (
         <>
-                <Navibar  _loginShow={_loginShow}/>
+                <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
