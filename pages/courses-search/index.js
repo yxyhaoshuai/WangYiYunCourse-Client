@@ -11,13 +11,15 @@ import Fixedfield from "../../components/fixedfield";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import Leftminiad from "../../components/leftminiad";
 import {useRouter} from "next/router";
-import {getSeriesCourses} from "../../api/searchApi";
+import {getSearchCourses, getSeriesCourses} from "../../api/searchApi";
+import Searchoursecard from "../../components/card/searchcoursecard";
+import Searchcoursecard from "../../components/card/searchcoursecard";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
     //获取路由信息
     const router = useRouter()
-    const {category,kw} = router.query;
 
 
     //登陆状态
@@ -27,15 +29,35 @@ export default function ProviderSearch() {
 
     }
 
+    const  [coourseCount,setcoourseCount] = useState(0)
+
+    const [data,setData] = useState([])
+
+    const [SearchCourses,setSearchCourses] = useState([])
+
     useEffect(()=>{
+        const {kw} = router.query;
         getSeriesCourses(kw).then((result)=>{
-            console.log(result)
+            setData(result.data)
+            setcoourseCount(result.data.length)
         })
 
-    },[category,kw])
+        getSearchCourses(kw).then((result)=>{
+            setSearchCourses(result.data)
+
+        })
+
+
+
+
+    },[router.query.category,router.query.kw])
 
     return (
         <>
+            <Head>
+                <title>搜索结果</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
                 <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
@@ -46,9 +68,9 @@ export default function ProviderSearch() {
                 <div className={"search-result-middle bx"}>
                     <div className={"search-result-text"}>
                         <span>共有</span>
-                        <span>14</span>
+                        <span>{coourseCount}</span>
                         <span>门包含“</span>
-                        <span>撩</span>
+                        <span>{router.query.kw}</span>
                         <span>”的课程</span>
                     </div>
                 </div>
@@ -64,12 +86,9 @@ export default function ProviderSearch() {
             <div className={"series-result-card-big"}>
                 <div className={"series-result-card-middle bx"}>
                     <FlexLayout>
-                        <Searchresultcard count="column5"/>
-                        <Searchresultcard count="column5"/>
-                        <Searchresultcard count="column5"/>
-                        <Searchresultcard count="column5"/>
-                        <Searchresultcard count="column5"/>
-                        <Searchresultcard count="column5"/>
+                        {
+                            data.map(item => <Searchresultcard data={item} key={item.id} count="column5"/>)
+                        }
                     </FlexLayout>
                 </div>
             </div>
@@ -89,12 +108,9 @@ export default function ProviderSearch() {
             <div className={"series-result-tabs-card"}>
                 <div className={"series-result-card-middle bx"}>
                     <FlexLayout>
-                        <Searchresultcard count="column5" is_score/>
-                        <Searchresultcard count="column5" is_score/>
-                        <Searchresultcard count="column5" is_score/>
-                        <Searchresultcard count="column5" is_score/>
-                        <Searchresultcard count="column5" is_score/>
-                        <Searchresultcard count="column5" is_score/>
+                        {
+                            SearchCourses.map(item=><Searchcoursecard data={item} key={item.id} count="column5" is_score/>)
+                        }
                     </FlexLayout>
                 </div>
             </div>

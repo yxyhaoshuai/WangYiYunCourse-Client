@@ -1,6 +1,7 @@
 //引入样式
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
+import {message} from "antd";
 
 require("./index.less")
 
@@ -16,6 +17,19 @@ export default function Navibar(props){
     const [kwV,setKwV] = useState(kw)
     const [categoryV,setCategoryV] = useState(category)
 
+    //输入框为空时的提示
+
+    const info = () => {
+        message.info({
+            content: '输入框不能为空！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+
 
     useEffect(()=>{
         setCategoryV(category)
@@ -23,13 +37,21 @@ export default function Navibar(props){
 
     },[category,kw])
 
+    const isNull = (e)=>{
+        if (kwV.length === 0 ){
+            e.preventDefault()
+            info()
+        }
+
+    }
+
 
     return(
         <div className={"nav bx"}>
             <div className={"nav-bar"}>
                 <div className={"nav-bar-middle"}>
                     <div className={"nav-bar-middle-logo"}>
-                        <a href={"#"}>
+                        <a href={"http://localhost:3000/"}>
                             <img src={"/assets/images/logo.png"}/>
                         </a>
                     </div>
@@ -52,7 +74,7 @@ export default function Navibar(props){
                             </div>
 
                             <div className={"nav-bar-middle-search-button"}>
-                                <input className={"button"} type="submit" value="搜索"/>
+                                <input onClick={isNull} className={"button"} type="submit" value="搜索"/>
                             </div>
 
 
