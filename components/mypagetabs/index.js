@@ -8,9 +8,11 @@ class Mypagetabs extends Component{
         return (
             <div className={"tabs"}>
                 <div className={"tabs-bx bx"}>
-                    <Tabs defaultActiveKey="1">
-                        <Tabs.TabPane tab="课程" key="1">
+                    <Tabs onChange={(e)=>{
+                        this.props.setCurrentStateFunction(e)
 
+                    }} defaultActiveKey="1">
+                        <Tabs.TabPane tab="课程" key="1">
                         </Tabs.TabPane>
                         <Tabs.TabPane tab="收藏夹" key="2">
                         </Tabs.TabPane>

@@ -9,8 +9,11 @@ import {BaseURL} from "../../../config/serverConfig";
 export default function Searchresultcard({count,is_score,data={}}) {
     const score_content =
         <div className={"content-div"}>
-            <Rate className={"score-div"} disabled defaultValue={2} />
-            <div className={"font-color"}>免费</div>
+            <Rate className={"score-div"} disabled defaultValue={data.avg_score} />
+            {
+                data.avg_score
+            }
+            <div className={"font-color"}>{data.price===0? "免费": "￥"+data.price}</div>
         </div>;
 
 

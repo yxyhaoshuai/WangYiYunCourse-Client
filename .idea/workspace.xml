@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/api/cartApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/officialNotice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/myStudy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/card/searchcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/searchcoursecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/messagetabitem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/messagetabitem/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mycart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mycart/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mycart/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/mycart/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mypagecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mypagetabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagetabs/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +181,7 @@
       <workItem from="1679053435879" duration="1210000" />
       <workItem from="1679125549551" duration="131000" />
       <workItem from="1679125737917" duration="328000" />
-      <workItem from="1679305952193" duration="3502000" />
+      <workItem from="1679305952193" duration="12313000" />
     </task>
     <servers />
   </component>

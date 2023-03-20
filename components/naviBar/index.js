@@ -7,6 +7,20 @@ import Link from "next/link";
 require("./index.less")
 
 export default function Navibar(props){
+    //全局消息
+    const success = () => {
+        message.success({
+            content: '开发学习过程中的非必要页面，此页面没有开发！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+    const messageStart = ()=>{
+        success()
+    }
 
     //登录逻辑
     const _loginShow = props._loginShow;
@@ -121,16 +135,25 @@ export default function Navibar(props){
                             </Link>
                         </div>
                         <div className={"xiaoXi"}>
-                            <a href="#" className={"iconfont"}>&#xe625;</a>
+                            <Link href={{
+                                pathname:"/message"
+                            }} >
+                                <a className={"iconfont"}>&#xe625;</a>
+                            </Link>
                         </div>
                         <div className={"VipWeDengLu"}>
                             <div className={"VipWeDengLu-mini"}>
                                 <div className={"vip-mystudy-div"}>
                                     <div className={"vip"}>
-                                        <a href="#">会员中心</a>
+                                        <a href="#" onClick={()=>{messageStart()}}>会员中心</a>
                                     </div>
                                     <div className={"mystudy"}>
-                                        <a href="#">我的学习</a>
+                                        <Link href={{
+                                            pathname:"/my"
+                                        }} >
+                                            <a href="#">我的学习</a>
+                                        </Link>
+
                                     </div>
                                 </div>
                                 <div className={"login"}>
