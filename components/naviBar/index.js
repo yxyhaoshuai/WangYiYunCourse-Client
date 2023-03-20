@@ -2,6 +2,7 @@
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {message} from "antd";
+import Link from "next/link";
 
 require("./index.less")
 
@@ -113,7 +114,11 @@ export default function Navibar(props){
                             </div>
                         </div>
                         <div className={"gouWuChe"}>
-                            <a href="#" className={"iconfont"}>&#xe73d;</a>
+                            <Link href={{
+                                pathname:"/cart"
+                            }} >
+                                <a className={"iconfont"}>&#xe73d;</a>
+                            </Link>
                         </div>
                         <div className={"xiaoXi"}>
                             <a href="#" className={"iconfont"}>&#xe625;</a>

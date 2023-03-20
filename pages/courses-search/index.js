@@ -1,6 +1,5 @@
-import FlexLayout from "../../layout/flexLayout";
-
 require("./index.less")
+import FlexLayout from "../../layout/flexLayout";
 import Crumb from "../../components/crumb";
 import Navibar from "../../components/naviBar";
 import React, {useEffect, useState} from "react";
@@ -12,7 +11,6 @@ import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import Leftminiad from "../../components/leftminiad";
 import {useRouter} from "next/router";
 import {getSearchCourses, getSeriesCourses} from "../../api/searchApi";
-import Searchoursecard from "../../components/card/searchcoursecard";
 import Searchcoursecard from "../../components/card/searchcoursecard";
 import Head from "next/head";
 
@@ -21,35 +19,31 @@ export default function ProviderSearch() {
     //获取路由信息
     const router = useRouter()
 
-
     //登陆状态
     const [showCoverLogin, setshowCoverLogin] = useState(false)
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
-
     }
 
+    //搜索结果个数
     const  [coourseCount,setcoourseCount] = useState(0)
 
+    //系列课程结果数据
     const [data,setData] = useState([])
 
+    //课程结果数据
     const [SearchCourses,setSearchCourses] = useState([])
 
+    //CSR网络请求获取数据
     useEffect(()=>{
         const {kw} = router.query;
         getSeriesCourses(kw).then((result)=>{
             setData(result.data)
             setcoourseCount(result.data.length)
         })
-
         getSearchCourses(kw).then((result)=>{
             setSearchCourses(result.data)
-
         })
-
-
-
-
     },[router.query.category,router.query.kw])
 
     return (

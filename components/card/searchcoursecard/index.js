@@ -14,7 +14,7 @@ export default function Searchcoursecard({count,is_score,data={}}) {
                 data.avg_score===null ? <span>该课程未获得评价</span> : <><Rate className={"score-div"} allowHalf disabled defaultValue={data.avg_score} />
                     {
                         data.avg_score
-                    }</>
+                    } 分</>
             }
 
             {

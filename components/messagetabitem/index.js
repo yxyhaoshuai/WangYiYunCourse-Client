@@ -1,79 +1,77 @@
 require("./index.less")
-import React, {Component} from "react";
+import {useRouter} from "next/router";
+import React, {useEffect, useState} from "react";
+import {getOfficialNotice} from "../../api/officialNotice";
+import {message} from "antd";
 
-class Messagetabitem extends Component{
-    render(){
-        return (
+export default function Messagetabitem() {
+
+    //全局消息
+    const success = () => {
+        message.success({
+            content: '不好意思哦，网站架构还没有扩展到下面这几个条目，以后会扩展越来越多的模块，敬请期待！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+    //选中的tab状态
+    const [tabCurrentStatus,setTabCurrentStatus] = useState(0)
+    //tab的文本内容
+    const tabTextContent = ["平台通知","互动提醒","课程提醒","私信"]
+    //页面内容信息
+    const router = useRouter()
+    //改变选中状态
+    const setTabCurrentStatusMethod = (index)=>{
+        setTabCurrentStatus(index)
+        if (index>0){
+            success()
+        }
+    }
+    //数据条目
+    const [dataItem,setDataItem] = useState([])
+
+    //发送网络请求拿官方消息的数据条目
+    useEffect(()=>{
+        getOfficialNotice().then((result)=>{
+            setDataItem(result.data)
+
+        })
+
+
+    },[router.route])
+
+    return (
             <div className={"flex-layout bx"}>
                 <div className={"md-message-layout_tab"}>
-                    <div className={"um-message-tab-view_item"}>课程提醒</div>
-                    <div className={"um-message-tab-view_item current"}>互动提醒</div>
-                    <div className={"um-message-tab-view_item"}>平台通知</div>
-                    <div className={"um-message-tab-view_item"}>私信</div>
+                    {
+                        tabTextContent.map((item,index)=>{
+                            return <div key={index} onClick={()=>setTabCurrentStatusMethod(index)} className={`um-message-tab-view_item ${index===tabCurrentStatus? "current" : ""}`}>{item}</div>
+                        })
+                    }
                 </div>
                 <div className={"md-message-layout_lst"}>
                     <ul className={"ux-message-list-view_ul"}>
-                        <li>
+                        {
+                            dataItem.map((item)=>{
+                                return <li key={item.id}>
                                 <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
+                                    <a href="#" >{item.official_notice}</a>
                                 </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
-                        <li>
+
                                 <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
+                                    {
+                                        item.create_time
+                                    }
                                 </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
-                        <li>
-                                <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
-                                </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
-                        <li>
-                                <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
-                                </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
-                        <li>
-                                <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
-                                </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
-                        <li>
-                                <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
-                                </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
-                        <li>
-                                <span>
-                                    <a href="#">【限时福利】恭喜你被福利砸中啦，满100立减5元，仅限3天内有效！千门好课VIP免费学，PS设计、Office精通、Python应用等优质好课等你来学！开会员最高加赠80元通用神券、折上9折券，戳我查看>></a>
-                                </span>
-                            <span>
-                                    2月20日21:12
-                                </span>
-                        </li>
+                                </li>
+                            })
+                        }
                     </ul>
                 </div>
             </div>
-        )
-    }
+    )
 }
-export default Messagetabitem;
 

@@ -12,8 +12,6 @@ export default function ProviderSearch() {
         setshowCoverLogin(!showCoverLogin)
 
     }
-
-
     return (
         <>
             <Navibar _loginShow={_loginShow}/>
