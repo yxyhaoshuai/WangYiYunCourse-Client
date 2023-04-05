@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/api/myStudy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/seriesCourseApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/card/seriescard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriescard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mypagecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mypagetabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagetabs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seriesbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriesbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seriescourseitem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriescourseitem/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seriescourseitem/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriescourseitem/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seriesimg/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriesimg/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seriesimg/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriesimg/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/series/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/series/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +185,17 @@
       <workItem from="1679125549551" duration="131000" />
       <workItem from="1679125737917" duration="328000" />
       <workItem from="1679305952193" duration="12313000" />
+      <workItem from="1680330727630" duration="10000" />
+      <workItem from="1680335782446" duration="4226000" />
+      <workItem from="1680352054563" duration="1838000" />
+      <workItem from="1680354432155" duration="62000" />
+      <workItem from="1680358860732" duration="608000" />
+      <workItem from="1680526182105" duration="767000" />
+      <workItem from="1680591789191" duration="4000" />
+      <workItem from="1680591951585" duration="1106000" />
+      <workItem from="1680596945619" duration="12000" />
+      <workItem from="1680607792915" duration="58000" />
+      <workItem from="1680693044265" duration="11109000" />
     </task>
     <servers />
   </component>

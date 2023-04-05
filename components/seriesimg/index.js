@@ -2,17 +2,19 @@ import {Breadcrumb} from "antd";
 
 require("./index.less")
 import React, {Component} from "react";
+import {BaseURL} from "../../config/serverConfig";
 
 class Seriesing extends Component{
     render(){
+        const {seriesCourseData,seriesCourseListData} = this.props;
         return (
             <div className={"series-course-img"}>
-                <img src="/assets/images/xilieimg.png" alt=""/>
+                <img src={BaseURL + seriesCourseData.course_introduction_img} alt=""/>
                 <div className={"content-module"}>
                     <div className={"Breadcrumb-div"}>
                         <Breadcrumb separator=">">
                             <Breadcrumb.Item>
-                                <a href="">全部课程</a>
+                                <a href="/">全部课程</a>
                             </Breadcrumb.Item>
                             <Breadcrumb.Item>
                                 <a href="">系列课程</a>
@@ -23,10 +25,14 @@ class Seriesing extends Component{
                         </Breadcrumb>
                     </div>
                     <div className={"series-title"}>
-                        撩课-王顺子-Python-爬虫实战系列
+                        {
+                            seriesCourseData.title
+                        }
                     </div>
                     <div className={"series-title-intro"}>
-                        撩课-王顺子-Python-爬
+                        {
+                            seriesCourseData.intro
+                        }
                     </div>
                     <div className={"join"}>
                         <div className={"join-button"}>
@@ -42,7 +48,13 @@ class Seriesing extends Component{
 
                         </div>
                         <div className={"price"}>
-                            <span>￥574.00</span>
+                            <span>￥
+                                {
+                                    seriesCourseListData.reduce((a,b)=>{
+                                        return a+b.price
+                                    },0)
+                                }
+                            </span>
 
                         </div>
                     </div>

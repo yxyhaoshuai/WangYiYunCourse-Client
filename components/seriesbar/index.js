@@ -3,24 +3,22 @@ import React, {Component} from "react";
 
 class Seriesbar extends Component{
     render(){
+        const {seriesCourseListData} = this.props;
         return (
             <div className={"series-bar"}>
                 <div className={"series-bar-bx bx"}>
-                    <div className={"tabs-bar"}>
-                        <a href={"#"}>
-                            爬虫实战-网络剖析
-                        </a>
-                    </div>
-                    <div className={"tabs-bar"}>
-                        <a href={"#"}>
-                            爬虫实战-网络实战
-                        </a>
-                    </div>
-                    <div className={"tabs-bar"}>
-                        <a href={"#"}>
-                            爬虫实战-数据解析
-                        </a>
-                    </div>
+
+                    {
+                        seriesCourseListData.map((item)=>{
+                            return <div key={item.id} className={"tabs-bar"}>
+                                <a href={"#"}>
+                                    {
+                                        item.course_title1
+                                    }
+                                </a>
+                            </div>
+                        })
+                    }
                 </div>
             </div>
         )

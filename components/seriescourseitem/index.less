@@ -1,9 +1,13 @@
 .series-course-item{
   margin-top: 50px;
   .course-title{
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 超出部分用省略号代替 */
+    white-space: nowrap; /* 禁止换行 */
+    font-size: 31px;
     a{
       color: #444444;
-      font-size: 31px;
+      font-size: 26px;
       &:hover{
         color: #ff3f29;
       }
@@ -46,7 +50,8 @@
         .course-title{
           color: #333333;
           font-size: 26px;
-          line-height: 20px;
+          line-height: 28px;
+
         }
         .course-teacher{
           color: #999999;
@@ -76,9 +81,11 @@
             height: 30px;
             border-radius: 15px;
             overflow: hidden;
-            img{
-              height: 100%;
-              width: 100%;
+            a{
+              img{
+                height: 100%;
+                width: 100%;
+              }
             }
           }
         }

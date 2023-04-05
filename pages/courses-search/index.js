@@ -42,7 +42,7 @@ export default function ProviderSearch() {
             setcoourseCount(result.data.length)
         })
         getSearchCourses(kw).then((result)=>{
-            setSearchCourses(result.data)
+                setSearchCourses(result.data)
         })
     },[router.query.category,router.query.kw])
 
@@ -73,7 +73,7 @@ export default function ProviderSearch() {
                 <div className={"series-result-middle bx"}>
                     <div className={"series-result-text"}>
                         <span>微专业／系列课程</span>
-                        <span>（60）</span>
+                        <span>{`（${coourseCount}）`}</span>
                     </div>
                 </div>
             </div>
