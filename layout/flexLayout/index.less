@@ -44,6 +44,7 @@
   }
 
 
+
   .column2 {
     width: ~"calc((100% - 1 * 20px) / 2)";
     margin-bottom: 20px;
@@ -54,4 +55,15 @@
   }
 
 
+}
+
+
+//series系列课程all页面的系列课程卡片
+.column3-special {
+  width: ~"calc((100% - 2 * 60px) / 3)";
+  margin-bottom: 60px;
+
+  &:not(:nth-child(3n+1)) {
+    margin-left: 60px;
+  }
 }
