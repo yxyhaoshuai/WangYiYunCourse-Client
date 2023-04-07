@@ -10,9 +10,9 @@ import {getSeriesCourseCardList, getSeriesCourseTotal} from "../../api/seriesCou
 
 
 export default function ProviderSearch() {
-
     //登录是否展示状态机
     const [showCoverLogin, setshowCoverLogin] = useState(false)
+
     //控制是否展示
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
@@ -24,8 +24,8 @@ export default function ProviderSearch() {
     //系列课程列表总数
     const [seriesCardTotal,setSeriesCardTotal] = useState(0)
 
-
-
+    //pages是当前页数
+    const [pages,setPages] = useState(1)
 
     //页面加载完毕！
     useEffect(()=>{
@@ -44,6 +44,7 @@ export default function ProviderSearch() {
         getSeriesCourseCardList(page_num,9).then((result)=>{
             setSeriesCardList(result.data)
         })
+        setPages(page_num)
     }
 
     return (
@@ -53,7 +54,7 @@ export default function ProviderSearch() {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
             <SeriesListTop/>
-            <SeriesList seriesCardTotal={seriesCardTotal} PaginationOnChange={PaginationOnChange} seriesCardList={seriesCardList}/>
+            <SeriesList pages={pages} seriesCardTotal={seriesCardTotal} PaginationOnChange={PaginationOnChange} seriesCardList={seriesCardList}/>
             <Fixedfield/>
             <Leftminiad/>
             <Wangyiyunfooter/>

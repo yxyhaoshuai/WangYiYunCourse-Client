@@ -4,7 +4,7 @@ import React from "react";
 import {Pagination} from "antd";
 import {BaseURL} from "../../config/serverConfig";
 
-export default function SeriesList({seriesCardList,PaginationOnChange,seriesCardTotal}) {
+export default function SeriesList({seriesCardList,PaginationOnChange,seriesCardTotal,pages}) {
 
     return (
         <>
@@ -35,7 +35,7 @@ export default function SeriesList({seriesCardList,PaginationOnChange,seriesCard
                     }
                 </FlexLayout>
                 <div className={"pagination-bottom"}>
-                    <Pagination onChange={(e)=>{
+                    <Pagination current={pages} onChange={(e)=>{
                         PaginationOnChange(e)
                     }} size="small" total={seriesCardTotal} showSizeChanger={false}/>
                 </div>
