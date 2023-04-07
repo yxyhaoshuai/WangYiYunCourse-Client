@@ -3,6 +3,7 @@ import {Breadcrumb} from "antd";
 require("./index.less")
 import React, {Component} from "react";
 import {BaseURL} from "../../config/serverConfig";
+import Link from "next/link";
 
 class Seriesing extends Component{
     render(){
@@ -14,10 +15,12 @@ class Seriesing extends Component{
                     <div className={"Breadcrumb-div"}>
                         <Breadcrumb separator=">">
                             <Breadcrumb.Item>
-                                <a href="/">全部课程</a>
+                                    <a href="/">全部课程</a>
                             </Breadcrumb.Item>
                             <Breadcrumb.Item>
-                                <a href="">系列课程</a>
+                                <Link href="/series/all">
+                                    <a>系列课程</a>
+                                </Link>
                             </Breadcrumb.Item>
                             <Breadcrumb.Item>
                                 详情

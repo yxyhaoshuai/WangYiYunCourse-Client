@@ -8,7 +8,7 @@ import Leftminiad from "../../components/leftminiad";
 import Fixedfield from "../../components/fixedfield";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import {useRouter} from "next/router";
-import {getSeriesCourse, getSeriesCourseList} from "../../api/seriesCourseApi";
+import {getSeriesCourse, getSeriesCourseList} from "../../api/seriesCourseDetailApi";
 
 export default function ProviderSearch() {
     const [showCoverLogin, setshowCoverLogin] = useState(false)

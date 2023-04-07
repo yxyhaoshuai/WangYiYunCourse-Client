@@ -1,19 +1,49 @@
-require("./index.less")
-import {Pagination} from "antd";
-import React, {useState} from "react";
+import SeriesListTop from "../../components/serieslisttop";
+import React, {useEffect, useState} from "react";
 import Navibar from "../../components/naviBar";
 import Coverlogin from "../../components/coverlogin";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import Fixedfield from "../../components/fixedfield";
 import Leftminiad from "../../components/leftminiad";
-import FlexLayout from "../../layout/flexLayout";
+import SeriesList from "../../components/Serieslist";
+import {getSeriesCourseCardList, getSeriesCourseTotal} from "../../api/seriesCourseListApi";
 
 
 export default function ProviderSearch() {
+
+    //登录是否展示状态机
     const [showCoverLogin, setshowCoverLogin] = useState(false)
+    //控制是否展示
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
+    }
 
+    //系列课程列表卡片数组
+    const [seriesCardList,setSeriesCardList] = useState([])
+
+    //系列课程列表总数
+    const [seriesCardTotal,setSeriesCardTotal] = useState(0)
+
+
+
+
+    //页面加载完毕！
+    useEffect(()=>{
+        getSeriesCourseCardList().then((result)=>{
+            setSeriesCardList(result.data)
+        })
+
+        getSeriesCourseTotal().then((result)=>{
+            setSeriesCardTotal(result.data[0].seriesTotal)
+            console.log(result.data[0].seriesTotal)
+        })
+    },[])
+
+    //页面数发生改变
+    const PaginationOnChange = (page_num)=>{
+        getSeriesCourseCardList(page_num,9).then((result)=>{
+            setSeriesCardList(result.data)
+        })
     }
 
     return (
@@ -22,107 +52,8 @@ export default function ProviderSearch() {
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
-            <div className={"m-top"}>
-                <div className={"g-flow bx"}>
-                    <div className={"g-flow-title"}>
-                        系列课程
-                    </div>
-                </div>
-            </div>
-            <div className={"series-list bx"}>
-                <FlexLayout>
-                    <div className={"series-card column3-special"}>
-                        <div className={"series-card-img"}>
-                            <a href="#">
-                                <img src="/assets/images/seriesCourses.png" alt=""/>
-                            </a>
-                        </div>
-                        <div className={"series-card-title"}>
-                            <a href="#">
-                                Python零基础到高薪就业
-                            </a>
-                        </div>
-                        <div className={"series-card-intro"}>
-                            本套餐专项帮小白学习相机摄影，夯实基础，实战应用。本套餐涵盖2门基础课：《叶梓摄影入门课》、《修图达人速成课》与1门进阶课：《星轨摄影》。
-                        </div>
-                    </div>
-                    <div className={"series-card column3-special"}>
-                        <div className={"series-card-img"}>
-                            <a href="#">
-                                <img src="/assets/images/seriesCourses.png" alt=""/>
-                            </a>
-                        </div>
-                        <div className={"series-card-title"}>
-                            <a href="#">
-                                Python零基础到高薪就业
-                            </a>
-
-
-                        </div>
-                        <div className={"series-card-intro"}>
-                            本套餐专项帮小白学习相机摄影，夯实基础，实战应用。本套餐涵盖2门基础课：《叶梓摄影入门课》、《修图达人速成课》与1门进阶课：《星轨摄影》。
-                        </div>
-
-                    </div>
-                    <div className={"series-card column3-special"}>
-                        <div className={"series-card-img"}>
-                            <a href="#">
-                                <img src="/assets/images/seriesCourses.png" alt=""/>
-                            </a>
-                        </div>
-                        <div className={"series-card-title"}>
-                            <a href="#">
-                                Python零基础到高薪就业
-                            </a>
-
-
-                        </div>
-                        <div className={"series-card-intro"}>
-                            本套餐专项帮小白学习相机摄影，夯实基础，实战应用。本套餐涵盖2门基础课：《叶梓摄影入门课》、《修图达人速成课》与1门进阶课：《星轨摄影》。
-                        </div>
-
-                    </div>
-                    <div className={"series-card column3-special"}>
-                        <div className={"series-card-img"}>
-                            <a href="#">
-                                <img src="/assets/images/seriesCourses.png" alt=""/>
-                            </a>
-                        </div>
-                        <div className={"series-card-title"}>
-                            <a href="#">
-                                Python零基础到高薪就业
-                            </a>
-
-
-                        </div>
-                        <div className={"series-card-intro"}>
-                            本套餐专项帮小白学习相机摄影，夯实基础，实战应用。本套餐涵盖2门基础课：《叶梓摄影入门课》、《修图达人速成课》与1门进阶课：《星轨摄影》。
-                        </div>
-
-                    </div>
-                    <div className={"series-card column3-special"}>
-                        <div className={"series-card-img"}>
-                            <a href="#">
-                                <img src="/assets/images/seriesCourses.png" alt=""/>
-                            </a>
-                        </div>
-                        <div className={"series-card-title"}>
-                            <a href="#">
-                                Python零基础到高薪就业
-                            </a>
-
-
-                        </div>
-                        <div className={"series-card-intro"}>
-                            本套餐专项帮小白学习相机摄影，夯实基础，实战应用。本套餐涵盖2门基础课：《叶梓摄影入门课》、《修图达人速成课》与1门进阶课：《星轨摄影》。
-                        </div>
-
-                    </div>
-                </FlexLayout>
-                <div className={"pagination-bottom"}>
-                    <Pagination size="small" total={90} showSizeChanger={false}/>
-                </div>
-            </div>
+            <SeriesListTop/>
+            <SeriesList seriesCardTotal={seriesCardTotal} PaginationOnChange={PaginationOnChange} seriesCardList={seriesCardList}/>
             <Fixedfield/>
             <Leftminiad/>
             <Wangyiyunfooter/>

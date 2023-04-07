@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/series/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/series/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/seriesCoursePages.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/seriesCourses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/seriesCourseListApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Serieslist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Serieslist/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/serieslisttop/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/serieslisttop/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/seriesimg/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriesimg/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/flexLayout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/layout/flexLayout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/seriesCourseApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/seriesCourseDetailApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/seriesimg/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/seriesimg/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/series/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/series/all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/series/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/series/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/series/index.less" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Less File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -50,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client",
+    "last_opened_file_path": "C:/Users/YXY/Desktop/WangYiYunCourse-Server-main",
     "list.type.of.created.stylesheet": "Less",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -196,6 +200,9 @@
       <workItem from="1680741186330" duration="9000" />
       <workItem from="1680741756625" duration="44000" />
       <workItem from="1680843980305" duration="7253000" />
+      <workItem from="1680851364276" duration="178000" />
+      <workItem from="1680851555082" duration="18000" />
+      <workItem from="1680853848922" duration="4018000" />
     </task>
     <servers />
   </component>
