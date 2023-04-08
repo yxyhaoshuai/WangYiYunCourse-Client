@@ -35,7 +35,6 @@ export default function ProviderSearch() {
 
         getSeriesCourseTotal().then((result)=>{
             setSeriesCardTotal(result.data[0].seriesTotal)
-            console.log(result.data[0].seriesTotal)
         })
     },[])
 

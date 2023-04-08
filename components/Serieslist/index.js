@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 require("./index.less")
 import FlexLayout from "../../layout/flexLayout";
 import React from "react";
@@ -14,16 +16,26 @@ export default function SeriesList({seriesCardList,PaginationOnChange,seriesCard
                         seriesCardList.map((item)=>{
                             return <div key={item.id} className={"series-card column3-special"}>
                                 <div className={"series-card-img"}>
-                                    <a href="#">
-                                        <img src={BaseURL + item.series_fm_url} alt=""/>
-                                    </a>
+                                    <Link href={{
+                                        pathname:"/series",
+                                        query:{"id":item.id}
+                                    }} >
+                                        <a>
+                                            <img src={BaseURL + item.series_fm_url} alt=""/>
+                                        </a>
+                                    </Link>
                                 </div>
                                 <div className={"series-card-title"}>
-                                    <a href="#">
-                                        {
-                                            item.title
-                                        }
-                                    </a>
+                                    <Link href={{
+                                        pathname:"/series",
+                                        query:{"id":item.id}
+                                    }} >
+                                        <a>
+                                            {
+                                                item.title
+                                            }
+                                        </a>
+                                    </Link>
                                 </div>
                                 <div className={"series-card-intro"}>
                                     {

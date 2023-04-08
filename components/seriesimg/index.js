@@ -51,9 +51,11 @@ class Seriesing extends Component{
 
                         </div>
                         <div className={"price"}>
-                            <span>￥
+                            <span>
                                 {
                                     seriesCourseListData.reduce((a,b)=>{
+                                        return a+b.price
+                                    },0) === 0? "免费" : "￥"+seriesCourseListData.reduce((a,b)=>{
                                         return a+b.price
                                     },0)
                                 }

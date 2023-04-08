@@ -3,7 +3,7 @@ import ajax from "../tools/ajax";
 
 const _USERKEY = "_USERKEY"
 
-export const register = (account, password) => ajax("/api/client/user/register", {account, password}, "post")
+export const register = (account, password) => ajax("/register", {account, password}, "post")
 
 export const login = (account, password) => ajax("/api/client/user/login", {account, password}, "post")
 
