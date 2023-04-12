@@ -1,12 +1,23 @@
 //引入样式
+require("./index.less")
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {message} from "antd";
 import Link from "next/link";
+import {getUser, isLogin, removeUser} from "../../api/userApi";
+import {BaseURL} from "../../config/serverConfig";
 
-require("./index.less")
+
+
+
 
 export default function Navibar(props){
+    // 用户登录数据
+    const [userData,setUserData] = useState({});
+    const [isLoginState,setIsLoginState] = useState(false);
+    //获取路由信息
+    const router = useRouter()
+
     //全局消息
     const success = () => {
         message.success({
@@ -18,6 +29,33 @@ export default function Navibar(props){
         });
     };
 
+
+
+
+    //获取用户登录状态
+    useEffect(()=>{
+        isLogin().then(result=>{
+            if (result) {
+                getUser().then((result)=>{
+                    setUserData(result)
+                    setIsLoginState(true)
+                })
+            }
+        })
+
+
+    },[])
+
+    //退出登录
+    const logOut = ()=>{
+        removeUser()
+        setIsLoginState(!isLoginState)
+
+    }
+
+
+
+
     const messageStart = ()=>{
         success()
     }
@@ -25,8 +63,7 @@ export default function Navibar(props){
     //登录逻辑
     const _loginShow = props._loginShow;
 
-    //获取路由信息
-    const router = useRouter()
+
     const {category="course",kw=""} = router.query;
 
     const [kwV,setKwV] = useState(kw)
@@ -59,7 +96,6 @@ export default function Navibar(props){
         }
 
     }
-
 
     return(
         <div className={"nav bx"}>
@@ -157,31 +193,74 @@ export default function Navibar(props){
                                     </div>
                                 </div>
                                 <div className={"login"}>
-                                    <div className={"login-register"} onClick={_loginShow}>
-                                        <a href="#">登录/注册</a>
-                                    </div>
-                                    <div className={"user-head"}>
-                                        <img src={"/assets/images/userInitHead.png"}/>
-                                        <div className={"operation-pane"}>
-                                            <ul className={"user-navuser-menu"}>
-                                                <li onClick={_loginShow}>游客,请登录...</li>
-                                                <li>
-                                                    <a href={"#"}>
-                                                        我的优惠卷
-                                                        <span>兑换</span>
-                                                    </a>
+                                    {
+                                        isLoginState ?
+                                            <>
+                                                <div className={"login-register"} onClick={_loginShow}>
+                                                    <a href="#">{userData.nick_name}</a>
+                                                </div>
+                                                <div className={"user-head"}>
+                                                    <img src={BaseURL + userData.header_url}/>
+                                                    <div className={"operation-pane"}>
+                                                        <ul className={"user-navuser-menu"}>
+                                                            <li onClick={_loginShow}>{userData.nick_name}</li>
+                                                            <li>
+                                                                <a href={"#"}>
+                                                                    我的优惠卷
+                                                                    <span>兑换</span>
+                                                                </a>
 
-                                                </li>
-                                                <li>
-                                                    <a href={"#"}>我的订单</a></li>
-                                                <li>
-                                                    <a href={"#"}>帮助与反馈</a></li>
-                                                <li>
-                                                    <a href={"#"}>设置</a></li>
-                                            </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a href={"#"}>我的订单</a>
+                                                            </li>
 
-                                        </div>
-                                    </div>
+                                                            <li>
+                                                                <a href={"#"}>帮助与反馈</a>
+                                                            </li>
+                                                            <li className={"border-bottom-class"}>
+                                                                <a href={"#"}>设置</a>
+                                                            </li>
+                                                            <li>
+                                                                <a onClick={()=>{
+                                                                    logOut()
+                                                                }}>退出登录</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </>
+                                            :
+                                            <>
+                                                <div className={"login-register"} onClick={_loginShow}>
+                                                    <a href="#">登录/注册</a>
+                                                </div>
+                                                <div className={"user-head"}>
+                                                    <img src={"/assets/images/userInitHead.png"}/>
+                                                    <div className={"operation-pane"}>
+                                                        <ul className={"user-navuser-menu"}>
+                                                            <li onClick={_loginShow}>游客,请登录...</li>
+                                                            <li>
+                                                                <a href={"#"}>
+                                                                    我的优惠卷
+                                                                    <span>兑换</span>
+                                                                </a>
+
+                                                            </li>
+                                                            <li>
+                                                                <a href={"#"}>我的订单</a></li>
+                                                            <li>
+                                                                <a href={"#"}>帮助与反馈</a></li>
+                                                            <li>
+                                                                <a href={"#"}>设置</a></li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </>
+                                    }
+
                                 </div>
                             </div>
                         </div>

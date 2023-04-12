@@ -43,26 +43,17 @@ class Home extends Component{
             searchBoxValue : ""
 
         }
-
         //课程分类列表数据处理
         const {categoryList1, categoryList2, lunbolist, homeCourseList, homeSeriesCourseList} = this.props;
-
-
         //初始化课程分类
         this.categoryList1=categoryList1;
         this.categoryList2=categoryList2;
-
         //初始化轮播图列表
         this.lunbolist=lunbolist;
-
         //初始化首页课程列表
         this.homeCourseList=homeCourseList;
-
-
         //初始化系列课程
         this.homeSeriesCourseList = homeSeriesCourseList;
-
-
         this.category = []
         for (let i = 1; i <= 8; i++) {
             let categoryid =categoryList1.filter(item=> item.id1 === i)

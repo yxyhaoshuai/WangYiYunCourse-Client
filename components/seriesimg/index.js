@@ -7,7 +7,7 @@ import Link from "next/link";
 
 class Seriesing extends Component{
     render(){
-        const {seriesCourseData,seriesCourseListData} = this.props;
+        const {seriesCourseData,seriesCourseListData,addFavorite} = this.props;
         return (
             <div className={"series-course-img"}>
                 <img src={BaseURL + seriesCourseData.course_introduction_img} alt=""/>
@@ -40,7 +40,7 @@ class Seriesing extends Component{
                     <div className={"join"}>
                         <div className={"join-button"}>
                             <div className={"join-button-icon"}>
-                                <span className={"iconfont"}>
+                                <span onClick={addFavorite} className={"iconfont"}>
                                     &#xe666;
                                 </span>
 

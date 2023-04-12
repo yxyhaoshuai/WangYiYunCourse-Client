@@ -2,7 +2,7 @@ import {Rate} from "antd";
 
 require("./index.less")
 
-import React from "react";
+import React, {useEffect} from "react";
 import {BaseURL} from "../../../config/serverConfig";
 import Link from "next/link";
 

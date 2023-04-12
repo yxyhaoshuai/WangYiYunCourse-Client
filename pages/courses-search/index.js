@@ -65,7 +65,7 @@ export default function ProviderSearch() {
                         <span>{coourseCount}</span>
                         <span>门包含“</span>
                         <span>{router.query.kw}</span>
-                        <span>”的课程</span>
+                        <span>”的系列课程</span>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,11 @@ export default function ProviderSearch() {
                 <div className={"series-result-card-middle bx"}>
                     <FlexLayout>
                         {
-                            data.map(item => <Searchresultcard data={item} key={item.id} count="column5"/>)
+                            data.map((item) => {
+                                if (item.id !==null){
+                                    return <Searchresultcard data={item} key={item.id} count="column5"/>}
+                                }
+                            )
                         }
                     </FlexLayout>
                 </div>

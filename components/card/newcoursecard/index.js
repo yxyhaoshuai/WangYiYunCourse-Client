@@ -31,8 +31,10 @@ class Newcoursecard extends Component{
                     </div>
                     <div className={"excellent-buy-info"}>
                         <div className={"excellent-buy-info_right"}>
-                            <span>￥</span>
-                            <span>{data.price}</span>
+                            {
+                                data.price === 0 ? <><span></span><span>免费</span></> : <><span>￥</span><span>{data.price}</span></>
+                            }
+
                         </div>
                     </div>
 

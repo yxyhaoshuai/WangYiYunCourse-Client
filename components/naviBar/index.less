@@ -328,10 +328,15 @@
               display: flex;
               text-align: center;
               .login-register {
+                width: 82px;
+                height: 32px;
                 flex: 2;
                 //background-color: aqua;
                 line-height: 32px;
                 margin-left: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 a {
                   color: #333;
                   &:hover {
@@ -350,7 +355,7 @@
                 }
                 .operation-pane {
                   background-color: #FFFFFF;
-                  height: 180px;
+                  //height: 180px;
                   width: 160px;
                   //background-color: aquamarine;
                   //absolute相对于父类
@@ -363,10 +368,20 @@
                   z-index: 999;
                   ul {
                     padding: 10px 10px;
+                    width: 100%;
+                    .border-bottom-class{
+                      border-bottom: 1px solid #ddd;
+                    }
                     li {
                       text-align: left;
                       font-size: 12px;
                       padding-left: 6px;
+                      display: block;
+                      height: 32px;
+                      width: 138px;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
                       a {
                         display: block;
                         width: 100%;

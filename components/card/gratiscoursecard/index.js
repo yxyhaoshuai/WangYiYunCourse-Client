@@ -33,7 +33,16 @@ class Gratiscoursecard extends Component{
                         <div className={"excellent-buy-info_right"}>
                             <span></span>
                             {
-                                data.price===0? <span>免费</span> : <span>{data.price}</span>
+                                data.price === 0 ?
+                                    <>
+                                        <span className={"one"}></span>
+                                        <span className={"two"}>免费</span>
+                                    </>
+                                    :
+                                    <>
+                                        <span className={"one"}>￥</span>
+                                        <span className={"two"}>{data.price}</span>
+                                    </>
                             }
 
                         </div>

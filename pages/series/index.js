@@ -8,58 +8,107 @@ import Leftminiad from "../../components/leftminiad";
 import Fixedfield from "../../components/fixedfield";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import {useRouter} from "next/router";
-import {getSeriesCourse, getSeriesCourseList} from "../../api/seriesCourseDetailApi";
+import {addUserFavorite, getSeriesCourse, getSeriesCourseList} from "../../api/seriesCourseDetailApi";
+import {getUser} from "../../api/userApi";
+import {message} from "antd";
+
+
 
 export default function ProviderSearch() {
+    //获取路由信息
+    const router = useRouter();
+
+    //控制登陆面板的显示
     const [showCoverLogin, setshowCoverLogin] = useState(false)
-    const _loginShow = () =>{
-        setshowCoverLogin(!showCoverLogin)
 
-    }
-    const router = useRouter()
+    //获取系列课程中的课程列表
+    const [seriesCourseListData, setSeriesCourseListData] = useState([])
 
+    //获取用户id
+    const [userData, setUserData] = useState(0)
 
     //系列课程详情
-    const [seriesCourseData,setSeriesCourseData] = useState([])
-    useEffect(()=>{
-        getSeriesCourse(router.query.id).then((result)=>{
-            if (result.data !== null){
+    const [seriesCourseData, setSeriesCourseData] = useState([])
+
+
+    const _loginShow = () => {
+        setshowCoverLogin(!showCoverLogin)
+    }
+
+
+    //全局消息
+    const success = () => {
+        message.success({
+            content: '收藏课程成功！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+    //点击收藏系列课程下所有课程的按钮后执行的函数
+    const addFavorite =  () => {
+        let newSeriesCourseListData = seriesCourseListData.map((item)=>{
+            return item.id
+        })
+        addUserFavorite(newSeriesCourseListData,userData.id).then((result)=>{
+            if ( result.code === 0 ){
+                success()
+            }
+        })
+
+
+    }
+
+    //从本地获取用户id
+    useEffect(() => {
+        getUser().then((result) => {
+            if (result.id === undefined) {
+                console.log("请先登录")
+            } else {
+                setUserData(result)
+            }
+        })
+    }, [])
+
+
+    //获取系列课程信息
+    useEffect(() => {
+        getSeriesCourse(router.query.id).then((result) => {
+            if (result.data !== null) {
                 setSeriesCourseData(result.data[0])
             }
 
         })
 
-    },[router.query]);
+    }, [router, router.query]);
 
 
-    //获取系列课程中的课程列表
-    const [seriesCourseListData,setSeriesCourseListData] = useState([])
-    useEffect(()=>{
-        getSeriesCourseList(router.query.id).then((result)=>{
-            if (result.data !== null){
+    //获取该系列课程的课程列表
+    useEffect(() => {
+        getSeriesCourseList(router.query.id).then((result) => {
+            if (result.data !== null) {
                 setSeriesCourseListData(result.data)
             }
 
         })
 
-    },[router.query]);
-
-
-
-
+    }, [router, router.query]);
 
 
     return (
         <>
-            <Navibar  _loginShow={_loginShow}/>
+            <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
-            <Seriesimg seriesCourseData={seriesCourseData} seriesCourseListData={seriesCourseListData}/>
+            <Seriesimg addFavorite={addFavorite} seriesCourseData={seriesCourseData}
+                       seriesCourseListData={seriesCourseListData}/>
             <Seriesbar seriesCourseListData={seriesCourseListData}/>
 
             {
-                seriesCourseListData.map((item)=>{
+                seriesCourseListData.map((item) => {
                     return <Seriescourseitem data={item} key={item.id}/>
                 })
             }
