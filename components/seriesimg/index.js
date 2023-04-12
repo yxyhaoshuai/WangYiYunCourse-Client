@@ -46,7 +46,14 @@ class Seriesing extends Component{
 
                             </div>
                             <div className={"join-button-button"}>
-                                参加全部课程
+                                <Link href={{
+                                    pathname:"/order",
+                                    query:{"id":seriesCourseData.id}
+                                }} >
+                                    <a>
+                                        参加全部课程
+                                    </a>
+                                </Link>
                             </div>
 
                         </div>

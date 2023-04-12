@@ -5,6 +5,7 @@ class Orderlayout extends Component{
 
     render(){
         const courseitem = this.props.children;
+        const courseList = this.props.courseList;
 
         return (
             <div className={"order bx"}>
@@ -33,12 +34,15 @@ class Orderlayout extends Component{
                     <span>确认订单信息</span>
                 </div>
                 {courseitem}
-
-
                 <div className={"total"}>
                     <div className={"total-text"}>
                         <span>总计:</span>
-                        <span>¥574.00</span>
+                        <span>¥
+                            {
+                                courseList.reduce((a,b)=>{
+                                    return a+b.price
+                                },0)
+                            }</span>
                     </div>
                 </div>
                 <div className={"promotion-code"}>

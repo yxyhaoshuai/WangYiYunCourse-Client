@@ -1,8 +1,11 @@
+import {BaseURL} from "../../config/serverConfig";
+
 require("./index.less")
 import React, {Component} from "react";
 
 class Orderitem extends Component{
     render(){
+        const item = this.props.item;
         return (
             <div className={"course-detail-item"}>
                 <div className={"iconfont"}>
@@ -10,13 +13,12 @@ class Orderitem extends Component{
                 </div>
                 <div className={"course-img"}>
                     <a href="#">
-                        <img src="/assets/images/ordercourseimg.png" alt=""/>
-
+                        <img src={BaseURL + item.img_url} alt=""/>
                     </a>
 
                 </div>
                 <div className={"course-title"}>
-                    <a href="">撩课-Python-爬虫系列-网络剖析</a>
+                    <a href="">{item.course_title}</a>
                 </div>
                 <div className={"valid"}>
                     永久有效

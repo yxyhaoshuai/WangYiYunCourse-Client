@@ -12,8 +12,6 @@ import {addUserFavorite, getSeriesCourse, getSeriesCourseList} from "../../api/s
 import {getUser} from "../../api/userApi";
 import {message} from "antd";
 
-
-
 export default function ProviderSearch() {
     //获取路由信息
     const router = useRouter();
