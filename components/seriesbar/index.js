@@ -11,7 +11,7 @@ class Seriesbar extends Component{
                     {
                         seriesCourseListData.map((item)=>{
                             return <div key={item.id} className={"tabs-bar"}>
-                                <a href={"#"}>
+                                <a href={`#${item.course_title1}`}>
                                     {
                                         item.course_title1
                                     }

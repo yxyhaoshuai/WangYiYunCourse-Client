@@ -1,10 +1,32 @@
-import {Breadcrumb, Rate} from "antd";
+import {Breadcrumb, message, Rate} from "antd";
 
 require("./index.less")
 import React, {Component} from "react";
+import {BaseURL} from "../../config/serverConfig";
+import Link from "next/link";
 
-class Coursedetailbread extends Component{
-    render(){
+class Coursedetailbread extends Component {
+
+    //回头看一下这个代码
+    componentDidMount() {
+        console.log(this.props.courseData.id)
+    }
+
+    render() {
+        const {courseData = {}} = this.props;
+
+        //全局消息
+        const warning = () => {
+            message.warning({
+                content: '会员模块没有开发哦！',
+                className: 'custom-class',
+                style: {
+                    marginTop: '20vh',
+                },
+            });
+        };
+
+
         return (
             <div className={"course-intro"}>
                 <div className={"course-intro-bread bx"}>
@@ -19,12 +41,14 @@ class Coursedetailbread extends Component{
                 <div className={"course-intro-card bx"}>
                     <div className={"img-content"}>
                         <div className={"img"}>
-                            <img src="/assets/images/coursedetail.png" alt=""/>
+                            <img src={BaseURL + courseData.courseurl} alt=""/>
                         </div>
                         <div className={"content"}>
                             <div className={"course-title"}>
                                 <div className={"course-title-text"}>
-                                    撩课-Python-爬虫系列-网络剖析
+                                    {
+                                        courseData.coursetitle
+                                    }
                                 </div>
                                 <div className={"share"}>
                                     <a href="#" className={"iconfont"}>&#xe62f;</a>
@@ -35,13 +59,17 @@ class Coursedetailbread extends Component{
                             </div>
                             <div className={"about-user-teacher"}>
                                 <div className={"user-count"}>
-                                    376人学过
+                                    {
+                                        `${courseData.studentcount}人学过`
+                                    }
                                 </div>
                                 <div className={"score"}>
-                                    <Rate disabled defaultValue={4.5} />
+                                    <Rate disabled defaultValue={courseData.avg_score}/>
                                 </div>
                                 <div className={"teacher-name"}>
-                                    讲师：王顺子
+                                    {
+                                        `讲师：${courseData.teacher_name}`
+                                    }
                                 </div>
                             </div>
 
@@ -49,21 +77,41 @@ class Coursedetailbread extends Component{
                                 this.props.ismystudy ? "" :
                                     <>
                                         <div className={"price"}>
-                                            ¥ 188.00
+
+                                            {
+                                                "¥ " +
+                                                courseData.courseprice
+                                            }
 
                                         </div>
                                         <div className={"coupon"}>
-                                            <a href="#">【福利】送80元购课通用红包></a>
-
+                                            <a onClick={() => {
+                                                warning()
+                                            }}>【福利】送80元购课通用红包></a>
                                         </div>
                                         <div className={"three-button"}>
                                             <div className={"join-button"}>
-                                                立即参加
-
+                                                <Link href={{
+                                                    pathname: "/order",
+                                                    query: {"id": courseData.courseid}
+                                                }}>
+                                                    <a>
+                                                        立即参加
+                                                    </a>
+                                                </Link>
                                             </div>
                                             <div className={"try-and-see"}>
-                                                免费试看
 
+
+                                                {/*下面的代码需要修改，修改路由路径为视频播放页的路由路径*/}
+                                                <Link href={{
+                                                    pathname: "/order",
+                                                    query: {"id": courseData.courseid}
+                                                }}>
+                                                    <a>
+                                                        免费试看
+                                                    </a>
+                                                </Link>
                                             </div>
                                             <div className={"join-cart"}>
                                                 <span className={"iconfont"}>&#xe6d5;</span>
@@ -93,5 +141,6 @@ class Coursedetailbread extends Component{
         )
     }
 }
+
 export default Coursedetailbread;
 

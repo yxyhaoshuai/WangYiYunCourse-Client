@@ -1,18 +1,24 @@
+import {removeUser} from "../../api/userApi";
+
 require("./index.less")
 import React, {Component} from "react";
 
 class Orderlayout extends Component{
-
     render(){
         const courseitem = this.props.children;
-        const courseList = this.props.courseList;
+        const {courseList,nickName,_loginShow} = this.props;
+
+        const chengeUser = ()=>{
+            _loginShow()
+            removeUser()
+        }
 
         return (
             <div className={"order bx"}>
                 <div className={"order-user"}>
                     <span>购买帐号：</span>
-                    <span>大大秀哥</span>
-                    <span><a href="">更换帐号 ></a></span>
+                    <span>{nickName}</span>
+                    <span><a onClick={chengeUser}>更换帐号 ></a></span>
                 </div>
                 <div className={"order-phone-num"}>
                     <span>手机号：</span>

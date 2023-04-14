@@ -9,7 +9,7 @@ import Fixedfield from "../../components/fixedfield";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import {useRouter} from "next/router";
 import {addUserFavorite, getSeriesCourse, getSeriesCourseList} from "../../api/seriesCourseDetailApi";
-import {getUser} from "../../api/userApi";
+import {getUser, isLogin} from "../../api/userApi";
 import {message} from "antd";
 
 export default function ProviderSearch() {
@@ -47,14 +47,22 @@ export default function ProviderSearch() {
 
     //点击收藏系列课程下所有课程的按钮后执行的函数
     const addFavorite =  () => {
-        let newSeriesCourseListData = seriesCourseListData.map((item)=>{
-            return item.id
-        })
-        addUserFavorite(newSeriesCourseListData,userData.id).then((result)=>{
-            if ( result.code === 0 ){
-                success()
+        isLogin().then((result)=>{
+            if (result){
+                let newSeriesCourseListData = seriesCourseListData.map((item)=>{
+                    return item.id
+                })
+                addUserFavorite(newSeriesCourseListData,userData.id).then((result)=>{
+                    if ( result.code === 0 ){
+                        success()
+                    }
+                })
+            }else{
+                _loginShow()
             }
+
         })
+
 
 
     }
@@ -68,7 +76,7 @@ export default function ProviderSearch() {
                 setUserData(result)
             }
         })
-    }, [])
+    }, [router.query])
 
 
     //获取系列课程信息
@@ -94,6 +102,20 @@ export default function ProviderSearch() {
 
     }, [router, router.query]);
 
+    const AttendAllCourses = (event,id)=>{
+        event.preventDefault();
+        isLogin().then((result)=>{
+            if (result){
+                router.push("/order?id="+id)
+                console.log(window.history)
+            }else {
+                _loginShow()
+            }
+        })
+
+    }
+
+
 
     return (
         <>
@@ -101,7 +123,7 @@ export default function ProviderSearch() {
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
-            <Seriesimg addFavorite={addFavorite} seriesCourseData={seriesCourseData}
+            <Seriesimg AttendAllCourses={AttendAllCourses} addFavorite={addFavorite} seriesCourseData={seriesCourseData}
                        seriesCourseListData={seriesCourseListData}/>
             <Seriesbar seriesCourseListData={seriesCourseListData}/>
 
@@ -110,7 +132,6 @@ export default function ProviderSearch() {
                     return <Seriescourseitem data={item} key={item.id}/>
                 })
             }
-
             <Wangyiyunfooter/>
             <Leftminiad/>
             <Fixedfield/>

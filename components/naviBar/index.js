@@ -7,10 +7,6 @@ import Link from "next/link";
 import {getUser, isLogin, removeUser} from "../../api/userApi";
 import {BaseURL} from "../../config/serverConfig";
 
-
-
-
-
 export default function Navibar(props){
     // 用户登录数据
     const [userData,setUserData] = useState({});
@@ -28,8 +24,6 @@ export default function Navibar(props){
             },
         });
     };
-
-
 
 
     //获取用户登录状态

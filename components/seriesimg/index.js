@@ -7,7 +7,7 @@ import Link from "next/link";
 
 class Seriesing extends Component{
     render(){
-        const {seriesCourseData,seriesCourseListData,addFavorite} = this.props;
+        const {seriesCourseData,seriesCourseListData,addFavorite,AttendAllCourses} = this.props;
         return (
             <div className={"series-course-img"}>
                 <img src={BaseURL + seriesCourseData.course_introduction_img} alt=""/>
@@ -50,7 +50,9 @@ class Seriesing extends Component{
                                     pathname:"/order",
                                     query:{"id":seriesCourseData.id}
                                 }} >
-                                    <a>
+                                    <a onClick={(e)=>{
+                                        AttendAllCourses(e,seriesCourseData.id)
+                                    }}>
                                         参加全部课程
                                     </a>
                                 </Link>
