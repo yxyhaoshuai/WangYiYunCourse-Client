@@ -2,27 +2,45 @@ import {removeUser} from "../../api/userApi";
 
 require("./index.less")
 import React, {Component} from "react";
+import {message, Popconfirm} from "antd";
 
 class Orderlayout extends Component{
     render(){
         const courseitem = this.props.children;
-        const {courseList,nickName,_loginShow} = this.props;
-
-        const chengeUser = ()=>{
+        const {courseList,userData,_loginShow} = this.props;
+        const confirm = (e) => {
             _loginShow()
             removeUser()
-        }
+        };
 
+        const success = () => {
+            message.info({
+                content: '优惠卷功能还未扩展',
+                className: 'custom-class',
+                style: {
+                    marginTop: '20vh',
+                },
+            });
+        };
         return (
             <div className={"order bx"}>
                 <div className={"order-user"}>
                     <span>购买帐号：</span>
-                    <span>{nickName}</span>
-                    <span><a onClick={chengeUser}>更换帐号 ></a></span>
+                    <span>{userData.nick_name}</span>
+                    <span>
+                        <Popconfirm
+                            title="您确定更换账号重新登录吗？"
+                            onConfirm={confirm}
+                            okText="确定"
+                            cancelText="取消"
+                        >
+                            <a>更换帐号 ></a>
+                        </Popconfirm>
+                    </span>
                 </div>
                 <div className={"order-phone-num"}>
                     <span>手机号：</span>
-                    <span>未绑定</span>
+                    <span>{userData.phone_number === null ? "未绑定" : userData.phone_number}</span>
                 </div>
                 <div className={"order-course-include"}>
                     <span>该系列课程包含以下课程：</span>
@@ -52,7 +70,7 @@ class Orderlayout extends Component{
                     </div>
                 </div>
                 <div className={"promotion-code"}>
-                    <a href="">我有优惠码，点此兑换</a>
+                    <a onClick={success}>我有优惠码，点此兑换</a>
                 </div>
             </div>
         )

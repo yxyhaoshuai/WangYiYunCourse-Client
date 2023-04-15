@@ -18,8 +18,7 @@ export default function ProviderSearch() {
 
     const [showCoverLogin, setshowCoverLogin] = useState(false)
     const _loginShow = () =>{
-        setshowCoverLogin(!showCoverLogin)
-
+        setshowCoverLogin(!showCoverLogin);
     }
 
     //antd

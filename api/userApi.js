@@ -37,10 +37,8 @@ export const removeUser = () => {
     })
 }
 
-export const getUserStudyHistory = (user_id) => ajax("/api/client/user/study_history", {user_id})
 
 export const updateUserStudyHistory = (user_id, course_id, outline_id,is_finish) => ajax("/api/client/user/update_study_history", {user_id, course_id, outline_id,is_finish}, "post")
 
-export const updateUserInfo = (user_id, nick_name, intro) => ajax("/api/client/user/update_info", {user_id, nick_name, intro}, "post")
 
-export const updateAccountPassword = (account,password,new_password) => ajax("/api/client/user/update_password", {account,password,new_password}, "post")
+export const getOtherData = (student_id) => ajax("/other_people_data", {student_id}, "post")

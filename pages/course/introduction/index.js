@@ -10,17 +10,16 @@ import Coursedetailschoolconsult from "../../../components/coursedetailschoolcon
 import Coursedetailbelongingseries from "../../../components/coursedetailbelongingseries";
 import Coursedetailcomment from "../../../components/coursedetailcomment";
 import Commentcover from "../../../components/commentcover";
-import {getCourseIntroduction} from "../../../api/courseIntroduction";
-import {getUser} from "../../../api/userApi";
 import {useRouter} from "next/router";
+import {getCourseIntroduction} from "../../../api/courseIntroduction";
+
 
 
 
 export default function ProviderSearch() {
     //获取路由信息
     const router =useRouter()
-
-    const [courseData,setCourseData] = useState([])
+    const [courseData,setCourseData] = useState({})
 
 
     //登陆表单
@@ -35,12 +34,16 @@ export default function ProviderSearch() {
         setshowcomment(!showcomment)
     }
 
+
     //获取课程详情信息
     useEffect(()=>{
-        getCourseIntroduction(router.query.id).then((result)=>{
-            setCourseData(result.data[0])
-        })
+        if (router.query.id !== undefined){
+            getCourseIntroduction(router.query.id).then((result)=>{
+                setCourseData(result.data[0])
+            })
+        }
     },[router.query])
+
 
     return (
         <>

@@ -77,10 +77,14 @@ export default function Seriescourseitem({data}) {
                                                     {
                                                         data.users.map((item2) => {
                                                             return <div key={item2.id} className={"use-head-div"}>
-                                                                <a href="#">
-                                                                    <img src={BaseURL + item2.header_url} alt=""/>
-                                                                </a>
-
+                                                                <Link href={{
+                                                                    pathname: "/user/others",
+                                                                    query: {"id": item2.id}
+                                                                }}>
+                                                                    <a>
+                                                                        <img src={BaseURL + item2.header_url} alt=""/>
+                                                                    </a>
+                                                                </Link>
                                                             </div>
                                                         })
                                                     }

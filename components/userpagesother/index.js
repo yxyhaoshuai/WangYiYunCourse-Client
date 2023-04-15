@@ -3,7 +3,7 @@ import {BaseURL} from "../../config/serverConfig";
 require("./index.less")
 import React, {Component} from "react";
 
-class Userpages extends Component{
+class Userpagesother extends Component{
     render(){
         const {userData} = this.props;
         return (
@@ -21,15 +21,6 @@ class Userpages extends Component{
                         <div className={"user-intro"}>
                             <span>{userData.intro}</span>
                         </div>
-                        <div className={"data-card"}>
-                            <a className={"iconfont-button-a"} href="#">
-                                <span className={"iconfont-button iconfont"}>&#xe622; 生成资料卡片</span>
-                            </a>
-
-                            <a className={"why"} href="#">
-                                <span>学习登记卡是什么？</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div className={"light bx"}>
@@ -39,5 +30,5 @@ class Userpages extends Component{
         )
     }
 }
-export default Userpages;
+export default Userpagesother;
 

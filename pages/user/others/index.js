@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from "react";
-import Navibar from "../../components/naviBar";
-import Coverlogin from "../../components/coverlogin";
-import Wangyiyunfooter from "../../components/wangyiyunfooter";
-import Leftminiad from "../../components/leftminiad";
-import Fixedfield from "../../components/fixedfield";
-import Userpages from "../../components/userpages";
+import Navibar from "../../../components/naviBar";
+import Coverlogin from "../../../components/coverlogin";
+import Wangyiyunfooter from "../../../components/wangyiyunfooter";
+import Leftminiad from "../../../components/leftminiad";
+import Fixedfield from "../../../components/fixedfield";
 import {useRouter} from "next/router";
-import {getUser} from "../../api/userApi";
+import {getOtherData} from "../../../api/userApi";
+import Userpagesother from "../../../components/userpagesother";
 
 
 export default function ProviderSearch() {
-    const router = useRouter()
+    const router = useRouter();
     const [showCoverLogin, setshowCoverLogin] = useState(false)
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
@@ -20,10 +20,10 @@ export default function ProviderSearch() {
 
 
     useEffect(()=>{
-        getUser().then((result)=>{
-            setUserData(result)
+        getOtherData(router.query.id).then((result)=>{
+                setUserData(result.data[0])
         })
-    },[])
+    },[router.query.id])
 
     return (
         <>
@@ -31,7 +31,7 @@ export default function ProviderSearch() {
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
-            <Userpages userData={userData}/>
+            <Userpagesother userData={userData}/>
             <Wangyiyunfooter/>
             <Leftminiad/>
             <Fixedfield/>

@@ -2,9 +2,10 @@ import {BaseURL} from "../../config/serverConfig";
 
 require("./index.less")
 import React, {Component} from "react";
+import Link from "next/link";
 
-class Orderitem extends Component{
-    render(){
+class Orderitem extends Component {
+    render() {
         const item = this.props.item;
         return (
             <div className={"course-detail-item"}>
@@ -12,13 +13,22 @@ class Orderitem extends Component{
                     <span>&#xe60f;</span>
                 </div>
                 <div className={"course-img"}>
-                    <a href="#">
-                        <img src={BaseURL + item.img_url} alt=""/>
-                    </a>
-
+                    <Link href={{
+                        pathname: "/course/introduction",
+                        query: {"id": item.id}
+                    }}>
+                        <a>
+                            <img src={BaseURL + item.img_url} alt=""/>
+                        </a>
+                    </Link>
                 </div>
                 <div className={"course-title"}>
-                    <a href="">{item.course_title}</a>
+                    <Link href={{
+                        pathname: "/course/introduction",
+                        query: {"id": item.id}
+                    }}>
+                        <a>{item.course_title}</a>
+                    </Link>
                 </div>
                 <div className={"valid"}>
                     永久有效
@@ -27,5 +37,6 @@ class Orderitem extends Component{
         )
     }
 }
+
 export default Orderitem;
 

@@ -7,8 +7,9 @@ import Orderlayout from "../../components/orderlayout";
 import Orderitem from "../../components/orderitem";
 import Orderprice from "../../components/orderprice";
 import {useRouter} from "next/router";
-import {getSeriesCourses} from "../../api/orderApi";
+import {getOrderCourses, getSeriesCourses} from "../../api/orderApi";
 import {getUser} from "../../api/userApi";
+import {message} from "antd";
 
 export default function ProviderSearch() {
     const router = useRouter()
@@ -20,22 +21,35 @@ export default function ProviderSearch() {
         setshowCoverLogin(!showCoverLogin)
     }
     //用户名状态机
-    const [nickName,setNickName] = useState("")
+    const [userData,setUserData] = useState({})
 
-    //设置课程列表状态机
+    //设置课程列表状态机，当从系列课程详情页跳转过来时
     useEffect(()=>{
-        getSeriesCourses(router.query.id).then((result)=>{
-            setCourseList(result.data)
-        })
+        if (router.query.id !==undefined){
+            getSeriesCourses(router.query.id).then((result)=>{
+                setCourseList(result.data)
+            })
+        }
+    },[router.query])
 
+    //设置课程列表状态机，当从课程详情页跳转过来时
+    useEffect(()=>{
+        if (router.query.courseId !==undefined){
+            getOrderCourses(router.query.courseId).then((result)=>{
+                setCourseList(result.data)
+            })
+        }
     },[router.query])
 
     //获取用户信息
     useEffect(()=>{
         getUser().then((result)=>{
-            setNickName(result.nick_name)
+            setUserData(result)
         })
     },[])
+
+
+
 
     return (
         <>
@@ -43,7 +57,7 @@ export default function ProviderSearch() {
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
-            <Orderlayout _loginShow={_loginShow} nickName={nickName} courseList={courseList}>
+            <Orderlayout _loginShow={_loginShow} userData={userData} courseList={courseList}>
                 {
                     courseList.map((item)=>{
                         return <Orderitem key={item.id} item={item}/>

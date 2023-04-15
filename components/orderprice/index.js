@@ -1,9 +1,20 @@
+import {message} from "antd";
+
 require("./index.less")
 import React, {Component} from "react";
 
 class Orderprice extends Component{
     render(){
         const courseList = this.props.courseList;
+        const success = () => {
+            message.info({
+                content: '支付的功能模块还未扩展',
+                className: 'custom-class',
+                style: {
+                    marginTop: '20vh',
+                },
+            });
+        };
         return (
             <div className={"reality-price"}>
                 <div className={"position"}>
@@ -16,7 +27,7 @@ class Orderprice extends Component{
                         }</span>
                     </div>
                     <div className={"submit-button"}>
-                        <a href="#">
+                        <a onClick={success}>
                             提交订单
                         </a>
                     </div>
