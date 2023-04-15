@@ -9,7 +9,6 @@ import Orderprice from "../../components/orderprice";
 import {useRouter} from "next/router";
 import {getOrderCourses, getSeriesCourses} from "../../api/orderApi";
 import {getUser} from "../../api/userApi";
-import {message} from "antd";
 
 export default function ProviderSearch() {
     const router = useRouter()

@@ -1,3 +1,5 @@
+import {addCar, addUserFavoriteOne} from "../../api/courseApi";
+
 require("./index.less")
 import {Breadcrumb, message, Rate} from "antd";
 
@@ -5,12 +7,13 @@ import {Breadcrumb, message, Rate} from "antd";
 import React, {useEffect, useState} from "react";
 import {BaseURL} from "../../config/serverConfig";
 import Link from "next/link";
-import {getCourseIntroduction} from "../../api/courseIntroduction";
-import {useRouter} from "next/router";
+import {getUser} from "../../api/userApi";
+
+
 
 
 export default function Coursedetailbread({courseData, ismystudy}) {
-
+    const [userId,setUserId] = useState(0)
 
     const warning = () => {
         message.warning({
@@ -21,9 +24,66 @@ export default function Coursedetailbread({courseData, ismystudy}) {
             },
         });
     };
+
+    //成功全局提示
+    const successTip = (msg) => {
+        message.success({
+            content: msg,
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+    //失败全局提示
+    const warningTip = (msg) => {
+        message.warning({
+            content: msg,
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+
+
+    const collect = ()=>{
+        addUserFavoriteOne(courseData.courseid,userId).then((result)=>{
+            if (result.code === 0){
+                successTip(result.msg)
+            }else {
+                warningTip(result.msg)
+            }
+        })
+    }
+
+    const success = () => {
+        message.info({
+            content: '这个网站还不支持微信登录！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+    const addCarFunc = ()=>{
+        addCar(courseData.courseid,userId).then((result)=>{
+            if (result.code === 0){
+                successTip(result.msg)
+            }else if (result.code === -1){
+                warningTip(result.msg)
+            }
+        })
+    }
+
     useEffect(() => {
-        console.log(courseData)
-    }, [courseData])
+        getUser().then((result)=>{
+            setUserId(result.id)
+        })
+    }, [])
 
     return (
         <div className={"course-intro"}>
@@ -48,11 +108,11 @@ export default function Coursedetailbread({courseData, ismystudy}) {
                                     courseData.coursetitle
                                 }
                             </div>
-                            <div className={"share"}>
+                            <div onClick={success} className={"share"}>
                                 <a href="#" className={"iconfont"}>&#xe62f;</a>
                             </div>
-                            <div className={"collect"}>
-                                <a href="#" className={"iconfont"}>&#xe666;</a>
+                            <div onClick={collect} className={"collect"}>
+                                <a className={"iconfont"}>&#xe666;</a>
                             </div>
                         </div>
                         <div className={"about-user-teacher"}>
@@ -107,7 +167,7 @@ export default function Coursedetailbread({courseData, ismystudy}) {
                                             {/*下面的代码需要修改，修改路由路径为视频播放页的路由路径*/}
                                             <Link href={{
                                                 pathname: "/order",
-                                                query: {"id": courseData.courseid}
+                                                query: {"courseId": courseData.courseid}
                                             }}>
                                                 <a>
                                                     免费试看
@@ -116,7 +176,7 @@ export default function Coursedetailbread({courseData, ismystudy}) {
                                         </div>
                                         <div className={"join-cart"}>
                                             <span className={"iconfont"}>&#xe6d5;</span>
-                                            <span>加入购物车</span>
+                                            <span onClick={addCarFunc}>加入购物车</span>
                                         </div>
 
                                     </div>

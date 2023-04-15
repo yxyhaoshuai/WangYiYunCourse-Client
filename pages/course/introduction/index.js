@@ -21,19 +21,16 @@ export default function ProviderSearch() {
     const router =useRouter()
     const [courseData,setCourseData] = useState({})
 
-
     //登陆表单
     const [showCoverLogin, setshowCoverLogin] = useState(false)
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin)
-
     }
     // 评论蒙版
     const [showcomment, setshowcomment] = useState(false)
     const _commentShow = () =>{
         setshowcomment(!showcomment)
     }
-
 
     //获取课程详情信息
     useEffect(()=>{
@@ -43,6 +40,10 @@ export default function ProviderSearch() {
             })
         }
     },[router.query])
+
+    useEffect(()=>{
+        console.log(courseData)
+    },[courseData])
 
 
     return (
