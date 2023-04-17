@@ -12,7 +12,7 @@ import {getUser} from "../../api/userApi";
 
 
 
-export default function Coursedetailbread({courseData, ismystudy}) {
+export default function Coursedetailbread({courseData, ismystudy,breadData}) {
     const [userId,setUserId] = useState(0)
 
     const warning = () => {
@@ -89,10 +89,10 @@ export default function Coursedetailbread({courseData, ismystudy}) {
         <div className={"course-intro"}>
             <div className={"course-intro-bread bx"}>
                 <Breadcrumb separator=">">
-                    <Breadcrumb.Item href="">首页</Breadcrumb.Item>
-                    <Breadcrumb.Item href="">编程开发</Breadcrumb.Item>
-                    <Breadcrumb.Item href="">IT互联网</Breadcrumb.Item>
-                    <Breadcrumb.Item href="">后端开发</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/">首页</Breadcrumb.Item>
+                    <Breadcrumb.Item href={`/category?classOneId=${breadData.classoneId}&categoryId=0`}>{breadData.classone}</Breadcrumb.Item>
+                    <Breadcrumb.Item href={`/category?classOneId=${breadData.classoneId}&categoryId=${breadData.classtwoId}`}>{breadData.classtwo}</Breadcrumb.Item>
+                    <Breadcrumb.Item href={`/category?classOneId=${breadData.classoneId}&categoryId=${breadData.classtwoId}`}>{breadData.classthree}</Breadcrumb.Item>
                     <Breadcrumb.Item> 课程详情</Breadcrumb.Item>
                 </Breadcrumb>
             </div>

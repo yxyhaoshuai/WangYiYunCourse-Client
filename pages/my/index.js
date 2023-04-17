@@ -9,7 +9,7 @@ import Mypagetabs from "../../components/mypagetabs";
 import Mypagelayout from "../../components/mypagelayout";
 import Mypagecard from "../../components/mypagecard";
 import Searchresultcard from "../../components/card/seriescard";
-import {getMyCollect, getMyStudy} from "../../api/myStudy";
+import {getMyCollect, getMyStudy} from "../../api/myStudyApi";
 
 
 export default function ProviderSearch() {

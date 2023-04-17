@@ -11,7 +11,7 @@ import Coursedetailbelongingseries from "../../../components/coursedetailbelongi
 import Coursedetailcomment from "../../../components/coursedetailcomment";
 import Commentcover from "../../../components/commentcover";
 import {useRouter} from "next/router";
-import {getCourseIntroduction} from "../../../api/courseIntroduction";
+import {getCourseDetailCrumbs, getCourseIntroduction} from "../../../api/courseIntroductionApi";
 
 
 
@@ -23,13 +23,17 @@ export default function ProviderSearch() {
 
     //登陆表单
     const [showCoverLogin, setshowCoverLogin] = useState(false)
-    const _loginShow = () =>{
-        setshowCoverLogin(!showCoverLogin)
-    }
+
+    //面包屑数据
+    const [breadData,setBreadData] = useState({})
     // 评论蒙版
     const [showcomment, setshowcomment] = useState(false)
     const _commentShow = () =>{
         setshowcomment(!showcomment)
+    }
+
+    const _loginShow = () =>{
+        setshowCoverLogin(!showCoverLogin)
     }
 
     //获取课程详情信息
@@ -41,9 +45,25 @@ export default function ProviderSearch() {
         }
     },[router.query])
 
+
+    // 课程详情页数据
+    // useEffect(()=>{
+    //     console.log(courseData)
+    // },[courseData])
+
+    //获取课程详情页面包屑
     useEffect(()=>{
-        console.log(courseData)
-    },[courseData])
+        if (router.query.id !== undefined){
+            getCourseDetailCrumbs(router.query.id).then((result)=>{
+                setBreadData(result.data[0])
+            })
+        }
+    },[router.query])
+
+
+    useEffect(()=>{
+        console.log(breadData)
+    },[breadData])
 
 
     return (
@@ -54,7 +74,7 @@ export default function ProviderSearch() {
             }
             <Fixedfield/>
             {/*下面是一个组件到时候封装*/}
-            <Coursedetailbread courseData={courseData}/>
+            <Coursedetailbread breadData={breadData} courseData={courseData}/>
             {/*下面是一个组件到时候封装*/}
             <Coursedetaillayout>
                 <Coursedetailschool/>
