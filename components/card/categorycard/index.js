@@ -1,28 +1,35 @@
+import {BaseURL} from "../../../config/serverConfig";
+
 require("./index.less")
 import React, {Component} from "react";
 
 class Categorycard extends Component{
     render(){
+        const {data} = this.props;
         return (
             <div className={"card column4"}>
                 <div className={"top-img"}>
-                    <img src="/assets/images/aaaa.png" alt=""/>
+                    <img src={BaseURL + data.img_url} alt=""/>
                 </div>
                 <div className={"open-card_content_time"}>
-                    3月3日 20:00
+                    {
+                        data.learning_time
+                    }
                 </div>
                 <div className={"open-card_content_title"}>
-                    <span>自研</span>
-                    <span>有道英语</span>
-                    <span>【速言日语】从零轻松玩转日语听说</span>
+                    {
+                        data.is_self_innovate === 1? <span>自研</span> : <span></span>
+                    }
+                    <span>{data.class_name}</span>
+                    <span>{data.course_title}</span>
                 </div>
                 <div className={"open-card_content_teacher"}>
-                    <span>唐矛</span>
-                    <span>日系暖男</span>
+                    <span>{data.name}</span>
+                    <span>{data.label}</span>
 
                 </div>
                 <div className={"open-card_content_des"}>
-                    日系暖男带你玩转日语听说
+                    {data.course_intro}
                 </div>
             </div>
         )

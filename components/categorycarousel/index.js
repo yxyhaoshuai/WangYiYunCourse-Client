@@ -1,9 +1,10 @@
 import {Carousel} from "antd";
 require("./index.less")
 import React, {useRef} from "react";
+import {BaseURL} from "../../config/serverConfig";
 
 
-export default function Categorycarousel() {
+export default function Categorycarousel({ad}) {
     const switchRef = useRef(null)
     //antd
     const contentStyle = {
@@ -28,21 +29,13 @@ export default function Categorycarousel() {
             <div className={"Left-jump iconfont"} onClick={_handlerPrev}>&#xe620;</div>
             <div className={"Right-jump iconfont"} onClick={_handlerNext}>&#xe62d;</div>
             <Carousel ref={switchRef} autoplay>
-                <div>
-                    <a href="#"><img src="/assets/images/lunbo1.png" alt="" style={contentStyle}/></a>
-                </div>
-                <div>
-                    <a href="#"><img src="/assets/images/lunbo2.png" alt="" style={contentStyle}/></a>
-                </div>
-                <div>
-                    <a href="#"><img src="/assets/images/lunbo3.png" alt="" style={contentStyle}/></a>
-                </div>
-                <div>
-                    <a href="#"><img src="/assets/images/lunbo4.png" alt="" style={contentStyle}/></a>
-                </div>
-                <div>
-                    <a href="#"><img src="/assets/images/lunbo5.png" alt="" style={contentStyle}/></a>
-                </div>
+                {
+                    ad.map((item)=>{
+                        return <div key={item.course_id}>
+                            <a href="#"><img src={BaseURL + item.ad_img_url} alt="" style={contentStyle}/></a>
+                        </div>
+                    })
+                }
             </Carousel>
         </div>
     )

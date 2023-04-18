@@ -9,7 +9,7 @@ import Categorycardlayout from "../../components/categorycardlayout";
 import Categorycard from "../../components/card/categorycard";
 import Categorybread from "../../components/categorybread";
 import Categorycarousel from "../../components/categorycarousel";
-import {getCategoryNav} from "../../api/categoryApi";
+import {getCategoryAd, getCategoryNav, getOpenCourseAll, getOpenCoursePart} from "../../api/categoryApi";
 import {useRouter} from "next/router";
 
 
@@ -20,6 +20,12 @@ export default function ProviderSearch() {
     const [showCoverLogin, setshowCoverLogin] = useState(false)
 
     const [nav , setNav] = useState([])
+
+    //轮播图数据
+    const [ad,setAd] = useState([])
+
+    //直播公开课
+    const [openCourse,setOpenCourse] = useState([])
 
 
     const _loginShow = () =>{
@@ -47,6 +53,53 @@ export default function ProviderSearch() {
         }
     },[router.query])
 
+    useEffect(()=>{
+        if (classOneId !== undefined){
+            if (+categoryId === 0) {
+                getCategoryAd(classOneId).then((result)=>{
+                    setAd(result.data)
+                })
+            } else {
+                setAd([])
+            }
+        }
+    },[router.query])
+
+    //获取直播公开课数据
+    useEffect(()=>{
+        if (classOneId !== undefined){
+            if (+categoryId === 0) {
+                getCategoryAd(classOneId).then((result)=>{
+                    setAd(result.data)
+                })
+            } else {
+                setAd([])
+            }
+        }
+    },[router.query])
+
+
+
+    //获取直播公开课数据
+    useEffect(()=>{
+        if (classOneId !== undefined){
+            if (+categoryId === 0) {
+                getOpenCourseAll(classOneId).then((result)=>{
+                    setOpenCourse(result.data)
+                })
+            } else {
+                getOpenCoursePart(categoryId).then((result)=>{
+                    setOpenCourse(result.data)
+                })
+            }
+        }
+    },[router.query])
+
+    //测试钩子
+    useEffect(()=>{
+        console.log(openCourse)
+    },[openCourse])
+
     return (
         <>
             <Navibar _loginShow={_loginShow}/>
@@ -54,14 +107,16 @@ export default function ProviderSearch() {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
             <Categorybread categoryId={categoryId} nav={nav}/>
-            <Categorycarousel/>
-            <Categorycardlayout layoutTitle={"直播公开课"}>
-                <Categorycard/>
-                <Categorycard/>
-                <Categorycard/>
-                <Categorycard/>
-                <Categorycard/>
-            </Categorycardlayout>
+            <Categorycarousel ad={ad}/>
+            {
+                openCourse.length > 0 ? <Categorycardlayout layoutTitle={"直播公开课"}>
+                        {
+                            openCourse.map((item)=>{
+                                return <Categorycard key={item.courseId} data={item}/>
+                            })
+                        }
+                    </Categorycardlayout> : ""
+            }
             {/*下面的score必传，传一个数值或者null*/}
             <Categorycardlayout layoutTitle={"免费好课"}>
                 <Categoryfreecard score={4.5}/>
