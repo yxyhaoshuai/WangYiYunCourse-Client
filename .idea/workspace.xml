@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/categoryApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/categoryApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/card/categorycard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categorycard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/categorycarousel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorycarousel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +225,11 @@
       <workItem from="1681708213017" duration="12335000" />
       <workItem from="1681731259130" duration="8392000" />
       <workItem from="1681740645765" duration="105000" />
-      <workItem from="1681801149332" duration="9488000" />
+      <workItem from="1681801149332" duration="10051000" />
+      <workItem from="1681864992775" duration="732000" />
+      <workItem from="1681868074332" duration="9000" />
+      <workItem from="1681892783674" duration="6950000" />
+      <workItem from="1681908115381" duration="1567000" />
     </task>
     <servers />
   </component>

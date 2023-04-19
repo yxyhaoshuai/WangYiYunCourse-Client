@@ -9,7 +9,13 @@ import Categorycardlayout from "../../components/categorycardlayout";
 import Categorycard from "../../components/card/categorycard";
 import Categorybread from "../../components/categorybread";
 import Categorycarousel from "../../components/categorycarousel";
-import {getCategoryAd, getCategoryNav, getOpenCourseAll, getOpenCoursePart} from "../../api/categoryApi";
+import {
+    getCategoryAd,
+    getCategoryNav,
+    getOpenCourseAll,
+    getOpenCoursePart,
+    getSonAndCourse, getSonAndCourse_son
+} from "../../api/categoryApi";
 import {useRouter} from "next/router";
 
 
@@ -26,6 +32,9 @@ export default function ProviderSearch() {
 
     //直播公开课
     const [openCourse,setOpenCourse] = useState([])
+
+    //页面子分类和课程状态机
+    const [sonAndCourse,setSonAndCourse] =useState([])
 
 
     const _loginShow = () =>{
@@ -95,10 +104,26 @@ export default function ProviderSearch() {
         }
     },[router.query])
 
+    //获取子分类和子分类里的课程列表
+    useEffect(()=>{
+        if (classOneId !== undefined){
+            if (+categoryId === 0) {
+                getSonAndCourse(classOneId).then((result)=>{
+                    setSonAndCourse(result.data)
+                })
+            } else {
+                getSonAndCourse_son(+categoryId).then((result)=>{
+                    setSonAndCourse(result.data)
+                })
+            }
+        }
+    },[router.query.categoryId])
+
+
     //测试钩子
     useEffect(()=>{
-        console.log(openCourse)
-    },[openCourse])
+        console.log(sonAndCourse)
+    },[sonAndCourse])
 
     return (
         <>
@@ -118,21 +143,22 @@ export default function ProviderSearch() {
                     </Categorycardlayout> : ""
             }
             {/*下面的score必传，传一个数值或者null*/}
-            <Categorycardlayout layoutTitle={"免费好课"}>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard score={null}/>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard/>
-            </Categorycardlayout>
-            <Categorycardlayout layoutTitle={"精选好课"}>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard score={4.5}/>
-                <Categoryfreecard/>
-                <Categoryfreecard score={4.5}/>
-            </Categorycardlayout>
+
+            {
+                sonAndCourse.map((item)=>{
+                    if (item.courses.length > 0){
+                        return <Categorycardlayout key={item.classTwoId} layoutTitle={item.sonName}>
+                            {
+                                item.courses.map((item2)=>{
+                                    return <Categoryfreecard data={item2} key={item2.courseId} score={item2.score}/>
+                                })
+                            }
+                        </Categorycardlayout>
+                    }else {
+                        return ""
+                    }
+                })
+            }
             <Fixedfield/>
             <Leftminiad/>
             <Wangyiyunfooter/>

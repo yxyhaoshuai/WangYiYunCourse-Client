@@ -11,4 +11,10 @@ export const getOpenCourseAll =(id) => ajax("/open_course_all/" + id)
 export const getOpenCoursePart =(id) => ajax("/open_course_part/" + id)
 
 
+export const getSonAndCourse =(classOneId) => ajax("/categorys_children_categorys/" + classOneId)
+
+export const getSonAndCourse_son =(classOneId) => ajax("/categorys_children_categorys_son/" + classOneId)
+
+
+
 
