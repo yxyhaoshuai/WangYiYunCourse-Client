@@ -12,10 +12,6 @@ class Lunbo extends Component{
     _handlerNext = ()=>{
         this._DOM.next()
     }
-
-
-
-
     render(){
         const contentStyle = {
             height: '100%',
@@ -32,9 +28,9 @@ class Lunbo extends Component{
                     {
                         lunbolist.map((item)=>{
                             return <div key={item.id}>
-
-                                <img src={BaseURL+item.ad_img_url} style={contentStyle}/>
-
+                                    <a href={"/course/introduction?id="+item.course_id}>
+                                        <img src={BaseURL+item.ad_img_url} style={contentStyle}/>
+                                    </a>
                             </div>
                         })
                     }

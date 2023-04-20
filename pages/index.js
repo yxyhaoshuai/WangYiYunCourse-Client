@@ -31,6 +31,8 @@ import {
     getLunBoList
 } from "../api/homeApi";
 import Head from "next/head";
+import {getUser} from "../api/userApi";
+import {message} from "antd";
 
 class Home extends Component{
     constructor(props){
@@ -87,17 +89,37 @@ class Home extends Component{
         }
 
     }
-    _InterestShow = () =>{
-        if (this.state.showInterest===false){
-            this.setState({
-                showInterest : true
-            })
-        }else {
-            this.setState({
-                showInterest : false
-            })
-        }
 
+    //未登录提示
+    warnTip = () => {
+        message.warn({
+            content: '未登录，请先登录！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
+    _InterestShow = () =>{
+        getUser().then((result)=>{
+            if (result.id){
+                if (this.state.showInterest===false){
+                    this.setState({
+                        showInterest : true
+                    })
+                }else {
+                    this.setState({
+                        showInterest : false
+                    })
+                }
+            }else if (result.id === undefined){
+                this.warnTip();
+                setTimeout(() => {
+                    this._loginShow();
+                }, 1000);
+            }
+        })
     }
 
     _pushInterestArray = (key) =>{
@@ -112,12 +134,13 @@ class Home extends Component{
     }
 
     _pushInterestNet = ()=>{
-        console.log("在这里发送网络请求",this.state.myInterestArray)
         this.setState({
             showInterest:!this.state.showInterest
         })
 
     }
+
+
 
     render(){
         const {showElem ,showCoverLogin,showInterest} =this.state;

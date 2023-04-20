@@ -63,23 +63,13 @@ export default function ProviderSearch() {
         }
     },[router.query])
 
-    useEffect(()=>{
-        if (classOneId !== undefined){
-            if (+categoryId === 0) {
-                getCategoryAd(classOneId).then((result)=>{
-                    setAd(result.data)
-                })
-            } else {
-                setAd([])
-            }
-        }
-    },[router.query])
 
-    //获取直播公开课数据
+    //获取广告轮播图数据
     useEffect(()=>{
         if (classOneId !== undefined){
             if (+categoryId === 0) {
                 getCategoryAd(classOneId).then((result)=>{
+                    console.log(result)
                     setAd(result.data)
                 })
             } else {

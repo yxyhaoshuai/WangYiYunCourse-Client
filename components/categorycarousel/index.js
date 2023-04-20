@@ -2,6 +2,7 @@ import {Carousel} from "antd";
 require("./index.less")
 import React, {useRef} from "react";
 import {BaseURL} from "../../config/serverConfig";
+import Link from "next/link";
 
 
 export default function Categorycarousel({ad}) {
@@ -32,7 +33,12 @@ export default function Categorycarousel({ad}) {
                 {
                     ad.map((item)=>{
                         return <div key={item.course_id}>
-                            <a href="#"><img src={BaseURL + item.ad_img_url} alt="" style={contentStyle}/></a>
+                            <Link href={{
+                                pathname: "/course/introduction/",
+                                query: {"id": item.course_id}
+                            }}>
+                                <a><img src={BaseURL + item.ad_img_url} alt="" style={contentStyle}/></a>
+                            </Link>
                         </div>
                     })
                 }

@@ -35,11 +35,29 @@
         font-weight: bold;
         color: black;
       }
-      span:nth-child(2n-1){
+      .class-one{
+        a{
+          color: #000000;
+          &:hover{
+            color: #ff3f29;
+          }
+        }
         &:hover{
           cursor: pointer;
           border-bottom: 1px solid #ff3f29;
-          color: #ff3f29;
+        }
+      }
+
+      .class-two{
+        a{
+          color: #777777;
+          &:hover{
+            color: #ff3f29;
+          }
+        }
+        &:hover{
+          cursor: pointer;
+          border-bottom: 1px solid #ff3f29;
         }
       }
       .category-intro-operation-pane{
@@ -54,7 +72,7 @@
         display: none;
         padding: 25px;
         box-sizing: border-box;
-        z-index: 99999999;
+        z-index: 99999;
         .category-name{
           span{
             background-color: #FFFFFF;
@@ -95,6 +113,8 @@
           background-color: #FFFFFF;
           font-size: 16px;
           padding-top: 10px;
+          color: #000000;
+          font-weight: bolder;
         }
         .category-course-card{
           width: 590px;

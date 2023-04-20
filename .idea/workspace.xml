@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/categorytabs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/categorytabs/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/categoryApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/categoryApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/categorybread/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorybread/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/lunbo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/lunbo/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/homeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/homeApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/categorycard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categorycard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/categorycard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categorycard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/categoryfreecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categoryfreecard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/coursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/coursecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/courseteachercard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/courseteachercard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/excellentcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/excellentcoursecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/gratiscoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/gratiscoursecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/livestreamingcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/livestreamingcard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/microprofessionalcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/microprofessionalcard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/microprofessionalcard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/microprofessionalcard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/newcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/newcoursecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/seriesofcourses/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/seriesofcourses/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorycarousel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorycarousel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorylistings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorylistings/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorylistings/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorylistings/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/interest/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/interest/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/lunbo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/lunbo/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/WangYiYunCourse-Server-main",
+    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client",
     "list.type.of.created.stylesheet": "Less",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -84,6 +98,9 @@
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/pages/index.js" working-dir="$PROJECT_DIR$/pages">
       <method v="2" />
     </configuration>
+    <configuration name="next.config.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/next.config.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -97,6 +114,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="Node.js.next.config.js" />
         <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
@@ -235,7 +253,11 @@
       <workItem from="1681892783674" duration="6950000" />
       <workItem from="1681908115381" duration="1567000" />
       <workItem from="1681910255326" duration="251000" />
-      <workItem from="1681952568235" duration="8084000" />
+      <workItem from="1681952568235" duration="8298000" />
+      <workItem from="1681964289905" duration="804000" />
+      <workItem from="1681983786010" duration="2391000" />
+      <workItem from="1681988467282" duration="10656000" />
+      <workItem from="1682002176348" duration="3028000" />
     </task>
     <servers />
   </component>

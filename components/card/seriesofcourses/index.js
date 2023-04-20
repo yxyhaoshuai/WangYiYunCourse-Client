@@ -4,11 +4,13 @@ require("./index.less")
 import React, {Component} from "react";
 
 class Seriesofcourses extends Component{
+
+
     render(){
         const {data} = this.props;
         return (
             <div className={"aeries-of-courses"}>
-                <a href="components/card/seriesofcourses/index#" className={"j-href"}>
+                <a href={"/series?id=" + data.id} className={"j-href"}>
                     <div className={"card"}>
                         <div className={"img"}>
                             <img src={BaseURL + data.series_fm_url} alt=""/>
