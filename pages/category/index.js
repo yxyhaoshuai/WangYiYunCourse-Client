@@ -11,12 +11,13 @@ import Categorybread from "../../components/categorybread";
 import Categorycarousel from "../../components/categorycarousel";
 import {
     getCategoryAd,
-    getCategoryNav,
+    getCategoryNav, getClassTwoCourses,
     getOpenCourseAll,
     getOpenCoursePart,
     getSonAndCourse, getSonAndCourse_son
 } from "../../api/categoryApi";
 import {useRouter} from "next/router";
+import Categorytabs from "../../components/categorytabs";
 
 
 export default function ProviderSearch() {
@@ -35,7 +36,7 @@ export default function ProviderSearch() {
 
     //页面子分类和课程状态机
     const [sonAndCourse,setSonAndCourse] =useState([])
-
+    const [classTwoCourse,setClassTwoCourse] = useState([])
 
     const _loginShow = () =>{
         setshowCoverLogin(!showCoverLogin);
@@ -119,11 +120,24 @@ export default function ProviderSearch() {
         }
     },[router.query.categoryId])
 
+    //获取二级分类下所有课程
+    useEffect(()=>{
+        if (classOneId !== undefined){
+            if (+categoryId === 0) {
+                setClassTwoCourse([])
+            } else {
+                getClassTwoCourses(categoryId,"studyCount").then((result)=>{
+                    setClassTwoCourse(result.data)
+                })
+            }
+        }
+    },[router.query.categoryId])
+
 
     //测试钩子
-    useEffect(()=>{
-        console.log(sonAndCourse)
-    },[sonAndCourse])
+    // useEffect(()=>{
+    //     console.log(sonAndCourse)
+    // },[sonAndCourse])
 
     return (
         <>
@@ -145,9 +159,9 @@ export default function ProviderSearch() {
             {/*下面的score必传，传一个数值或者null*/}
 
             {
-                sonAndCourse.map((item)=>{
+                sonAndCourse.map((item,index)=>{
                     if (item.courses.length > 0){
-                        return <Categorycardlayout key={item.classTwoId} layoutTitle={item.sonName}>
+                        return <Categorycardlayout key={index} layoutTitle={item.sonName}>
                             {
                                 item.courses.map((item2)=>{
                                     return <Categoryfreecard data={item2} key={item2.courseId} score={item2.score}/>
@@ -159,6 +173,7 @@ export default function ProviderSearch() {
                     }
                 })
             }
+            <Categorytabs categoryId={categoryId} setClassTwoCourse={setClassTwoCourse} classTwoCourse={classTwoCourse}/>
             <Fixedfield/>
             <Leftminiad/>
             <Wangyiyunfooter/>

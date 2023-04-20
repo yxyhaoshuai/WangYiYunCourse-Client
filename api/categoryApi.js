@@ -16,5 +16,9 @@ export const getSonAndCourse =(classOneId) => ajax("/categorys_children_category
 export const getSonAndCourse_son =(classOneId) => ajax("/categorys_children_categorys_son/" + classOneId)
 
 
+export const getClassTwoCourses =(classTwoId,orderBy) => ajax(`/class-two-course?id=${classTwoId}&orderBy=${orderBy}`)
+
+
+
 
 

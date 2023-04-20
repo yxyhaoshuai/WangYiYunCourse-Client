@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/components/categorytabs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/categorytabs/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/categoryApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/categoryApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/categoryfreecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorybread/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorybread/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/lunbo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/lunbo/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Less File" />
         <option value="JavaScript File" />
+        <option value="Less File" />
       </list>
     </option>
   </component>
@@ -230,6 +234,8 @@
       <workItem from="1681868074332" duration="9000" />
       <workItem from="1681892783674" duration="6950000" />
       <workItem from="1681908115381" duration="1567000" />
+      <workItem from="1681910255326" duration="251000" />
+      <workItem from="1681952568235" duration="8084000" />
     </task>
     <servers />
   </component>
