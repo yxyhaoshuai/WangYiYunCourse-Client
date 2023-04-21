@@ -1,0 +1,249 @@
+.course-intro{
+  margin-top: 70px;
+  .course-intro-bread{
+    margin-bottom: 20px;
+
+
+  }
+  .course-intro-card{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 1px 2px #bbb;
+    .img-content{
+
+      display: flex;
+      .img{
+        img{
+          height: 250px;
+          width: 450px;
+
+        }
+
+
+      }
+      .content{
+        flex-grow: 1;
+        padding-left: 20px;
+        .course-title{
+          display: flex;
+          position: relative;
+          .course-title-text{
+            color: #333333;
+            font-size: 24px;
+
+          }
+
+          .share{
+            width: 40px;
+            height: 25px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            position: absolute;
+            right: 39px;
+            &:hover{
+              background-color: #eeeeee;
+            }
+            a{
+              color: #666666;
+              display: block;
+              width: 40px;
+              height: 25px;
+              text-align: center;
+              font-size: 18px;
+              line-height: 22px;
+              &:hover{
+                color: #ff3f29;
+              }
+            }
+
+          }
+          .collect{
+            width: 40px;
+            height: 25px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            position: absolute;
+            right: 0;
+
+            &:hover{
+              background-color: #eeeeee;
+            }
+            a{
+              display: block;
+              width: 40px;
+              height: 25px;
+              text-align: center;
+              font-size: 18px;
+              line-height: 22px;
+              color: #666666;
+              font-weight: bolder;
+              &:hover{
+                color: #ff3f29;
+              }
+
+            }
+          }
+        }
+        .about-user-teacher{
+          height: 40px;
+          display: flex;
+          .user-count{
+            font-size: 12px;
+            color: #999999;
+            line-height: 40px;
+          }
+          .score{
+            margin-left: 20px;
+
+          }
+          .teacher-name{
+            color: #666666;
+            font-size: 12px;
+            margin-left: 10px;
+            line-height: 40px;
+
+          }
+
+        }
+        .price{
+          font-size: 28px;
+          color: #333333;
+          line-height: 28px;
+
+        }
+        .coupon{
+          background-color: #FF632A;
+          width: 230px;
+          height: 24px;
+          text-align: center;
+          border-radius: 12px;
+          margin-top: 10px;
+          a{
+            color: white;
+            font-size: 14px;
+            &:hover{
+              border-bottom: 1px solid white;
+            }
+
+          }
+
+        }
+        .three-button{
+          display: flex;
+          height: 110px;
+          position: relative;
+          .join-button{
+            background-color: #ff8000;
+            font-size: 20px;
+            width: 160px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            a{
+              color: white;
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+            &:hover{
+              background: #ee6600;
+              cursor: pointer;
+            }
+
+          }
+          .try-and-see{
+            width: 160px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            font-size: 20px;
+
+            background-color: white;
+            border: 1px solid #666;
+            position: absolute;
+            bottom: 0;
+            left: 180px;
+            a{
+              color: #666666;
+              display: block;
+              width: 100%;
+              height: 100%;
+              &:hover{
+                color: #FF3F29;
+              }
+            }
+            &:hover{
+              border: 1px solid #FF3F29;
+              cursor: pointer;
+            }
+
+          }
+          .join-cart{
+            width: 160px;
+            height: 45px;
+            line-height: 45px;
+            position: absolute;
+            bottom: 0;
+            left: 360px;
+            span:nth-child(1){
+              color: #FF3F29;
+              font-size: 18px;
+            }
+            span:nth-child(2){
+              color: #666666;
+              font-size: 14px;
+              margin-left: 5px;
+              &:hover{
+                color: #FF3F29;
+              }
+            }
+            &:hover{
+              cursor: pointer;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+  .bar-button{
+    background-color: #fafafa;
+    box-shadow: 0 1px 2px #bbb;
+    border: 1px solid #eeeeee;
+    display: flex;
+    padding: 6px 20px 6px 20px;
+    .current{
+      padding: 1px 10px 1px 10px;
+      margin-right: 8px;
+      border-radius: 4px;
+      background-color: #444444;
+      font-size: 14px;
+      color: white;
+      &:hover{
+        cursor: pointer;
+      }
+
+    }
+    .not-current{
+      padding: 1px 10px 1px 10px;
+      margin-right: 8px;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 14px;
+      color: #333333;
+      &:hover{
+        cursor: pointer;
+        color: #ff3f29;
+      }
+    }
+
+  }
+}

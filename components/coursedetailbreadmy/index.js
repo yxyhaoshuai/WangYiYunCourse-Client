@@ -1,14 +1,17 @@
+import {BaseURL} from "../../config/serverConfig";
+
 require("./index.less")
 import {addCar, addUserFavoriteOne} from "../../api/courseApi";
 import {Breadcrumb, message, Rate} from "antd";
 import React, {useEffect, useState} from "react";
-import {BaseURL} from "../../config/serverConfig";
-import Link from "next/link";
 import {getUser} from "../../api/userApi";
+import Link from "next/link";
 
 
-export default function Coursedetailbread({courseData, ismystudy,breadData}) {
-    const [userId,setUserId] = useState(0)
+export default function Coursedetailbreadmy({courseData, ismystudy, breadData,directoryIntro,setDirectoryIntro}) {
+    const [userId, setUserId] = useState(0);
+
+
 
     const warning = () => {
         message.warning({
@@ -43,12 +46,11 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
     };
 
 
-
-    const collect = ()=>{
-        addUserFavoriteOne(courseData.courseid,userId).then((result)=>{
-            if (result.code === 0){
+    const collect = () => {
+        addUserFavoriteOne(courseData.courseid, userId).then((result) => {
+            if (result.code === 0) {
                 successTip(result.msg)
-            }else {
+            } else {
                 warningTip(result.msg)
             }
         })
@@ -64,18 +66,18 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
         });
     };
 
-    const addCarFunc = ()=>{
-        addCar(courseData.courseid,userId).then((result)=>{
-            if (result.code === 0){
+    const addCarFunc = () => {
+        addCar(courseData.courseid, userId).then((result) => {
+            if (result.code === 0) {
                 successTip(result.msg)
-            }else if (result.code === -1){
+            } else if (result.code === -1) {
                 warningTip(result.msg)
             }
         })
     }
 
     useEffect(() => {
-        getUser().then((result)=>{
+        getUser().then((result) => {
             setUserId(result.id)
         })
     }, [])
@@ -85,9 +87,12 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
             <div className={"course-intro-bread bx"}>
                 <Breadcrumb separator=">">
                     <Breadcrumb.Item href="/">首页</Breadcrumb.Item>
-                    <Breadcrumb.Item href={`/category?classOneId=${breadData.classoneId}&categoryId=0`}>{breadData.classone}</Breadcrumb.Item>
-                    <Breadcrumb.Item href={`/category?classOneId=${breadData.classoneId}&categoryId=${breadData.classtwoId}`}>{breadData.classtwo}</Breadcrumb.Item>
-                    <Breadcrumb.Item href={`/category?classOneId=${breadData.classoneId}&categoryId=${breadData.classtwoId}`}>{breadData.classthree}</Breadcrumb.Item>
+                    <Breadcrumb.Item
+                        href={`/category?classOneId=${breadData.classoneId}&categoryId=0`}>{breadData.classone}</Breadcrumb.Item>
+                    <Breadcrumb.Item
+                        href={`/category?classOneId=${breadData.classoneId}&categoryId=${breadData.classtwoId}`}>{breadData.classtwo}</Breadcrumb.Item>
+                    <Breadcrumb.Item
+                        href={`/category?classOneId=${breadData.classoneId}&categoryId=${breadData.classtwoId}`}>{breadData.classthree}</Breadcrumb.Item>
                     <Breadcrumb.Item> 课程详情</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
@@ -118,9 +123,9 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
                             </div>
                             <div className={"score"}>
                                 {
-                                    courseData.avg_score ? <Rate disabled allowHalf defaultValue={courseData.avg_score}/> : ""
+                                    courseData.avg_score ?
+                                        <Rate disabled allowHalf defaultValue={courseData.avg_score}/> : ""
                                 }
-
                             </div>
                             <div className={"teacher-name"}>
                                 {
@@ -155,7 +160,6 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
                                             </Link>
                                         </div>
                                         <div className={"try-and-see"}>
-                                            {/*下面的代码需要修改，修改路由路径为视频播放页的路由路径*/}
                                             <Link href={{
                                                 pathname: "/order",
                                                 query: {"courseId": courseData.courseid}
@@ -178,13 +182,38 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
             </div>
             <div className={"bar-button bx"}>
                 {/*current选中 not-current是未选择两者只能填一个*/}
-                <span className={"current"}>
-                        介绍
-                    </span>
-                <span className={"not-current"}>
-                        目录
-                    </span>
-
+                {
+                    directoryIntro !== 1 ?
+                        <>
+                            <span onClick={() => {
+                                setDirectoryIntro(1)
+                            }
+                            } className={"not-current"}>
+                                介绍
+                            </span>
+                            <span onClick={() => {
+                                setDirectoryIntro(2)
+                            }
+                            } className={"current"}>
+                                目录
+                            </span>
+                        </>
+                        :
+                        <>
+                            <span onClick={() => {
+                                setDirectoryIntro(1)
+                            }
+                            } className={"current"}>
+                                介绍
+                            </span>
+                            <span onClick={() => {
+                                setDirectoryIntro(2)
+                            }
+                            } className={"not-current"}>
+                                目录
+                            </span>
+                        </>
+                }
             </div>
 
         </div>
