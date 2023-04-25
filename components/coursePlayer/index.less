@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 753px;
     background-image: url(/assets/images/courseLearn_bg.jpg);
     &>.top {
       width: 100%;
@@ -46,15 +47,18 @@
       }
     }
     &>.play-pane {
-      width: ~"calc(100% - 100px)";
+      width: ~"calc(100% - 40px)";
       flex: 1;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       .class-title {
         font-size: 16px;
-        color: #fff;
-        padding: 10px 0;
+        color: #eeeeee;
+        &>span:nth-child(2){
+          color: #ff3a00;
+          font-size: 20px;
+        }
       }
       .player {
         flex: 1;
@@ -87,6 +91,80 @@
   &>.right {
     width: 300px;
     //background-color: darkcyan;
+    &>.course-information{
+      height: 98px;
+      background-color: #abadb0;;
+      display: flex;
+      padding: 15px;
+      &>.course-information-left{
+        flex: 1;
+        padding-right: 10px;
+        width: 154px;
+        height: 68px;
+        &>.course-title{
+          white-space: nowrap; /* 不允许换行 */
+          text-overflow: ellipsis; /* 超出部分显示省略号 */
+          overflow: hidden; /* 超出部分隐藏 */
+          &>a{
+            color: #333333;
+            font-size: 15px;
+            &:hover{
+              color: #ff3f29;
+            }
+          }
+
+        }
+        &>.rate-div{
+          &>.score-div{
+            font-size: 14px;
+            &>li{
+              margin-right: 0;
+            }
+          }
+          &>span{
+            color: #666666;
+            font-size: 12px;
+          }
+
+        }
+        &>.course-teacher-name{
+          color: #666666;
+          font-size: 12px;
+
+        }
+      }
+      &>.course-information-right{
+        width: 120px;
+        height: 68px;
+        background-color: #666666;
+        box-shadow: 0 0 4px #666;
+        position: relative;
+        &:hover{
+          &>.mask{
+            display: block;
+            cursor: pointer;
+            &>a{
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        &>img{
+          width: 100%;
+          height: 100%;
+        }
+        &>.mask{
+          transition: all 0.2s ease-in 0s;
+          position: absolute;
+          width: 116px;
+          height: 68px;
+          background: rgba(0, 0, 0, 0.2);
+          top: 0;
+          display: none;
+        }
+      }
+    }
     .title {
       height: 45px;
       line-height: 45px;
@@ -97,7 +175,7 @@
       background-repeat: repeat-x;
     }
     .items {
-      height: ~"calc(100% - 45px)";
+      height: 610px;
       //background: green;
       overflow-y: auto;
       padding: 10px;
@@ -149,7 +227,7 @@
               width: 16px;
               height: 14px;
               //background-color: green;
-              background-image: url(/assets/images/listIcons.png);
+              background-image: url(/assets/images/Timeline.png);
               background-position: -136px -113px;
               &.no-finish {
                 background-position: -169px -113px;

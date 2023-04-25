@@ -38,7 +38,7 @@ export const removeUser = () => {
 }
 
 
-export const updateUserStudyHistory = (user_id, course_id, outline_id,is_finish) => ajax("/api/client/user/update_study_history", {user_id, course_id, outline_id,is_finish}, "post")
+export const updateUserStudyHistory = (student_id, course_id, course_list_id,status) => ajax("/update_study_history", {student_id, course_id, course_list_id,status}, "post")
 
 
 export const getOtherData = (student_id) => ajax("/other_people_data", {student_id}, "post")
