@@ -5,43 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/config/config.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Timeline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bg_nav_rep.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/courseLearn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/courseLearn_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/course_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/ewm_lk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/layout_css_sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/layout_css_sprites2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/listIcons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo-mini.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/mini_pro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/my_study_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/place.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/star_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/teacher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/teacher_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/toolbar_tab_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/wechat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/zsf.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/courseApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/courseApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/userApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursePlayer待改/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursePlayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursePlayer待改/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursePlayer/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/courseLearn/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/courseLearn/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/courseLearn/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/play待改.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/coursecard.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/coursecard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/searchcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/searchcoursecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorybread/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/categorybread/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mycart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mycart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/settingspageslayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/settingspageslayout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/usersettingaddress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/usersettingaddress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/usersettingbasic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/usersettingbasic/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/usersettingbasic/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/usersettingbasic/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Less File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -285,7 +260,19 @@
       <workItem from="1682300770286" duration="4763000" />
       <workItem from="1682305588285" duration="4107000" />
       <workItem from="1682313759895" duration="7216000" />
-      <workItem from="1682423177223" duration="1440000" />
+      <workItem from="1682423177223" duration="5321000" />
+      <workItem from="1682430034755" duration="1104000" />
+      <workItem from="1682469727347" duration="8901000" />
+      <workItem from="1682480678702" duration="1257000" />
+      <workItem from="1682508638316" duration="52000" />
+      <workItem from="1682518626235" duration="11000" />
+      <workItem from="1682563808166" duration="37000" />
+      <workItem from="1682579166858" duration="17000" />
+      <workItem from="1682579320620" duration="1180000" />
+      <workItem from="1682580609180" duration="442000" />
+      <workItem from="1682581084677" duration="1000" />
+      <workItem from="1682660249532" duration="17297000" />
+      <workItem from="1682681462209" duration="14753000" />
     </task>
     <servers />
   </component>

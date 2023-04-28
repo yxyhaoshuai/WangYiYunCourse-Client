@@ -2,11 +2,16 @@ import {Rate} from "antd";
 
 require("./index.less")
 
-import React from "react";
+import React, {useEffect} from "react";
 import {BaseURL} from "../../../config/serverConfig";
+import Link from "next/link";
 
 
 export default function Searchcoursecard({count,is_score,data={}}) {
+
+    useEffect(()=>{
+        console.log(data)
+    },[data])
     const score_content =
         <div className={"content-div"}>
 
@@ -30,6 +35,11 @@ export default function Searchcoursecard({count,is_score,data={}}) {
 
     return (
         <div className={`series-card ${count ? count : ""}`}>
+            <Link href={{
+                pathname: "/course/courseMain",
+                query: {"id": data.id}
+            }}>
+                <a>
             <div className={"img-div"}>
                 <img src={BaseURL + data.img_url} alt=""/>
             </div>
@@ -43,7 +53,8 @@ export default function Searchcoursecard({count,is_score,data={}}) {
                     data.course_intro
                 }</div>}
             </div>
-
+            </a>
+            </Link>
         </div>
     )
 }

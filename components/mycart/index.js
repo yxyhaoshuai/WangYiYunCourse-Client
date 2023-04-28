@@ -4,10 +4,10 @@ require("./index.less")
 import {Checkbox, message} from "antd";
 import React, {useEffect, useState} from "react";
 import {BaseURL} from "../../config/serverConfig";
+import {getUser} from "../../api/userApi";
 
 export default function Mycart() {
-    //先假设用户的id为1，后期删掉
-    const userid =1;
+    const [userid,setUserid] =useState(0);
 
     //发送网络请求发送错误时发生错误的提示
     const info = () => {
@@ -64,13 +64,21 @@ export default function Mycart() {
 
     //获取的购物车列表数据作为依赖项[]
     useEffect(()=>{
-        getCartApi(userid).then((result)=>{
-            if (result){
-                setCartData(result.data)
-            }else {
-                info()
-            }
+        getUser().then((result)=>{
+            setUserid(result.id)
         })
+    },[])
+
+    useEffect(()=>{
+        if (userid !== 0){
+            getCartApi(userid).then((result)=>{
+                if (result){
+                    setCartData(result.data)
+                }else {
+                    info()
+                }
+            })
+        }
     },[userid])
 
 

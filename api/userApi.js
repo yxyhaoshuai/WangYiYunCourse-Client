@@ -42,3 +42,13 @@ export const updateUserStudyHistory = (student_id, course_id, course_list_id,sta
 
 
 export const getOtherData = (student_id) => ajax("/other_people_data", {student_id}, "post")
+
+
+export const setUserInformation = (nick_name,sex,intro,name,E_mail,phone_number,qq_number,student_id) => ajax("/update_info", {nick_name,sex,intro,name,E_mail,phone_number,qq_number,student_id}, "post")
+
+
+
+export const getUserInfoApi = (userId) => ajax("/get-user-info/" + userId)
+
+export const updatePassword = (account, password, new_password) => ajax("/update_password", {account, password, new_password}, "post")
+

@@ -14,8 +14,8 @@ export default function Categorybread({nav, categoryId}) {
             setCurrent(+categoryId)
         }
     }, [categoryId])
-    const setCurrentState = (current) => {
-        router.push(`/category?classOneId=2&categoryId=${current}`)
+    const setCurrentState = (classOne,classTwo) => {
+        router.push(`/category?classOneId=${classOne}&categoryId=${classTwo}`)
     }
     useEffect(() => {
         if (nav.length > 0) {
@@ -23,6 +23,15 @@ export default function Categorybread({nav, categoryId}) {
         }
     }, [nav])
 
+    useEffect(() => {
+        if (nav.length > 0){
+            nav[0].classoneid=nav[1].classoneid
+        }
+    }, [nav])
+
+    useEffect(() => {
+       console.log(nav)
+    }, [nav])
     return (
         <div className={"category-page_header"}>
             <div className={"category-page-header-bx bx"}>
@@ -32,12 +41,12 @@ export default function Categorybread({nav, categoryId}) {
                     nav.map((item, index) => {
                         if (item.current === current) {
                             return <a key={index} onClick={() => {
-                                setCurrentState(item.classtwoid)
+                                setCurrentState(item.classoneid,item.classtwoid)
                             }
                             } className={"ux-category-breadcrumb_cat2_item cat-item"}>{item.classtwoname}</a>
                         } else {
                             return <a key={index} onClick={() => {
-                                setCurrentState(item.classtwoid)
+                                setCurrentState(item.classoneid,item.classtwoid)
                             }
                             } className={"ux-category-breadcrumb_cat2_item"}>{item.classtwoname}</a>
                         }

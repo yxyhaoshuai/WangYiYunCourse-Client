@@ -69,7 +69,6 @@ export default function ProviderSearch() {
         if (classOneId !== undefined){
             if (+categoryId === 0) {
                 getCategoryAd(classOneId).then((result)=>{
-                    console.log(result)
                     setAd(result.data)
                 })
             } else {

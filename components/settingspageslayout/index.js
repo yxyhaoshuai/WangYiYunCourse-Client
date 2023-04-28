@@ -31,7 +31,7 @@ class Settingspageslayout extends Component{
                         资料设置
                     </div>
                     <div onClick={this._setsettingshow} className={this.state.settingstyle ? "not-get-focus": "get-focus"}>
-                        收货地址设置
+                        修改密码
                     </div>
                 </div>
 
