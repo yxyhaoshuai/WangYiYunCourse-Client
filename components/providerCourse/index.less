@@ -1,0 +1,49 @@
+.provider-course{
+  margin: 0 auto;
+  width: 1205px;
+  .provider-course-top{
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+    .provider-course-top-left{
+      color: #333333;
+      font-size: 24px;
+    }
+    .provider-course-top-right{
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      span:nth-child(1){
+        font-size: 14px;
+        &:hover{
+          color: #ff3f29;
+          cursor: pointer;
+        }
+      }
+      span:nth-child(2){
+        font-size: 14px;
+        &:hover{
+          color: #ff3f29;
+          cursor: pointer;
+        }
+      }
+      .current{
+        color: #ff3f29;
+      }
+    }
+
+  }
+  .provider-course-center{
+    width: 100%;
+
+  }
+  .provider-course-bottom{
+    height: 60px;
+    position: relative;
+    .provider-course-bottom-position{
+      position: absolute;
+      right: 0;
+    }
+
+  }
+}

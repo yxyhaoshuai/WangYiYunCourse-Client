@@ -1,0 +1,90 @@
+.provider-carousel-bx{
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 40px auto;
+  width: 1205px;
+
+  &:hover div{
+    opacity: 1;
+    cursor:pointer;
+  }
+  .Left-jump{
+    width: 40px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: absolute;
+    z-index: 99999;
+    left: 0;
+    top: 140px;
+    border-radius: 0 25px 25px 0;
+    transition-property: opacity,width;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255,255,255, 0.6);
+    font-size: 17px;
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
+
+  .Right-jump{
+    width: 40px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: absolute;
+    z-index: 99999;
+    right: 0;
+    top: 140px;
+    border-radius: 25px 0 0 25px;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255,255,255, 0.6);
+    font-size: 17px;
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
+
+  .carousel-item{
+    width: 1205px;
+    height: 360px;
+    div{
+      width: 1205px;
+      height: 360px;
+      a{
+        display: block;
+        width: 1205px;
+        height: 360px;
+        .img-category{
+
+
+        }
+
+      }
+
+    }
+
+  }
+  .img-category{
+    height: 360px;
+    width: 1205px;
+  }
+}
+
+
+
+
+
+
+
+body{
+  background-color: #eeeeee;
+}

@@ -92,7 +92,7 @@ export default function Navibar(props){
     }
 
     return(
-        <div className={"nav bx"}>
+        <div className={"nav"}>
             <div className={"nav-bar"}>
                 <div className={"nav-bar-middle"}>
                     <div className={"nav-bar-middle-logo"}>
