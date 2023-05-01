@@ -5,41 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/api/providerSearchApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProviderAbout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProviderAbout/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProviderHome/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProviderHome/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerCourse/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerCourse/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerCourse2/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerCourse2/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerCourseCardItem/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerCourseCardItem/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerHomeAd/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerHomeAd/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerTeacher/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerTeacher/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerTeacherCard/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/providerTeacherCard/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/searchResultBig/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/searchResultBig/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/instructor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/instructor/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/provider/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/provider/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/provider-head.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/teacher-head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/instructorApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/providerApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmoreProvider/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmoreProvider/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/providerBar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/providerInfo/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/providerInfo/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/searchcoursecard2/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/searchcoursecard2/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/naviBar/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProviderAbout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProviderAbout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProviderHome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProviderHome/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/searchcoursecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/searchcoursecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerCourse/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerCourse/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerCourse2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerCourse2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerCourseCardItem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerCourseCardItem/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerHomeAd/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerHomeAd/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerHomeAd/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerHomeAd/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerTeacher/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerTeacher/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerTeacher/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerTeacher/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerTeacherCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerTeacherCard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/searchschool/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/searchschool/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/searchschool/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/searchschool/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/provider-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/provider-search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/provider-search/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/provider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/provider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/provider/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerBar/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Less File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,34 +62,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client/components&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\WebstormInstallPosition\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client/components/layout",
+    "list.type.of.created.stylesheet": "Less",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "E:\\WebstormInstallPosition\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components\layout" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\public\assets\images" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\pages\course\courseLearn" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\config" />
-      <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components\userpagesother" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\pages\course\courseLearn" />
@@ -300,6 +291,12 @@
       <workItem from="1682698570916" duration="191000" />
       <workItem from="1682698841750" duration="216000" />
       <workItem from="1682844464251" duration="26799000" />
+      <workItem from="1682878038647" duration="189000" />
+      <workItem from="1682878324416" duration="83000" />
+      <workItem from="1682878744034" duration="121000" />
+      <workItem from="1682932674812" duration="841000" />
+      <workItem from="1682934671366" duration="12667000" />
+      <workItem from="1682951469834" duration="4948000" />
     </task>
     <servers />
   </component>
@@ -328,8 +325,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/components/searchschool/index.js</url>
-          <line>38</line>
-          <properties lambdaOrdinal="-1" />
+          <line>49</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

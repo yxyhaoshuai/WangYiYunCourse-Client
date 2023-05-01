@@ -1,70 +1,39 @@
+import {BaseURL} from "../../config/serverConfig";
+
 require("./index.less")
-import React from "react";
+import React, {useEffect} from "react";
+import Link from "next/link";
 
-export default function ProviderTeacherCardItem() {
-
+export default function ProviderTeacherCardItem({teacher}) {
+    useEffect(() => {
+        console.log(teacher)
+    }, [teacher])
     return (
         <div className={"provider-teacher-card-display"}>
-            <div className={"provider-teacher-card"}>
-                <a href="#">
-                    <div className={"teacher-head"}>
-                        <img src="/assets/images/teacher-head.png" alt=""/>
-                    </div>
-                    <div className={"teacher-content"}>
-                        <div className={"teacher-name"}>Java讲师杨震</div>
-                        <div className={"teacher-intro"}>北京航天航空大学，软件工程硕士。授课风格幽默诙谐，通俗易懂。拥有大量分布式开发经验。</div>
-                    </div>
-                </a>
+            {
+                teacher.slice(0, 4).map((item) => {
+                    if (item.is_school_recommend === 1) {
+                        return <div key={item.id} className={"provider-teacher-card"}>
+                            <Link href={{
+                                pathname: "/instructor",
+                                query: {"id": item.id}
+                            }}>
+                                <a>
+                                    <div className={"teacher-head"}>
+                                        <img src={BaseURL + item.header_url} alt=""/>
+                                    </div>
+                                    <div className={"teacher-content"}>
+                                        <div className={"teacher-name"}>{item.name}</div>
+                                        <div className={"teacher-intro"}>{item.intro}</div>
+                                    </div>
+                                </a>
+                            </Link>
 
-            </div>
-            <div className={"provider-teacher-card"}>
-                <a href="#">
-                    <div className={"teacher-head"}>
-                        <img src="/assets/images/teacher-head.png" alt=""/>
-                    </div>
-                    <div className={"teacher-content"}>
-                        <div className={"teacher-name"}>Java讲师杨震</div>
-                        <div className={"teacher-intro"}>北京航天航空大学，软件工程硕士。授课风格幽默诙谐，通俗易懂。拥有大量分布式开发经验。</div>
-                    </div>
-                </a>
+                        </div>
+                    }
 
-            </div>
-            <div className={"provider-teacher-card"}>
-                <a href="#">
-                    <div className={"teacher-head"}>
-                        <img src="/assets/images/teacher-head.png" alt=""/>
-                    </div>
-                    <div className={"teacher-content"}>
-                        <div className={"teacher-name"}>Java讲师杨震</div>
-                        <div className={"teacher-intro"}>北京航天航空大学，软件工程硕士。授课风格幽默诙谐，通俗易懂。拥有大量分布式开发经验。</div>
-                    </div>
-                </a>
-
-            </div>
-            <div className={"provider-teacher-card"}>
-                <a href="#">
-                    <div className={"teacher-head"}>
-                        <img src="/assets/images/teacher-head.png" alt=""/>
-                    </div>
-                    <div className={"teacher-content"}>
-                        <div className={"teacher-name"}>Java讲师杨震</div>
-                        <div className={"teacher-intro"}>北京航天航空大学，软件工程硕士。授课风格幽默诙谐，通俗易懂。拥有大量分布式开发经验。</div>
-                    </div>
-                </a>
-
-            </div>
-            <div className={"provider-teacher-card"}>
-                <a href="#">
-                    <div className={"teacher-head"}>
-                        <img src="/assets/images/teacher-head.png" alt=""/>
-                    </div>
-                    <div className={"teacher-content"}>
-                        <div className={"teacher-name"}>Java讲师杨震</div>
-                        <div className={"teacher-intro"}>北京航天航空大学，软件工程硕士。授课风格幽默诙谐，通俗易懂。拥有大量分布式开发经验。</div>
-                    </div>
-                </a>
-
-            </div>
+                })
+            }
 
         </div>
     )

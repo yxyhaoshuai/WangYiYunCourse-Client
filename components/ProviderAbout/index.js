@@ -5,10 +5,10 @@ import React from "react";
 
 
 
-export default function ProviderAbout() {
+export default function ProviderAbout({netSchoolInformation}) {
 
     return (
-        <div className={"about-me"}>撒法发阿嘎俺是个阿萨v发顺丰</div>
+        <div className={"about-me"}>{netSchoolInformation.about_school}</div>
     )
 }
 

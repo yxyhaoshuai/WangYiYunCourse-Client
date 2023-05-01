@@ -9,9 +9,6 @@ import Link from "next/link";
 
 export default function Searchcoursecard({count,is_score,data={}}) {
 
-    useEffect(()=>{
-        console.log(data)
-    },[data])
     const score_content =
         <div className={"content-div"}>
 
