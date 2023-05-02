@@ -1,3 +1,5 @@
+import {addUserStudyIndex} from "../../api/courseMainApi";
+
 require("./index.less")
 import {Rate} from "antd";
 import {useEffect, useState} from "react";
@@ -6,7 +8,7 @@ import {useRouter} from "next/router";
 import {getUser, updateUserStudyHistory} from "../../api/userApi";
 import Link from "next/link";
 
-export default function CoursePlayer({data, courseDetailData, data2}) {
+export default function CoursePlayer({data, courseDetailData}) {
 
     const router = useRouter()
 
@@ -15,6 +17,8 @@ export default function CoursePlayer({data, courseDetailData, data2}) {
     const [dp, setDp] = useState()
 
     const [courseTitle, setCourseTitle] = useState("加载中......")
+
+
 
     useEffect(() => {
         if (data.length === 0) return;
@@ -31,7 +35,13 @@ export default function CoursePlayer({data, courseDetailData, data2}) {
             let {o_id} = router.query
             let index = data.findIndex(item => item.id + "" === o_id + "")
 
-            setCurrentVideoIndex(index === -1 ? 0 : index)
+            if (router.query.videoIndex !== undefined){
+                setCurrentVideoIndex(router.query.videoIndex - 1)
+            } else {
+                setCurrentVideoIndex(index === -1 ? 0 : index)
+            }
+
+
         })
     }, [data])
 
@@ -41,7 +51,7 @@ export default function CoursePlayer({data, courseDetailData, data2}) {
         // console.log("播放视频", video_url)
         if (dp) {
             getUser().then(userInfo => {
-                updateUserStudyHistory(userInfo.id, router.query.id, id, 1)
+                updateUserStudyHistory(userInfo.id, id, 1)
             })
 
             dp.switchVideo({
@@ -57,6 +67,15 @@ export default function CoursePlayer({data, courseDetailData, data2}) {
         }
 
     }, [data, currentVideoIndex])
+
+
+    useEffect(() => {
+        if (router.query.id !== undefined){
+            getUser().then((result)=>{
+                addUserStudyIndex(result.id,router.query.id,currentVideoIndex+1)
+            })
+        }
+    }, [currentVideoIndex])
 
 
     return (

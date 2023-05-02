@@ -22,16 +22,16 @@ export default function ProviderSearch() {
     const [searchResult,setSearchResult] = useState([])
 
     useEffect(()=>{
-        if (router.query.keyword !== undefined){
-            getProviderSearchResult(router.query.keyword).then((result)=>{
+        if (router.query.kw !== undefined){
+            getProviderSearchResult(router.query.kw).then((result)=>{
                 setSearchResult(result.data)
             })
         }
-    },[router.query.keyword])
+    },[router.query.kw])
 
-    useEffect(()=>{
-        console.log(searchResult)
-    },[searchResult])
+
+
+
 
     return (
         <>
@@ -41,7 +41,7 @@ export default function ProviderSearch() {
             }
 
             <Crumb/>
-            <SearchResultBig keyword={router.query.keyword} searchResult={searchResult}/>
+            <SearchResultBig keyword={router.query.kw} searchResult={searchResult}/>
             {
                 searchResult.map((item)=>{
                     return <Searchschool is_series={false} key={item.id} data={item}/>

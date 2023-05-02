@@ -11,12 +11,14 @@ import Coursedetailbelongingseries from "../../../components/coursedetailbelongi
 import Coursedetailcomment from "../../../components/coursedetailcomment";
 import Commentcover from "../../../components/commentcover";
 import {useRouter} from "next/router";
-import {getCourseDetailCrumbs, getCourseIntroduction} from "../../../api/courseIntroductionApi";
+import {getCourseDetailCrumbs, getCourseIntroduction, getCourseOutline} from "../../../api/courseIntroductionApi";
 
 
 
 
 export default function ProviderSearch() {
+    //介绍和目录状态机
+    const [directoryIntro, setDirectoryIntro] = useState(1);
     //获取路由信息
     const router =useRouter()
     const [courseData,setCourseData] = useState({})
@@ -61,9 +63,17 @@ export default function ProviderSearch() {
     },[router.query])
 
 
-    useEffect(()=>{
-        console.log(breadData)
-    },[breadData])
+
+    const [courseOutline, setCourseOutline] = useState([])
+
+    useEffect(() => {
+        if (router.query.id !== undefined) {
+            getCourseOutline(router.query.id).then((result) => {
+                setCourseOutline(result.data)
+            })
+        }
+
+    }, [router.query])
 
 
     return (
@@ -74,9 +84,9 @@ export default function ProviderSearch() {
             }
             <Fixedfield/>
             {/*下面是一个组件到时候封装*/}
-            <Coursedetailbread breadData={breadData} courseData={courseData}/>
+            <Coursedetailbread setDirectoryIntro={setDirectoryIntro} directoryIntro={directoryIntro} _loginShow={_loginShow} breadData={breadData} courseData={courseData}/>
             {/*下面是一个组件到时候封装*/}
-            <Coursedetaillayout>
+            <Coursedetaillayout courseOutline={courseOutline}  directoryIntro={directoryIntro}>
                 <Coursedetailschool/>
                 <Coursedetailschoolconsult/>
                 <Coursedetailbelongingseries/>

@@ -7,7 +7,7 @@ import Link from "next/link";
 import {getUser} from "../../api/userApi";
 
 
-export default function Coursedetailbread({courseData, ismystudy,breadData}) {
+export default function Coursedetailbread({courseData, ismystudy,breadData,_loginShow,directoryIntro,setDirectoryIntro}) {
     const [userId,setUserId] = useState(0)
 
     const warning = () => {
@@ -45,13 +45,24 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
 
 
     const collect = ()=>{
-        addUserFavoriteOne(courseData.courseid,userId).then((result)=>{
-            if (result.code === 0){
-                successTip(result.msg)
-            }else {
-                warningTip(result.msg)
+        getUser().then((result)=>{
+            if (result.id !== undefined){
+                addUserFavoriteOne(courseData.courseid,userId).then((result)=>{
+                    if (result.code === 0){
+                        successTip(result.msg)
+                    }else {
+                        warningTip(result.msg)
+                    }
+                })
+            } else{
+                warningTip("请先登录!")
+                setTimeout(()=>{
+                    _loginShow()
+                },1000)
+
             }
         })
+
     }
 
     const success = () => {
@@ -65,13 +76,24 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
     };
 
     const addCarFunc = ()=>{
-        addCar(courseData.courseid,userId).then((result)=>{
-            if (result.code === 0){
-                successTip(result.msg)
-            }else if (result.code === -1){
-                warningTip(result.msg)
+        getUser().then((result)=>{
+            if (result.id !== undefined){
+                addCar(courseData.courseid,userId).then((result)=>{
+                    if (result.code === 0){
+                        successTip(result.msg)
+                    }else if (result.code === -1){
+                        warningTip(result.msg)
+                    }
+                })
+            } else{
+                warningTip("请先登录!")
+                setTimeout(()=>{
+                    _loginShow()
+                },1000)
+
             }
         })
+
     }
 
     useEffect(() => {
@@ -157,8 +179,8 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
                                         <div className={"try-and-see"}>
                                             {/*下面的代码需要修改，修改路由路径为视频播放页的路由路径*/}
                                             <Link href={{
-                                                pathname: "/order",
-                                                query: {"courseId": courseData.courseid}
+                                                pathname: "/course/courseLearn",
+                                                query: {"id": courseData.courseid}
                                             }}>
                                                 <a>
                                                     免费试看
@@ -178,12 +200,38 @@ export default function Coursedetailbread({courseData, ismystudy,breadData}) {
             </div>
             <div className={"bar-button bx"}>
                 {/*current选中 not-current是未选择两者只能填一个*/}
-                <span className={"current"}>
-                        介绍
-                    </span>
-                <span className={"not-current"}>
-                        目录
-                    </span>
+                {
+                    directoryIntro !== 1 ?
+                        <>
+                            <span onClick={() => {
+                                setDirectoryIntro(1)
+                            }
+                            } className={"not-current"}>
+                                介绍
+                            </span>
+                            <span onClick={() => {
+                                setDirectoryIntro(2)
+                            }
+                            } className={"current"}>
+                                目录
+                            </span>
+                        </>
+                        :
+                        <>
+                            <span onClick={() => {
+                                setDirectoryIntro(1)
+                            }
+                            } className={"current"}>
+                                介绍
+                            </span>
+                            <span onClick={() => {
+                                setDirectoryIntro(2)
+                            }
+                            } className={"not-current"}>
+                                目录
+                            </span>
+                        </>
+                }
 
             </div>
 

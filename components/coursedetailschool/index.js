@@ -1,26 +1,49 @@
-require("./index.less")
-import React, {Component} from "react";
+import {getNetworkSchoolInfo} from "../../api/courseMainApi";
 
-class Coursedetailschool extends Component{
-    render(){
-        return (
-            <div className={"school"}>
-                <div className={"school-img"}>
-                    <div className={"school-img-center"}>
-                        <a href="#">
-                            <img src="/assets/images/schoolimg3.png" alt=""/>
+require("./index.less")
+import React, {useEffect, useState} from "react";
+import {useRouter} from "next/router";
+import {BaseURL} from "../../config/serverConfig";
+import Link from "next/link";
+
+
+
+export default function Coursedetailschool() {
+    const router = useRouter()
+
+    const [netSchoolInfo,setNetSchoolInfo] = useState({})
+    useEffect(()=>{
+        if (router.query.id !== undefined){
+            getNetworkSchoolInfo(router.query.id).then((result)=>{
+                setNetSchoolInfo(result.data[0])
+            })
+        }
+    },[router.query])
+    return (
+        <div className={"school"}>
+            <div className={"school-img"}>
+                <div className={"school-img-center"}>
+                    <Link href={{
+                        pathname: "/provider",
+                        query: {"id": netSchoolInfo.id}
+                    }}>
+                        <a>
+                            <img src={BaseURL + netSchoolInfo.organization_heard_url} alt=""/>
                         </a>
-                    </div>
-                    <div className={"school-name"}>
-                        王顺子
-                    </div>
+
+                    </Link>
+
                 </div>
-                <div className={"school-intro"}>
-                    微信关注：天天撩课
+                <div className={"school-name"}>
+                    {netSchoolInfo.school_title}
                 </div>
             </div>
-        )
-    }
+            <div className={"school-intro"}>
+                {netSchoolInfo.organization_intro}
+            </div>
+        </div>
+    )
 }
-export default Coursedetailschool;
+
+
 

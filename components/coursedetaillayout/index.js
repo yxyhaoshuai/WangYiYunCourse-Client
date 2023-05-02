@@ -12,11 +12,11 @@ import Coursedetailcomment from "../coursedetailcomment";
 class Coursedetaillayout extends Component{
 
     render(){
-        const {directoryIntro} = this.props;
+        const {directoryIntro,courseOutline} = this.props;
         return (
             <div className={"layout bx"}>
                 {
-                    directoryIntro ===1 ?<Coursedetailintro/> :<Coursedetailcatalogue/>
+                    directoryIntro ===1 ?<Coursedetailintro/> :<Coursedetailcatalogue courseOutline={courseOutline}/>
 
                 }
                 <div className={"layout-right"}>

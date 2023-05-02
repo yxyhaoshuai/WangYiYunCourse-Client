@@ -54,7 +54,6 @@ export default function CoursePlay() {
     useEffect(() => {
         if (!router.query.id) return;
         getCourseOutlineTwo(router.query.id).then((result)=>{
-            console.log(result.data,"data")
             setOutlineData(result.data)
         })
     }, [router.query.id])

@@ -11,8 +11,31 @@ export default function Navibar(props){
     // 用户登录数据
     const [userData,setUserData] = useState({});
     const [isLoginState,setIsLoginState] = useState(false);
+
+    const [defaultSearch,setDefaultSearch] = useState("/courses-search")
+
     //获取路由信息
     const router = useRouter()
+
+    //默认搜索方式
+    const changeDefaultSearch = ()=>{
+        if (defaultSearch === "/courses-search"){
+            setDefaultSearch("/provider-search")
+        } else if (defaultSearch === "/provider-search"){
+            setDefaultSearch("/courses-search")
+        }
+    }
+
+
+    useEffect(()=>{
+        if (router.query.category !== undefined){
+            if (router.query.category === "network-school"){
+                setDefaultSearch("/provider-search")
+            } else if (router.query.category === "course"){
+                setDefaultSearch("/courses-search")
+            }
+        }
+    },[router.query])
 
     //全局消息
     const success = () => {
@@ -39,6 +62,13 @@ export default function Navibar(props){
 
 
     },[])
+
+    //获取用户登录状态
+    useEffect(()=>{
+
+        console.log(defaultSearch)
+    },[defaultSearch])
+
 
     //退出登录
     const logOut = ()=>{
@@ -100,12 +130,13 @@ export default function Navibar(props){
                             <img src={"/assets/images/logo.png"}/>
                         </a>
                     </div>
-                    <form className={"nav-search"} action="/courses-search">
+                    <form className={"nav-search"} action={defaultSearch}>
                         <div className={"nav-bar-middle-search"}>
                             <div className={"nav-bar-middle-search-type"}>
                                 <label>
                                     <select name={"category"} value={categoryV} onChange={(e)=>{
                                         setCategoryV(e.target.value)
+                                        changeDefaultSearch()
                                     }}>
                                         <option value={"course"}>课程</option>
                                         <option value={"network-school"}>网校</option>

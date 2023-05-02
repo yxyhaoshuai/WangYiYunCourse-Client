@@ -1,4 +1,4 @@
-import {getCourseDetailCrumbs, getCourseIntroduction} from "../../../api/courseIntroductionApi";
+import {getCourseDetailCrumbs, getCourseIntroduction, getCourseOutline} from "../../../api/courseIntroductionApi";
 
 require("./index.less")
 import Navibar from "../../../components/naviBar";
@@ -16,6 +16,7 @@ import Commentcover from "../../../components/commentcover";
 import Progressbar from "../../../components/progressbar";
 import Coursedetailbreadmy from "../../../components/coursedetailbreadmy";
 import {useRouter} from "next/router";
+
 
 
 export default function ProviderSearch() {
@@ -60,13 +61,20 @@ export default function ProviderSearch() {
     },[router.query])
 
 
+    const [courseOutline, setCourseOutline] = useState([])
 
+    useEffect(() => {
+        if (router.query.id !== undefined) {
+            getCourseOutline(router.query.id).then((result) => {
+                setCourseOutline(result.data)
+            })
+        }
 
-    // //测试钩子
+    }, [router.query])
+
     // useEffect(()=>{
-    //     console.log(directoryIntro)
-    // },[directoryIntro])
-
+    //     console.log(courseData)
+    // },[courseData])
     return (
         <>
             <Navibar  _loginShow={_loginShow}/>
@@ -75,9 +83,8 @@ export default function ProviderSearch() {
             }
             {/*courseMain界面就传true，introduction就传false*/}
             <Coursedetailbreadmy setDirectoryIntro={setDirectoryIntro} directoryIntro={directoryIntro} courseData={courseData} breadData={breadData} ismystudy={true}/>
-            {/*学习进度:total总课程数 count已学习的课程数*/}
-            <Progressbar/>
-            <Coursedetaillayout directoryIntro={directoryIntro}>
+            <Progressbar courseOutline={courseOutline}/>
+            <Coursedetaillayout courseOutline={courseOutline} directoryIntro={directoryIntro}>
                 <Coursedetailschool/>
                 <Coursedetailschoolconsult/>
                 <Coursedetailbelongingseries/>
