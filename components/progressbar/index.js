@@ -36,7 +36,11 @@ export default function Progressbar({courseOutline}) {
         if (router.query.id !== undefined){
             getUser().then((result)=>{
                 getStudentSchedule(result.id,router.query.id).then((result2)=>{
-                    setUserStudyIndex(result2.data[0].student_study_index)
+                    if (result2.data.length > 0){
+                        setUserStudyIndex(result2.data[0].student_study_index)
+                    }else {
+                        setUserStudyIndex(1)
+                    }
                 })
             })
         }

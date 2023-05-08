@@ -1,4 +1,5 @@
 
+//用这个不要用下面的
 export function getFormatTimeFromDate(dateStr) {
     function parseSingleNum(num) {
         return num < 10 ? "0" + num : num;

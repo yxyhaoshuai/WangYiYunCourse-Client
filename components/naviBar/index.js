@@ -48,6 +48,17 @@ export default function Navibar(props){
         });
     };
 
+    //全局消息
+    const logOutSuccess = () => {
+        message.success({
+            content: '退出登陆成功！',
+            className: 'custom-class',
+            style: {
+                marginTop: '20vh',
+            },
+        });
+    };
+
 
     //获取用户登录状态
     useEffect(()=>{
@@ -74,6 +85,8 @@ export default function Navibar(props){
     const logOut = ()=>{
         removeUser()
         setIsLoginState(!isLoginState)
+        logOutSuccess()
+
 
     }
 
@@ -247,9 +260,7 @@ export default function Navibar(props){
                                                                 <a href={"#"}>设置</a>
                                                             </li>
                                                             <li>
-                                                                <a onClick={()=>{
-                                                                    logOut()
-                                                                }}>退出登录</a>
+                                                                <a onClick={logOut}>退出登录</a>
                                                             </li>
                                                         </ul>
 

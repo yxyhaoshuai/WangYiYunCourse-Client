@@ -135,16 +135,15 @@
           }
           .text{
             margin-left: 5px;
-
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: 0;
+            white-space: nowrap;
+            width: 100px;
             a{
-              display: block;
               color: #ff3f29;
               font-size: 12px;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              margin-bottom: 0;
-              white-space: nowrap;
-              width: 100px;
+
               border-bottom: 1px solid transparent;
               &:hover{
                 box-sizing: border-box;
