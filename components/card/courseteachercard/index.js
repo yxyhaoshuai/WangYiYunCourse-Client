@@ -7,24 +7,14 @@ export default function Courseteachercard({data}){
     return(
         <div className={"course-teacher-card"}>
             <div className={"teacher-heard"}>
-                <Link href={{
-                    pathname: "/course/introduction",
-                    query: {"id": data.courseid}
-                }}>
-                    <a>
+                    <a href={"/course/introduction?id="+data.courseid}>
                         <img src={BaseURL + data.course_img_url} />
                     </a>
-                </Link>
             </div>
             <div className={"course-intro"}>
-                <Link href={{
-                    pathname: "/course/introduction",
-                    query: {"id": data.courseid}
-                }}>
-                    <a>
+                    <a href={"/course/introduction?id="+data.courseid}>
                         {data.course_title}
                     </a>
-                </Link>
             </div>
 
         </div>

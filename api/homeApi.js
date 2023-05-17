@@ -10,6 +10,9 @@ export const getMyInterestArray = (id) => ajax("/interest_recommend/"+id)
 
 export const setMyInterestArray = (interest_array,student_id) => ajax("/set_interest",{interest_array,student_id},"post")
 
+export const getLeftMiniAd = () => ajax("/home_mini_ad")
+
+
 
 
 

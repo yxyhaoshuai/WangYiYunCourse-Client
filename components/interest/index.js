@@ -42,6 +42,7 @@ export default function Interest({_InterestShow, _pushInterestArray, myInterestA
         })
     },[])
 
+
     return (
         <div className={"interest"}>
             <div className={"ux-modal_dialog"}>

@@ -33,6 +33,7 @@ import {
 import Head from "next/head";
 import {getUser} from "../api/userApi";
 import {message} from "antd";
+import {globalMessage} from "../tools/globalMessage";
 
 class Home extends Component{
     constructor(props){
@@ -102,6 +103,9 @@ class Home extends Component{
     };
 
     _InterestShow = () =>{
+        this.setState({
+            myInterestArray:[]
+        })
         getUser().then((result)=>{
             if (result.id){
                 if (this.state.showInterest===false){
@@ -164,20 +168,20 @@ class Home extends Component{
                 <PublicityItem/>
                 <div className={"content-big bx"}>
                     <div className={"left"}>
-                        <Coursecardlayoutmore titel={"直播公开课"} className={"card"}>
+                        <Coursecardlayoutmore moreLink={"/talk"} titel={"直播公开课"} className={"card"}>
                             <div className={"display"}>
                                 {
-                                    this.homeCourseList.filter((item=>item.specialid===10)).map((item2,index)=>{
+                                    this.homeCourseList.filter((item => item.specialid === 10)).slice(0, 3).map((item2, index) => {
                                         return <Livestreamingcard key={index} data={item2}/>
                                     })
                                 }
                             </div>
                         </Coursecardlayoutmore>
                     </div>
-                    <div className={"right"}>
+                    <div onClick={()=>{globalMessage("success","直播及相关模块未扩展！")}} className={"right"}>
                         <Coursecardlayoutmore titel={"课堂直播"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===1)).map((item2,index)=>{
+                                this.homeCourseList.filter((item=>item.specialid===1)).slice(0, 3).map((item2,index)=>{
                                     return <Teacheritem key={index} data={item2}/>
                                 })
                             }
@@ -189,7 +193,7 @@ class Home extends Component{
                     <Coursecardlayout titel={"精品课"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===2)).map((item2,index)=>{
+                                this.homeCourseList.filter((item=>item.specialid===2)).slice(0, 4).map((item2,index)=>{
                                     return <Coursecard key={index} data={item2}/>
                                 })
                             }
@@ -201,7 +205,7 @@ class Home extends Component{
                     <Coursecardlayoutmore titel={"微专业"}>
                         <div className={"display special"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===4)).map((item2,index)=>{
+                                this.homeCourseList.filter((item=>item.specialid===4)).slice(0, 4).map((item2,index)=>{
                                     return <Microprofessionlcard key={index} data={item2}/>
                                 })
                             }
@@ -224,7 +228,7 @@ class Home extends Component{
                     <Coursecardlayout className="display-flex" titel={"系列课程"}>
                         <div className={"display-flex"}>
                             {
-                                this.homeSeriesCourseList.map((item,index)=>{
+                                this.homeSeriesCourseList.slice(0, 4).map((item,index)=>{
                                     return <Seriesofcourses key={index} data={item}/>
                                 })
                             }
@@ -235,7 +239,7 @@ class Home extends Component{
                     <Coursecardlayout titel={"精选好课"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===5)).map((item2,index)=>{
+                                this.homeCourseList.filter((item=>item.specialid===5)).slice(0, 4).map((item2,index)=>{
                                     return <Excellentcoursecard key={index} data={item2}/>
                                 })
                             }
@@ -246,7 +250,7 @@ class Home extends Component{
                     <Coursecardlayout titel={"新课推荐"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===9)).map((item2,index)=>{
+                                this.homeCourseList.filter((item=>item.specialid===9)).slice(0, 4).map((item2,index)=>{
                                     return <Newcoursecard key={index} data={item2}/>
                                 })
                             }
@@ -258,7 +262,7 @@ class Home extends Component{
                     <Coursecardlayout titel={"免费好课"}>
                         <div className={"display"}>
                             {
-                                this.homeCourseList.filter((item=>item.specialid===8)).map((item2,index)=>{
+                                this.homeCourseList.filter((item=>item.specialid===8)).slice(0, 4).map((item2,index)=>{
                                     return <Gratiscoursecard key={index} data={item2}/>
                                 })
                             }

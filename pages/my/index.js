@@ -8,14 +8,17 @@ import Myinfo from "../../components/myinfo";
 import Mypagetabs from "../../components/mypagetabs";
 import Mypagelayout from "../../components/mypagelayout";
 import Mypagecard from "../../components/mypagecard";
-import Searchresultcard from "../../components/card/seriescard";
-import {getMyCollect, getMyStudy} from "../../api/myStudyApi";
+import {getMyCollect, getMyStudy, topMyCourse} from "../../api/myStudyApi";
+import {getUser} from "../../api/userApi";
+import MyPagesSearchresultCard from "../../components/myPagesSearchresultCard";
+import {getProgressBar} from "../../api/courseApi";
 
 
 export default function ProviderSearch() {
 
-    //此处先模拟用户1已经登录
-    const userId = 1;
+    const [userData,setUserData] = useState({});
+
+
 
 
     //登陆表单
@@ -30,23 +33,33 @@ export default function ProviderSearch() {
 
     const setCurrentStateFunction = (e)=>{
         setCurrentState(Number(e))
-        console.log(currentState)
     }
     //我的收藏列表数据
     const [myCollectData,setMyCollectData] = useState([])
     //我的学习列表数据
     const [myStudyData,setMyStudyData] = useState([])
 
+    useEffect(()=>{
+        getUser().then((result)=>{
+            setUserData(result)
+        })
+    },[])
 
     //获取我的收藏列表数据
     useEffect(()=>{
-        getMyCollect(userId).then(result=>setMyCollectData(result.data))
-    },[0])
+        if (userData.id !== 0){
+            getMyCollect(userData.id).then(result=>setMyCollectData(result.data))
+        }
+
+    },[userData])
 
     //获取我的学习列表数据
     useEffect(()=>{
-        getMyStudy(userId).then(result=>setMyStudyData(result.data))
-    },[0])
+        if (userData.id !== 0){
+            getMyStudy(userData.id).then(result=>setMyStudyData(result.data))
+        }
+    },[userData])
+
 
 
 
@@ -56,7 +69,7 @@ export default function ProviderSearch() {
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
-            <Myinfo/>
+            <Myinfo userData={userData}/>
             <Mypagetabs setCurrentStateFunction={setCurrentStateFunction}/>
             <Mypagelayout>
                 {/*下面切代码用三目运算符切换卡片组件*/}
@@ -70,7 +83,7 @@ export default function ProviderSearch() {
                     </>:<>
                         {
                             myCollectData.map((item)=>{
-                                return <Searchresultcard key={item.id} data={item} count="column5" is_score/>
+                                return <MyPagesSearchresultCard key={item.id} data={item} count="column5" is_score/>
                             })
                         }
                     </>

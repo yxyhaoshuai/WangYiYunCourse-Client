@@ -31,6 +31,8 @@ export default function Progressbar({courseOutline}) {
 
     //用户学习到哪里的索引
     const [userStudyIndex,setUserStudyIndex] = useState(-1)
+
+
     //获取学习进度
     useEffect(()=>{
         if (router.query.id !== undefined){

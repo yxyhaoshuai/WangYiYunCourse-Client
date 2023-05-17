@@ -94,16 +94,6 @@ export default function ProviderSearch() {
     }, [router.query.id])
 
 
-
-
-
-
-
-
-
-
-
-
     return (
         <>
             <Navibar _loginShow={_loginShow}/>

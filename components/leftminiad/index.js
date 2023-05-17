@@ -1,40 +1,49 @@
+import {getLeftMiniAd} from "../../api/homeApi";
+
 require("./index.less")
-import React, {Component} from "react";
+import React, {useEffect, useState} from "react";
+import {BaseURL} from "../../config/serverConfig";
 
-class Leftminiad extends Component{
-    state = {
-        showElem:true
+
+
+
+
+export default function Leftminiad() {
+
+    const [showElem,setShowElem] = useState(true)
+
+    const _turnOffAds=()=>{
+        setShowElem(false)
     }
-    _turnOffAds=()=>{
-        this.setState({
 
-                showElem:false
+    const [miniAdUrl,setMiniAdUrl] = useState({})
 
+    useEffect(()=>{
+        getLeftMiniAd().then((result)=>{
+            setMiniAdUrl(result.data[0])
         })
-    }
+    },[])
 
-    render(){
-        return (
-            <>
-                {
-                    this.state.showElem?(
-                        <div className={"Left-mini-ad"}>
-                            <a href="#">
-                                <img src="/assets/images/adimg.png" alt=""/>
-                            </a>
 
-                            <div className={"x"} onClick={this._turnOffAds}>
+    return (
+        <>
+            {
+                showElem ? (
+                    <div className={"Left-mini-ad"}>
+                        <a href={"/course/introduction?id=" + miniAdUrl.course_id}>
+                            <img src={BaseURL + miniAdUrl.ad_url} alt=""/>
+                        </a>
 
-                            </div>
+                        <div className={"x"} onClick={_turnOffAds}>
 
                         </div>
-                    ):null
-                }
 
-            </>
-
-        )
-    }
+                    </div>
+                ):null
+            }
+        </>
+    )
 }
-export default Leftminiad;
+
+
 

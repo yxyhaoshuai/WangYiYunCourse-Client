@@ -5,20 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/api/talkApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talk/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/talk/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/globalMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/courseMainApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/courseMainApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/commentcover/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/commentcover/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/commenttextarea/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/commenttextarea/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailbelongingseries/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailbelongingseries/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailcomment/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailcomment/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/articleApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/homeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/homeApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/myStudyApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/myStudyApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/teacherApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/courseteachercard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/courseteachercard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/fixedfield/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/fixedfield/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footerad/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footerad/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/interest/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/interest/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/leftminiad/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/leftminiad/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/myinfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/myinfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mypagecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagecard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mypagecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagecard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mypagetabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagetabs/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/progressbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/progressbar/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/course/courseMain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/courseMain/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/dateTool.js" beforeDir="false" afterPath="$PROJECT_DIR$/tools/dateTool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client",
+    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client/components/myPagesSearchresultCard",
     "list.type.of.created.stylesheet": "Less",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -73,11 +88,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components\myPagesSearchresultCard" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components\layout" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\public\assets\images" />
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\pages\course\courseLearn" />
-      <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\pages\course\courseLearn" />
@@ -296,7 +311,14 @@
       <workItem from="1683372423528" duration="5000" />
       <workItem from="1683545642143" duration="8223000" />
       <workItem from="1683559317448" duration="1229000" />
-      <workItem from="1683560731245" duration="12065000" />
+      <workItem from="1683560731245" duration="12475000" />
+      <workItem from="1683620932252" duration="203000" />
+      <workItem from="1683787471585" duration="4484000" />
+      <workItem from="1683880477856" duration="151000" />
+      <workItem from="1684298924894" duration="7863000" />
+      <workItem from="1684308390468" duration="2844000" />
+      <workItem from="1684312511466" duration="4291000" />
+      <workItem from="1684320142275" duration="14763000" />
     </task>
     <servers />
   </component>

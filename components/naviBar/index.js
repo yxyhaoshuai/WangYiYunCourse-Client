@@ -1,4 +1,6 @@
 //引入样式
+import {globalMessage} from "../../tools/globalMessage";
+
 require("./index.less")
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
@@ -25,7 +27,6 @@ export default function Navibar(props){
             setDefaultSearch("/courses-search")
         }
     }
-
 
     useEffect(()=>{
         if (router.query.category !== undefined){
@@ -133,6 +134,25 @@ export default function Navibar(props){
         }
 
     }
+    const onClickLogin = ()=>{
+        getUser().then((result)=>{
+            if (result.id === undefined){
+                _loginShow()
+            }else {
+                router.push('/user');
+            }
+        })
+    }
+
+    const onClickSetting = ()=>{
+        getUser().then((result)=>{
+            if (result.id === undefined){
+                _loginShow()
+            } else {
+                router.push('/user/setting');
+            }
+        })
+    }
 
     return(
         <div className={"nav"}>
@@ -234,30 +254,30 @@ export default function Navibar(props){
                                     {
                                         isLoginState ?
                                             <>
-                                                <div className={"login-register"} onClick={_loginShow}>
+                                                <div className={"login-register"} onClick={onClickLogin}>
                                                     <a href="#">{userData.nick_name}</a>
                                                 </div>
                                                 <div className={"user-head"}>
                                                     <img src={BaseURL + userData.header_url}/>
                                                     <div className={"operation-pane"}>
                                                         <ul className={"user-navuser-menu"}>
-                                                            <li onClick={_loginShow}>{userData.nick_name}</li>
+                                                            <li onClick={onClickLogin}>{userData.nick_name}</li>
                                                             <li>
-                                                                <a href={"#"}>
+                                                                <a onClick={()=>{globalMessage("warning","优惠卷及相关模块未扩展！")}}>
                                                                     我的优惠卷
                                                                     <span>兑换</span>
                                                                 </a>
 
                                                             </li>
                                                             <li>
-                                                                <a href={"#"}>我的订单</a>
+                                                                <a onClick={()=>{globalMessage("warning","我的订单模块为扩展，不影响用户使用！")}}>我的订单</a>
                                                             </li>
 
                                                             <li>
-                                                                <a href={"#"}>帮助与反馈</a>
+                                                                <a onClick={()=>{globalMessage("success","点击后跳转到客服页面！")}}>帮助与反馈</a>
                                                             </li>
                                                             <li className={"border-bottom-class"}>
-                                                                <a href={"#"}>设置</a>
+                                                                <a onClick={onClickSetting}>设置</a>
                                                             </li>
                                                             <li>
                                                                 <a onClick={logOut}>退出登录</a>
@@ -289,7 +309,7 @@ export default function Navibar(props){
                                                             <li>
                                                                 <a href={"#"}>帮助与反馈</a></li>
                                                             <li>
-                                                                <a href={"#"}>设置</a></li>
+                                                                <a onClick={onClickSetting}>设置</a></li>
                                                         </ul>
 
                                                     </div>
