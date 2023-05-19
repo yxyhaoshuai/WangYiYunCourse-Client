@@ -7,6 +7,7 @@ import Fixedfield from "../../../components/fixedfield";
 import {useRouter} from "next/router";
 import {getOtherData} from "../../../api/userApi";
 import Userpagesother from "../../../components/userpagesother";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
@@ -20,13 +21,19 @@ export default function ProviderSearch() {
 
 
     useEffect(()=>{
-        getOtherData(router.query.id).then((result)=>{
+        if (router.query.id !== undefined){
+            getOtherData(router.query.id).then((result)=>{
                 setUserData(result.data[0])
-        })
+            })
+        }
     },[router.query.id])
 
     return (
         <>
+            <Head>
+                <title>{userData.nick_name === undefined ? "加载中...": `${userData.nick_name}的主页`}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar  _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

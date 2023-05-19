@@ -1,3 +1,5 @@
+import {getFormatTimeFromDate} from "../../tools/dateTool";
+
 require("./index.less")
 import {useRouter} from "next/router";
 import React, {useEffect, useState} from "react";
@@ -63,7 +65,7 @@ export default function Messagetabitem() {
 
                                 <span>
                                     {
-                                        item.create_time
+                                        getFormatTimeFromDate(item.create_time)
                                     }
                                 </span>
                                 </li>

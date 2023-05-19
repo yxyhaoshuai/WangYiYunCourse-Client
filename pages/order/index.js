@@ -9,6 +9,7 @@ import Orderprice from "../../components/orderprice";
 import {useRouter} from "next/router";
 import {getOrderCourses, getSeriesCourses} from "../../api/orderApi";
 import {getUser} from "../../api/userApi";
+import Head from "next/head";
 
 export default function ProviderSearch() {
     const router = useRouter()
@@ -52,6 +53,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>提交订单</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar  _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

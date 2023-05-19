@@ -5,6 +5,7 @@ import {Button, Checkbox, Form, Input, message, Tabs} from "antd";
 import React from "react";
 import {LockOutlined, UserOutlined} from "@ant-design/icons";
 import {login, register, saveUser} from "../../api/userApi";
+import {globalMessage} from "../../tools/globalMessage";
 
 
 export default function Coverlogin({_loginShow}) {
@@ -51,15 +52,17 @@ export default function Coverlogin({_loginShow}) {
     const onFinish = (values) => {
         if (values.account !== undefined){
             login(values.account,values.password).then((result)=>{
-                if (result.code === 0 ){
+                if (result.data.id !== -1 ){
                     saveUser(result.data)
                     loginSuccess()
                     _loginShow()
                     router.reload()
-
+                } else if (result.data.id === -1){
+                    globalMessage("error","用户名或密码错误！")
+                    _loginShow()
                 }
             })
-        }else {
+        } else {
             register(values.registeredAccount,values.registeredPassword).then((result)=>{
                 if (result.code === 0 ){
                     success()

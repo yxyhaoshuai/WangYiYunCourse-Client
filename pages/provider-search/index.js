@@ -9,6 +9,7 @@ import Fixedfield from "../../components/fixedfield";
 import Searchschool from "../../components/searchschool";
 import {getProviderSearchResult} from "../../api/providerSearchApi";
 import {useRouter} from "next/router";
+import Head from "next/head";
 
 export default function ProviderSearch() {
 
@@ -35,6 +36,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>网校搜索结果</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar  _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

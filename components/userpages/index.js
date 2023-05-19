@@ -2,6 +2,7 @@ import {BaseURL} from "../../config/serverConfig";
 
 require("./index.less")
 import React, {Component} from "react";
+import {globalMessage} from "../../tools/globalMessage";
 
 class Userpages extends Component{
     render(){
@@ -23,11 +24,11 @@ class Userpages extends Component{
                         </div>
                         <div className={"data-card"}>
                             <a className={"iconfont-button-a"} href="#">
-                                <span className={"iconfont-button iconfont"}>&#xe622; 生成资料卡片</span>
+                                <span onClick={()=>{globalMessage("warning","这个功能未开发！")}} className={"iconfont-button iconfont"}>&#xe622; 生成资料卡片</span>
                             </a>
 
                             <a className={"why"} href="#">
-                                <span>学习登记卡是什么？</span>
+                                <span onClick={()=>{globalMessage("warning","这个功能未开发！")}}>学习登记卡是什么？</span>
                             </a>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import Fixedfield from "../../components/fixedfield";
 import Userpages from "../../components/userpages";
 import {useRouter} from "next/router";
 import {getUser} from "../../api/userApi";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
@@ -27,6 +28,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>我的主页</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar  _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

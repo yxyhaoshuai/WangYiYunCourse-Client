@@ -1,9 +1,10 @@
 import CoursePlayer from "../../../components/coursePlayer";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {getCourseOutline, getCourseOutlineTwo} from "../../../api/courseApi";
 import {getCourseIntroduction} from "../../../api/courseIntroductionApi";
 import {getUser} from "../../../api/userApi";
+import Head from "next/head";
 
 export default function CoursePlay() {
 
@@ -59,8 +60,14 @@ export default function CoursePlay() {
     }, [router.query.id])
 
 
+
+
     return (
         <>
+            <Head>
+                <title>正在播放：{courseData.coursetitle}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <CoursePlayer data2={outlineData2} courseDetailData={courseData} data={outlineData}/>
         </>
     )

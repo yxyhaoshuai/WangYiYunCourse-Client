@@ -8,16 +8,17 @@ import CoursecardlayoutmoreProvider from "../layout/coursecardlayoutmoreProvider
 
 
 
-export default function ProviderHome({adLunbo,teacher,course}) {
+export default function ProviderHome({adLunbo,teacher,course,setTabsStatus}) {
+
 
     return (
         <>
             <ProviderHomeAd adLunbo={adLunbo}/>
             <div className={"provider-teacher-course-layout"}>
-                <CoursecardlayoutmoreProvider className={"provider-teacher-course-layout"} titel={"推荐讲师"}>
+                <CoursecardlayoutmoreProvider setTabsStatus={setTabsStatus} className={"provider-teacher-course-layout"} titel={"推荐讲师"}>
                     <ProviderTeacherCardItem teacher={teacher}/>
                 </CoursecardlayoutmoreProvider>
-                <CoursecardlayoutmoreProvider className={"provider-teacher-course-layout"} titel={"推荐课程"}>
+                <CoursecardlayoutmoreProvider setTabsStatus={setTabsStatus} className={"provider-teacher-course-layout"} titel={"推荐课程"}>
                     <ProviderCourseCardItem course={course}/>
                 </CoursecardlayoutmoreProvider>
             </div>

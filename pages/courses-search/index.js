@@ -49,7 +49,7 @@ export default function ProviderSearch() {
     return (
         <>
             <Head>
-                <title>搜索结果</title>
+                <title>课程搜索结果</title>
                 <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
             </Head>
                 <Navibar _loginShow={_loginShow}/>

@@ -17,6 +17,7 @@ import {
     getNetSchoolInformation,
     getNetSchoolTeacherList
 } from "../../api/providerApi";
+import Head from "next/head";
 
 export default function ProviderSearch() {
     const router = useRouter()
@@ -80,15 +81,23 @@ export default function ProviderSearch() {
     },[router.query])
 
 
+
+
+
     return (
         <>
+
+            <Head>
+                <title>{netSchoolInformation.school_title === undefined ? "加载中...":netSchoolInformation.school_title}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
             }
             <ProviderInfo netSchoolInformation={netSchoolInformation}/>
-            <ProviderBar setTabsStatus={setTabsStatus}/>
-            {tabsStatus === "1" ? <ProviderHome course={course} teacher={teacher} adLunbo={adLunbo}/> : null}
+            <ProviderBar tabsStatus={tabsStatus} setTabsStatus={setTabsStatus}/>
+            {tabsStatus === "1" ? <ProviderHome setTabsStatus={setTabsStatus} course={course} teacher={teacher} adLunbo={adLunbo}/> : null}
             {tabsStatus === "2" ? <ProviderCourse/> : null}
             {tabsStatus === "3" ? <ProviderTeacher/> : null}
             {tabsStatus === "4" ? <ProviderAbout netSchoolInformation={netSchoolInformation}/> : null}

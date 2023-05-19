@@ -4,10 +4,11 @@ require("./index.less")
 import {Checkbox, message} from "antd";
 import React, {useEffect, useState} from "react";
 import {BaseURL} from "../../config/serverConfig";
-import {getUser} from "../../api/userApi";
+import {buyCourseApi, getUser} from "../../api/userApi";
+import {globalMessage} from "../../tools/globalMessage";
 
 export default function Mycart() {
-    const [userid,setUserid] =useState(0);
+    const [userid, setUserid] = useState(0);
 
     //发送网络请求发送错误时发生错误的提示
     const info = () => {
@@ -34,27 +35,21 @@ export default function Mycart() {
     const [indeterminate, setIndeterminate] = useState(true);
 
     //是否全选
-    const [CheckboxStatus,setCheckboxStatus] = useState(false)
+    const [CheckboxStatus, setCheckboxStatus] = useState(false)
 
     //每个按钮的状态机
-    const [everyCheckedStatus,setEveryCheckedStatus] = useState([])
-
+    const [everyCheckedStatus, setEveryCheckedStatus] = useState([])
 
 
     //子按钮
     const onChange = (course_id) => {
         everyCheckedStatus.push(course_id)
         setEveryCheckedStatus(everyCheckedStatus)
-        console.log(everyCheckedStatus)
-
     };
 
 
-
-
-
     //购物车列表数据
-    const [cartData,setCartData] = useState([])
+    const [cartData, setCartData] = useState([])
 
     //改变全选按钮状态
     const changeAllCheckbox = () => {
@@ -63,37 +58,54 @@ export default function Mycart() {
     };
 
     //获取的购物车列表数据作为依赖项[]
-    useEffect(()=>{
-        getUser().then((result)=>{
+    useEffect(() => {
+        getUser().then((result) => {
             setUserid(result.id)
         })
-    },[])
+    }, [])
 
-    useEffect(()=>{
-        if (userid !== 0){
-            getCartApi(userid).then((result)=>{
-                if (result){
+    useEffect(() => {
+        if (userid !== 0) {
+            getCartApi(userid).then((result) => {
+                if (result) {
                     setCartData(result.data)
-                }else {
+                } else {
                     info()
                 }
             })
         }
-    },[userid])
+    }, [userid])
 
 
     //移除购物车网络请求
-    const _removeMyCart = (course_id)=>{
-        removeMyCartCartApi(course_id,userid).then((result)=>{
-            if (result.data.affectedRows !== 0){
+    const _removeMyCart = (course_id) => {
+        removeMyCartCartApi(course_id, userid).then((result) => {
+            if (result.data.affectedRows !== 0) {
                 remove()
             }
         })
-        setCartData(cartData.filter((item)=>{
-            return item.id !==course_id
+        setCartData(cartData.filter((item) => {
+            return item.id !== course_id
 
         }))
 
+    }
+
+    const buyCourseFunc = ()=>{
+
+        const courseIdArray = cartData.map(item=>item.id)
+        getUser().then((result)=>{
+            if (result.id !== undefined){
+                buyCourseApi(courseIdArray,result.id).then((result2)=>{
+                    console.log(result2)
+                    if (result2.code === 0){
+                        globalMessage("success",result2.msg)
+                    }else if (result2.code === -1){
+                        globalMessage("warning",result2.msg)
+                    }
+                })
+            }
+        })
     }
 
 
@@ -113,7 +125,8 @@ export default function Mycart() {
             {/*全面选*/}
             <div className={"lookup"}>
                     <span className={"lookup-check-all"}>
-                        <Checkbox indeterminate={indeterminate} checked={CheckboxStatus} onChange={changeAllCheckbox}><span>全选</span></Checkbox>
+                        <Checkbox indeterminate={indeterminate} checked={CheckboxStatus}
+                                  onChange={changeAllCheckbox}><span>全选</span></Checkbox>
                     </span>
                 <span className={"lookup-course-name"}>
                         课程名称
@@ -143,7 +156,9 @@ export default function Mycart() {
                             return (
                                 <div key={item.id} className={"course-order-item-item"}>
                                     <div className={"check-all"}>
-                                        <Checkbox checked={CheckboxStatus} onChange={()=>{onChange(item.id)}}></Checkbox>
+                                        <Checkbox checked={CheckboxStatus} onChange={() => {
+                                            onChange(item.id)
+                                        }}></Checkbox>
                                     </div>
                                     <div className={"course-order-item-img"}>
                                         <a href="#">
@@ -165,14 +180,14 @@ export default function Mycart() {
                                     </div>
                                     <div className={"course-price"}>
                                         {
-                                            item.price === 0 ? "免费" : "￥"+item.price
+                                            item.price === 0 ? "免费" : "￥" + item.price
                                         }
 
                                     </div>
                                     <div className={"delete-icon"}>
 
                                         {/*onClick发送网络请求*/}
-                                        <span onClick={()=>{
+                                        <span onClick={() => {
                                             _removeMyCart(item.id)
                                         }} className={"iconfont"}>&#xe633;</span>
                                     </div>
@@ -198,13 +213,13 @@ export default function Mycart() {
                             <span>
                                 合计：
                             </span>
-                            <span>
+                        <span>
                                 ¥
-                                {
-                                    cartData.reduce((a,b)=>{
-                                        return a+b.price
-                                    },0)
-                                }
+                            {
+                                cartData.reduce((a, b) => {
+                                    return a + b.price
+                                }, 0)
+                            }
 
                             </span>
                     </div>
@@ -213,9 +228,16 @@ export default function Mycart() {
                     </div>
 
                 </div>
-                <div className={"pay-button"}>
-                    <span>去结算</span>
-                </div>
+                {
+                    CheckboxStatus === true ? <div onClick={buyCourseFunc} className={"pay-button-optional"}>
+                            <span>去结算</span>
+                        </div>
+                        :
+                        <div className={"pay-button"}>
+                            <span>去结算</span>
+                        </div>
+                }
+
 
             </div>
         </>

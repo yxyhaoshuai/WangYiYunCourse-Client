@@ -75,11 +75,7 @@ export default function Navibar(props){
 
     },[])
 
-    //获取用户登录状态
-    useEffect(()=>{
 
-        console.log(defaultSearch)
-    },[defaultSearch])
 
 
     //退出登录

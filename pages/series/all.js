@@ -7,6 +7,7 @@ import Fixedfield from "../../components/fixedfield";
 import Leftminiad from "../../components/leftminiad";
 import SeriesList from "../../components/Serieslist";
 import {getSeriesCourseCardList, getSeriesCourseTotal} from "../../api/seriesCourseListApi";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
@@ -48,6 +49,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>全部系列课程</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

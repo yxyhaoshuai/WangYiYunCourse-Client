@@ -12,6 +12,7 @@ import {getMyCollect, getMyStudy, topMyCourse} from "../../api/myStudyApi";
 import {getUser} from "../../api/userApi";
 import MyPagesSearchresultCard from "../../components/myPagesSearchresultCard";
 import {getProgressBar} from "../../api/courseApi";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
@@ -65,6 +66,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>我的学习</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

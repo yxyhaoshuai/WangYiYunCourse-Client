@@ -18,6 +18,7 @@ import {
 } from "../../api/categoryApi";
 import {useRouter} from "next/router";
 import Categorytabs from "../../components/categorytabs";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
@@ -124,12 +125,18 @@ export default function ProviderSearch() {
 
 
     //测试钩子
-    // useEffect(()=>{
-    //     console.log(sonAndCourse)
-    // },[sonAndCourse])
+    useEffect(()=>{
+        console.log(nav)
+    },[nav])
 
     return (
         <>
+            <Head>
+                <title>{nav.length > 0 ? nav[1].classonename : "加载中"}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+                <meta name="keywords" content="有道英语，有道英语视频，有道英语教程，有道英语网站,云课堂"/>
+                <meta name="description" content="在网易云课堂有道英语频道，发现好课！云课堂是网易公司(163.com)旗下实用技能学习平台。与顶级机构、院校和优秀讲师合作，为您提供海量优质课程，以及创新的在线学习体验。涉及IT互联网、设计、职场提升、经管、法律、语言、留学、考试、亲子育儿、兴趣生活等多个领域。帮助您获得全新的个人发展和能力提升。"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

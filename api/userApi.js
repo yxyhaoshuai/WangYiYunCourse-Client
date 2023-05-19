@@ -52,3 +52,5 @@ export const getUserInfoApi = (userId) => ajax("/get-user-info/" + userId)
 
 export const updatePassword = (account, password, new_password) => ajax("/update_password", {account, password, new_password}, "post")
 
+
+export const buyCourseApi = (courseIdArray,student_id) => ajax("/buy-course", {courseIdArray, student_id}, "post");

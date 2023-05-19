@@ -5,35 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/api/talkApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/talk/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/talk/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/globalMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/components/userSetting/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main/pages/course/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/articleApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/homeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/homeApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/myStudyApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/myStudyApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/teacherApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/card/courseteachercard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/courseteachercard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/fixedfield/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/fixedfield/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footerad/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footerad/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/interest/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/interest/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmore/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/leftminiad/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/leftminiad/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/myinfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/myinfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mypagecard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagecard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mypagecard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagecard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mypagetabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mypagetabs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/courseApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/courseApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/instructorApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/instructorApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/userApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/userApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProviderHome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProviderHome/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/coverlogin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coverlogin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/coursecardlayoutmoreProvider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/coursecardlayoutmoreProvider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/messagetabitem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/messagetabitem/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mycart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/mycart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mycart/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/mycart/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/naviBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/naviBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/progressbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/progressbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/orderprice/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/orderprice/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/providerBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/providerBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/userpages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/userpages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/category/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course/courseLearn/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/courseLearn/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/course/courseMain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/courseMain/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/introduction/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instructor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instructor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/message/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/provider-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/provider-search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/provider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/provider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/series/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/series/all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/series/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/series/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user/others/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/others/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user/setting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/setting/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,27 +69,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YXY/Desktop/网易云课堂前台/WangYiYunCourse-Client/components/myPagesSearchresultCard",
-    "list.type.of.created.stylesheet": "Less",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "E:\\WebstormInstallPosition\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YXY/Desktop/WangYiYunCourse-Server-main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\WebstormInstallPosition\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\YXY\Desktop\网易云课堂前台\WangYiYunCourse-Client\components\myPagesSearchresultCard" />
@@ -318,7 +322,13 @@
       <workItem from="1684298924894" duration="7863000" />
       <workItem from="1684308390468" duration="2844000" />
       <workItem from="1684312511466" duration="4291000" />
-      <workItem from="1684320142275" duration="14763000" />
+      <workItem from="1684320142275" duration="15169000" />
+      <workItem from="1684339148458" duration="270000" />
+      <workItem from="1684394385035" duration="737000" />
+      <workItem from="1684405434395" duration="1868000" />
+      <workItem from="1684419966048" duration="1359000" />
+      <workItem from="1684421395597" duration="9763000" />
+      <workItem from="1684469440706" duration="10914000" />
     </task>
     <servers />
   </component>

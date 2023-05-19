@@ -11,6 +11,7 @@ import {useRouter} from "next/router";
 import {addUserFavorite, getSeriesCourse, getSeriesCourseList} from "../../api/seriesCourseDetailApi";
 import {getUser, isLogin} from "../../api/userApi";
 import {message} from "antd";
+import Head from "next/head";
 
 export default function ProviderSearch() {
     //获取路由信息
@@ -119,6 +120,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>{seriesCourseData.title === undefined ? "加载中..." : seriesCourseData.title}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

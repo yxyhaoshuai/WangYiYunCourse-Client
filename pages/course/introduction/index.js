@@ -13,6 +13,9 @@ import Commentcover from "../../../components/commentcover";
 import {useRouter} from "next/router";
 import {getCourseDetailCrumbs, getCourseIntroduction, getCourseOutline} from "../../../api/courseIntroductionApi";
 import {getCourseMainSeries} from "../../../api/courseMainApi";
+import {isHaveBought} from "../../../api/courseApi";
+import {getUser} from "../../../api/userApi";
+import Head from "next/head";
 
 
 export default function ProviderSearch() {
@@ -36,6 +39,21 @@ export default function ProviderSearch() {
     const _loginShow = () => {
         setshowCoverLogin(!showCoverLogin)
     }
+
+    //如果已购买就跳转
+    useEffect(()=>{
+        if (router.query.id !== undefined){
+            getUser().then((result)=>{
+                if (result.id !== undefined){
+                    isHaveBought(router.query.id,result.id).then((result2)=>{
+                        if (result2.data.length>0){
+                            router.push(`/course/courseMain?id=${router.query.id}`)
+                        }
+                    })
+                }
+            })
+        }
+    },[router.query])
 
     //获取课程详情信息
     useEffect(() => {
@@ -89,6 +107,10 @@ export default function ProviderSearch() {
 
     return (
         <>
+            <Head>
+                <title>{courseData.coursetitle === undefined ? "加载中...":courseData.coursetitle}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''

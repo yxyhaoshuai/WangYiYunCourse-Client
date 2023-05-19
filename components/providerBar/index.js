@@ -3,7 +3,7 @@ import {Tabs} from "antd";
 require("./index.less")
 import React from "react";
 
-export default function ProviderBar({setTabsStatus}) {
+export default function ProviderBar({setTabsStatus,tabsStatus}) {
     const tabsOnChange = (e)=>{
         setTabsStatus(e)
     }
@@ -11,6 +11,7 @@ export default function ProviderBar({setTabsStatus}) {
         <div className={"ux-provider-info-bar"}>
             <div className={"ux-provider-info-bar-bx"}>
                 <Tabs
+                    activeKey={tabsStatus}
                     defaultActiveKey="1"
                     onChange={tabsOnChange}
                     items={[

@@ -19,6 +19,9 @@ import {
     getCourseMainCommentListLimit5,
     getCourseMainSeries
 } from "../../../api/courseMainApi";
+import {getUser} from "../../../api/userApi";
+import {isHaveBought} from "../../../api/courseApi";
+import Head from "next/head";
 require("./index.less")
 
 
@@ -94,8 +97,30 @@ export default function ProviderSearch() {
     }, [router.query.id])
 
 
+    //如果没购买就跳转introduction
+    useEffect(()=>{
+        if (router.query.id !== undefined){
+            getUser().then((result)=>{
+                if (result.id !== undefined){
+                    isHaveBought(router.query.id,result.id).then((result2)=>{
+                        if (result2.data.length === 0){
+                            router.push(`/course/introduction?id=${router.query.id}`)
+                        }
+                    })
+                } else {
+                    router.push(`/course/introduction?id=${router.query.id}`)
+                }
+            })
+        }
+    },[router.query])
+
+
     return (
         <>
+            <Head>
+                <title>{courseData.coursetitle === undefined ? "加载中...":courseData.coursetitle}</title>
+                <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Navibar _loginShow={_loginShow}/>
             {
                 showCoverLogin ? <Coverlogin _loginShow={_loginShow}/> : ''
