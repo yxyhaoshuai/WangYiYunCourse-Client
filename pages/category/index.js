@@ -124,10 +124,7 @@ export default function ProviderSearch() {
     },[router.query.categoryId])
 
 
-    //测试钩子
-    useEffect(()=>{
-        console.log(nav)
-    },[nav])
+
 
     return (
         <>
