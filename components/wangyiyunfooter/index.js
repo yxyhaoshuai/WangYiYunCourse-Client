@@ -13,13 +13,12 @@ class Wangyiyunfooter extends Component{
                             <a href="#">帮助中心</a>
                             <a href="#">中国大学MOOC</a>
                             <a href="#">卡搭编程</a>
-                            <a href="#">有道智云</a>
-                            <a href="#">有道社招</a>
-                            <a href="#"> 有道校招</a>
+                            <a href="#">民大智云</a>
+                            <a href="#">民大招生</a>
                             <a href="#"> 廉正举报</a>
                         </div>
                         <div className={"m-yktfoot_copy"}>
-                            <span>©1997-2022 网易公司 版权所有</span>
+                            <span>©1997-2022 西北民大 版权所有</span>
                             <span>粤B2-20090191-18</span>
                             <span>
                                 <a className={"special"} href="#">工业和信息化部备案管理系统网站</a>
@@ -46,7 +45,7 @@ class Wangyiyunfooter extends Component{
                                     <div className={"attention-wechat-account"}>关注云课堂官方微信号</div>
                                     <div className={"intro"}>-领取课程免费福利，超值学习资料-</div>
                                     <div className={"WeChat-QR-code"}>
-                                        <img src="/assets/images/WechatQRcode.png"/>
+                                        <img src="/assets/images/WechatQRcode.jpg"/>
                                     </div>
                                 </div>
                             </div>

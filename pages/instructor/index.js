@@ -5,8 +5,6 @@ import Fixedfield from "../../components/fixedfield";
 import Leftminiad from "../../components/leftminiad";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
 import {Tabs} from "antd";
-
-import ProviderCourse from "../../components/providerCourse";
 import ProviderCourse2 from "../../components/providerCourse2";
 import {getTeacherCourseName} from "../../api/instructorApi";
 import {useRouter} from "next/router";

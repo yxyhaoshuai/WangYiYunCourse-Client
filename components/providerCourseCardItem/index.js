@@ -12,7 +12,7 @@ export default function ProviderCourseCardItem({course}) {
         <div className={"provider-course-card-layout"}>
             <FlexLayout>
                 {
-                    course.map((item)=>{
+                    course && course.map((item)=>{
                         return <Searchcoursecard data={item} key={item.id} count="column5" is_score/>
                     })
                 }

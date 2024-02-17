@@ -81,7 +81,7 @@ export default function ProviderSearch() {
                 {
                     currentState ===1? <>
                         {
-                            myStudyData.map((item)=>{
+                            myStudyData && myStudyData.map((item)=>{
                                 return <Mypagecard key={item.id} data={item}/>
                             })
                         }

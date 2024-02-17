@@ -156,7 +156,7 @@ export default function Navibar(props){
                 <div className={"nav-bar-middle"}>
                     <div className={"nav-bar-middle-logo"}>
                         <a href={"http://localhost:3000/"}>
-                            <img src={"/assets/images/logo.png"}/>
+                            {/*<img src={"/assets/images/logo.png"}/>*/}
                         </a>
                     </div>
                     <form className={"nav-search"} action={defaultSearch}>
@@ -212,7 +212,7 @@ export default function Navibar(props){
                                     <div className={"attention-wechat-account"}>关注云课堂官方微信号</div>
                                     <div className={"intro"}>-领取课程免费福利，超值学习资料-</div>
                                     <div className={"WeChat-QR-code"}>
-                                        <img src="/assets/images/WechatQRcode.png"/>
+                                        <img src="/assets/images/WechatQRcode.jpg"/>
                                     </div>
                                 </div>
                             </div>

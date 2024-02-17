@@ -207,7 +207,7 @@ const Usersettingbasic = () => {
                         </Form.Item>
 
                         <Form.Item id={"sex"} label="性别">
-                                    <Radio.Group defaultValue={""+sex} name="sex">
+                                    <Radio.Group value={""+sex} name="sex" onChange={(e)=>{setSex(+e.target.value)}}>
                                         <Radio value="1"> 男 </Radio>
                                         <Radio value="2"> 女 </Radio>
                                         <Radio value="0"> 保密 </Radio>

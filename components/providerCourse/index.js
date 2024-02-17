@@ -59,6 +59,9 @@ export default function ProviderCourse() {
         }
     },[router.query])
 
+    useEffect(() =>{
+        console.log(courseAll, "打印")
+    }, [courseAll])
 
     return (
             <div className={"provider-course"}>
@@ -77,7 +80,7 @@ export default function ProviderCourse() {
                 <div className={"provider-course-center"}>
                     <FlexLayout>
                         {
-                            courseAll.map((item)=>{
+                            courseAll && courseAll.map((item)=>{
                                 return <Searchcoursecard data={item} key={item.id} count="column5" is_score/>
                             })
                         }

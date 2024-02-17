@@ -39,7 +39,7 @@ class Fixedfield extends Component{
                                 </div>
                                 <div className={"qrcode-content"}>
                                     <div className={"img"}>
-                                        <img src="/assets/images/WechatQRcode.png" alt=""/>
+                                        <img src="/assets/images/WechatQRcode.jpg" alt=""/>
                                     </div>
                                     <div className={"text"}>
                                         关注微信

@@ -7,7 +7,7 @@ class PublicityItem extends Component{
             <div className={"publicity"}>
                 <div className={"publicity-centre bx"}>
                     <div className={"special"}>
-                        网易
+                        严选
                         <span className={"special"}>自研课程承诺:</span>
                     </div>
                     <div>

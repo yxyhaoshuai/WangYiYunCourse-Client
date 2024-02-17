@@ -10,12 +10,10 @@ import {getClassTwoCourses} from "../../api/categoryApi";
 export default function Categorytabs({classTwoCourse,setClassTwoCourse,categoryId}) {
     const onChange = (key) => {
         if (key === "2"){
-            console.log(key)
             getClassTwoCourses(categoryId,"score").then((result)=>{
                 setClassTwoCourse(result.data)
             })
         } else if (key === "1"){
-            console.log(key)
             getClassTwoCourses(categoryId,"studyCount").then((result)=>{
                 setClassTwoCourse(result.data)
             })
