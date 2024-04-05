@@ -9,6 +9,7 @@ import {BaseURL} from "../../config/serverConfig";
 import {getFormatTimeFromDate} from "../../tools/dateTool";
 import {getUser} from "../../api/userApi";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 
 
@@ -89,7 +90,7 @@ export default function Coursedetailcomment({_commentShow}) {
                             return <div key={item.id} className={"comment-comment"}>
                                 <div className={"comment-user-score"}>
                                     <div className={"user-img"}>
-                                        <img src={BaseURL + item.header_url} alt=""/>
+                                        <LazyLoadImage src={BaseURL + item.header_url}/>
                                     </div>
                                     <div className={"text"}>
                                         <Link href={{

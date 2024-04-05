@@ -8,6 +8,7 @@ import {message} from "antd";
 import Link from "next/link";
 import {getUser, isLogin, removeUser} from "../../api/userApi";
 import {BaseURL} from "../../config/serverConfig";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 export default function Navibar(props){
     // 用户登录数据
@@ -254,7 +255,7 @@ export default function Navibar(props){
                                                     <a href="#">{userData.nick_name}</a>
                                                 </div>
                                                 <div className={"user-head"}>
-                                                    <img src={BaseURL + userData.header_url}/>
+                                                    <LazyLoadImage src={BaseURL + userData.header_url}/>
                                                     <div className={"operation-pane"}>
                                                         <ul className={"user-navuser-menu"}>
                                                             <li onClick={onClickLogin}>{userData.nick_name}</li>

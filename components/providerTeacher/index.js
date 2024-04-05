@@ -5,6 +5,7 @@ import {useRouter} from "next/router";
 import {getNetSchoolTeacherList} from "../../api/providerApi";
 import {BaseURL} from "../../config/serverConfig";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 require("./index.less")
 
@@ -37,7 +38,7 @@ export default function ProviderTeacher() {
                             }}>
                                 <a>
                                     <div className={"teacher-head"}>
-                                        <img src={BaseURL + item.header_url} alt=""/>
+                                        <LazyLoadImage src={BaseURL + item.header_url}/>
                                     </div>
                                     <div className={"teacher-content"}>
                                         <div className={"teacher-name"}>{item.name}</div>

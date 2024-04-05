@@ -5,6 +5,7 @@ import FlexLayout from "../../layout/flexLayout";
 import React from "react";
 import {Pagination} from "antd";
 import {BaseURL} from "../../config/serverConfig";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 export default function SeriesList({seriesCardList,PaginationOnChange,seriesCardTotal,pages}) {
 
@@ -21,7 +22,7 @@ export default function SeriesList({seriesCardList,PaginationOnChange,seriesCard
                                         query:{"id":item.id}
                                     }} >
                                         <a>
-                                            <img src={BaseURL + item.series_fm_url} alt=""/>
+                                            <LazyLoadImage src={BaseURL + item.series_fm_url}></LazyLoadImage>
                                         </a>
                                     </Link>
                                 </div>

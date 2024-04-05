@@ -4,13 +4,14 @@ require("./index.less")
 import React, {Component} from "react";
 import {BaseURL} from "../../config/serverConfig";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 class Seriesing extends Component{
     render(){
         const {seriesCourseData,seriesCourseListData,addFavorite,AttendAllCourses} = this.props;
         return (
             <div className={"series-course-img"}>
-                <img src={BaseURL + seriesCourseData.course_introduction_img} alt=""/>
+                <LazyLoadImage src={BaseURL + seriesCourseData.course_introduction_img}/>
                 <div className={"content-module"}>
                     <div className={"Breadcrumb-div"}>
                         <Breadcrumb separator=">">

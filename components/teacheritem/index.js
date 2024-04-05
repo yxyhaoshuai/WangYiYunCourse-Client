@@ -2,6 +2,7 @@ import {BaseURL} from "../../config/serverConfig";
 
 require("./index.less")
 import React, {Component} from "react";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 class Teacheritem extends Component{
     render(){
@@ -10,7 +11,7 @@ class Teacheritem extends Component{
             <div className={"teacheritem"}>
                 <div className={"live-card"}>
                     <div className={"live-card_avatar"}>
-                        <img src={BaseURL+data.header_url}/>
+                        <LazyLoadImage src={BaseURL+data.header_url}/>
                     </div>
                     <div className={"live-card_content"}>
                         <div className={"live-card_content_head"}>

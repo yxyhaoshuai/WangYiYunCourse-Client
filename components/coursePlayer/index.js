@@ -7,6 +7,7 @@ import {BaseURL} from "../../config/serverConfig";
 import {useRouter} from "next/router";
 import {getUser, updateUserStudyHistory} from "../../api/userApi";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 export default function CoursePlayer({data, courseDetailData}) {
 
@@ -142,7 +143,7 @@ export default function CoursePlayer({data, courseDetailData}) {
 
                     </div>
                     <div className={"course-information-right"}>
-                        <img src={BaseURL + courseDetailData.courseurl} alt=""/>
+                        <LazyLoadImage src={BaseURL + courseDetailData.courseurl}/>
                         <div className={"mask"}>
                             <Link href={{
                                 pathname: "/course/courseMain",

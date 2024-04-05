@@ -7,6 +7,7 @@ import Coursedetailschool from "../coursedetailschool";
 import Coursedetailschoolconsult from "../coursedetailschoolconsult";
 import Coursedetailbelongingseries from "../coursedetailbelongingseries";
 import Coursedetailcomment from "../coursedetailcomment";
+import Coursenotes from "../coursenotes";
 
 
 class Coursedetaillayout extends Component{
@@ -16,8 +17,7 @@ class Coursedetaillayout extends Component{
         return (
             <div className={"layout bx"}>
                 {
-                    directoryIntro ===1 ?<Coursedetailintro/> :<Coursedetailcatalogue courseOutline={courseOutline}/>
-
+                    directoryIntro ===1 ? <Coursedetailintro/> : directoryIntro === 2 ?  <Coursedetailcatalogue courseOutline={courseOutline}/> : <Coursenotes/>
                 }
                 <div className={"layout-right"}>
                     {this.props.children}

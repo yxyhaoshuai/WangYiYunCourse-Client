@@ -7,6 +7,7 @@ import {getUser} from "../../api/userApi";
 import {topMyCourse} from "../../api/myStudyApi";
 import {globalMessage} from "../../tools/globalMessage";
 import {useRouter} from "next/router";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 
 export default function Mypagecard({data}) {
@@ -44,7 +45,7 @@ export default function Mypagecard({data}) {
         <div className={"mystudy-course-card column4"}>
             <a href={"/course/courseMain?id=" + data.id}>
                 <div className={"mystudy-course-card-header"}>
-                    <img src={BaseURL + data.img_url} alt=""/>
+                    <LazyLoadImage src={BaseURL + data.img_url}/>
                     <div className={"cover-tag"}>
                         随到随学
                     </div>

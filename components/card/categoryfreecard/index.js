@@ -4,6 +4,7 @@ require("./index.less")
 import React, {Component} from "react";
 import {BaseURL} from "../../../config/serverConfig";
 import Link from "next/link";
+import LazyLoadImage from "../../lazyLoadImage/LazyLoadImage";
 
 class Categoryfreecard extends Component{
     render(){
@@ -17,7 +18,7 @@ class Categoryfreecard extends Component{
                     }}>
                         <a>
                             <div className={"img-div"}>
-                                <img src={BaseURL + data.img_url} alt=""/>
+                                <LazyLoadImage src={BaseURL + data.img_url}/>
                             </div>
                             <div className={"text-div"}>
                                 <div className={"course-card"}>

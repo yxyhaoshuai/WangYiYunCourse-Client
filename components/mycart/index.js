@@ -6,6 +6,7 @@ import React, {useEffect, useState} from "react";
 import {BaseURL} from "../../config/serverConfig";
 import {buyCourseApi, getUser} from "../../api/userApi";
 import {globalMessage} from "../../tools/globalMessage";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 export default function Mycart() {
     const [userid, setUserid] = useState(0);
@@ -162,8 +163,7 @@ export default function Mycart() {
                                     </div>
                                     <div className={"course-order-item-img"}>
                                         <a href="#">
-                                            <img src={BaseURL + item.img_url} alt=""/>
-
+                                            <LazyLoadImage src={BaseURL + item.img_url}/>
                                         </a>
 
 

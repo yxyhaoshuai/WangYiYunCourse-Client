@@ -3,6 +3,7 @@ import {BaseURL} from "../../config/serverConfig";
 require("./index.less")
 import React, {Component} from "react";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 class Searchschool extends Component {
 
@@ -18,7 +19,7 @@ class Searchschool extends Component {
                                 query: {"id": data.id}
                             }}>
                                 <a>
-                                    <img src={BaseURL + data.organization_heard_url} alt=""/>
+                                    <LazyLoadImage src={BaseURL + data.organization_heard_url}/>
                                 </a>
                             </Link>
                         </div>
@@ -50,7 +51,7 @@ class Searchschool extends Component {
                                 <a href={`/course/introduction?id=${item.id}`}>
                                     <div className={"series-card"}>
                                         <div className={"img-div"}>
-                                            <img src={BaseURL + item.img_url} alt=""/>
+                                            <LazyLoadImage src={BaseURL + item.img_url}/>
                                             {
                                                 is_series ? <div className={"is_series"}>系列课程</div> : ""
                                             }

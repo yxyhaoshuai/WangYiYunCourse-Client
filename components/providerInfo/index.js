@@ -2,6 +2,7 @@ import {BaseURL} from "../../config/serverConfig";
 
 require("./index.less")
 import React from "react";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 export default function ProviderInfo({netSchoolInformation}) {
 
@@ -9,7 +10,7 @@ export default function ProviderInfo({netSchoolInformation}) {
         <div className={"ux-provider-info"}>
             <div className={"ux-provider-info-bx bx"}>
                 <div className={"ux-provider-info-left"}>
-                    <img src={BaseURL + netSchoolInformation.organization_heard_url} alt=""/>
+                    <LazyLoadImage src={BaseURL + netSchoolInformation.organization_heard_url}/>
                 </div>
                 <div className={"ux-provider-info-center"}>
                     <p>

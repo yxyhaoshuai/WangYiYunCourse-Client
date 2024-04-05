@@ -2,6 +2,7 @@ import {BaseURL} from "../../config/serverConfig";
 
 require("./index.less")
 import React, {Component} from "react";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 class Userpagesother extends Component{
     render(){
@@ -11,7 +12,7 @@ class Userpagesother extends Component{
                 <div className={"user-background"}>
                     <div className={"user-background-bx bx"}>
                         <div className={"ux-user-info-top_img"}>
-                            <img src={BaseURL + userData.header_url} alt=""/>
+                            <LazyLoadImage src={BaseURL + userData.header_url}/>
                             <div className={"crown"}></div>
                         </div>
                         <div className={"user-name"}>

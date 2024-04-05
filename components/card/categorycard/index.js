@@ -3,6 +3,7 @@ import {BaseURL} from "../../../config/serverConfig";
 require("./index.less")
 import React, {Component} from "react";
 import Link from "next/link";
+import LazyLoadImage from "../../lazyLoadImage/LazyLoadImage";
 
 class Categorycard extends Component{
     render(){
@@ -15,7 +16,7 @@ class Categorycard extends Component{
                 }}>
                     <a>
                         <div className={"top-img"}>
-                            <img src={BaseURL + data.img_url} alt=""/>
+                            <LazyLoadImage  src={BaseURL + data.img_url}/>
                         </div>
                         <div className={"open-card_content_time"}>
                             {

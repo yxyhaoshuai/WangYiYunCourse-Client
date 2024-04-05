@@ -7,6 +7,7 @@ import {BaseURL} from "../../config/serverConfig";
 import {getCourseMainCommentList, getCourseMainCommentListCount} from "../../api/courseMainApi";
 import {useRouter} from "next/router";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 
 export default function Commentcover({_commentShow}) {
@@ -64,7 +65,7 @@ export default function Commentcover({_commentShow}) {
                                     <div className={"item-content"}>
                                         <div className={"item-content-left"}>
                                             <div className={"item-content-left-img"}>
-                                                <img src={BaseURL + item.header_url} alt=""/>
+                                                <LazyLoadImage src={BaseURL + item.header_url}/>
                                             </div>
                                             <div className={"about-user-count"}>
                                                 <div className={"user-name"}>

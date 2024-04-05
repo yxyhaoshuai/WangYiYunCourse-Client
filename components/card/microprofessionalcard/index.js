@@ -2,6 +2,7 @@ import {BaseURL} from "../../../config/serverConfig";
 
 require("./index.less")
 import React, {Component} from "react";
+import LazyLoadImage from "../../lazyLoadImage/LazyLoadImage";
 
 class Microprofessionlcard extends Component{
     render(){
@@ -11,7 +12,7 @@ class Microprofessionlcard extends Component{
                 <a href={"/course/introduction?id=" + data.courseid}>
                     <div className={"course-card_img"}>
                         <div className={"course-card_img_jpk"}>
-                            <img src={BaseURL + data.img_url} alt=""/>
+                            <LazyLoadImage src={BaseURL + data.img_url}/>
                         </div>
 
                     </div>

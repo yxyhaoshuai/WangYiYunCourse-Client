@@ -5,6 +5,7 @@ require("./index.less")
 import React, {useEffect} from "react";
 import {BaseURL} from "../../../config/serverConfig";
 import Link from "next/link";
+import LazyLoadImage from "../../lazyLoadImage/LazyLoadImage";
 
 
 export default function Searchcoursecard({count,is_score,data={}}) {
@@ -38,7 +39,7 @@ export default function Searchcoursecard({count,is_score,data={}}) {
             }}>
                 <a>
             <div className={"img-div"}>
-                <img src={BaseURL + data.img_url} alt=""/>
+                <LazyLoadImage src={BaseURL + data.img_url}/>
             </div>
             <div className={"text-div2"}>
                 <div className={"title-div2"}>

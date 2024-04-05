@@ -5,6 +5,7 @@ import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import {BaseURL} from "../../config/serverConfig";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 
 
@@ -28,7 +29,7 @@ export default function Coursedetailschool() {
                         query: {"id": netSchoolInfo.id}
                     }}>
                         <a>
-                            <img src={BaseURL + netSchoolInfo.organization_heard_url} alt=""/>
+                            <LazyLoadImage src={BaseURL + netSchoolInfo.organization_heard_url}/>
                         </a>
 
                     </Link>

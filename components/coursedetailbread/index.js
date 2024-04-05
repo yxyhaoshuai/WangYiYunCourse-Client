@@ -1,3 +1,5 @@
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
+
 require("./index.less")
 import {addCar, addUserFavoriteOne} from "../../api/courseApi";
 import {Breadcrumb, message, Rate} from "antd";
@@ -116,7 +118,7 @@ export default function Coursedetailbread({courseData, ismystudy,breadData,_logi
             <div className={"course-intro-card bx"}>
                 <div className={"img-content"}>
                     <div className={"img"}>
-                        <img src={BaseURL + courseData.courseurl} alt=""/>
+                        <LazyLoadImage src={BaseURL + courseData.courseurl}/>
                     </div>
                     <div className={"content"}>
                         <div className={"course-title"}>
@@ -201,36 +203,71 @@ export default function Coursedetailbread({courseData, ismystudy,breadData,_logi
             <div className={"bar-button bx"}>
                 {/*current选中 not-current是未选择两者只能填一个*/}
                 {
-                    directoryIntro !== 1 ?
+                    directoryIntro === 1 ?
                         <>
                             <span onClick={() => {
                                 setDirectoryIntro(1)
                             }
-                            } className={"not-current"}>
+                            } className={"current"}>
                                 介绍
                             </span>
                             <span onClick={() => {
                                 setDirectoryIntro(2)
                             }
-                            } className={"current"}>
+                            } className={"not-current"}>
                                 目录
+                            </span>
+                            <span onClick={() => {
+                                setDirectoryIntro(3)
+                            }
+                            } className={"not-current"}>
+                                笔记
                             </span>
                         </>
                         :
+                        directoryIntro === 2 ?
                         <>
                             <span onClick={() => {
                                 setDirectoryIntro(1)
                             }
-                            } className={"current"}>
+                            } className={"not-current"}>
                                 介绍
                             </span>
                             <span onClick={() => {
                                 setDirectoryIntro(2)
                             }
-                            } className={"not-current"}>
+                            } className={"current"}>
                                 目录
                             </span>
+                            <span onClick={() => {
+                                setDirectoryIntro(3)
+                            }
+                            } className={"not-current"}>
+                                笔记
+                            </span>
                         </>
+                            :
+
+                            <>
+                            <span onClick={() => {
+                                setDirectoryIntro(1)
+                            }
+                            } className={"not-current"}>
+                                介绍
+                            </span>
+                                <span onClick={() => {
+                                    setDirectoryIntro(2)
+                                }
+                                } className={"not-current"}>
+                                目录
+                            </span>
+                                <span onClick={() => {
+                                    setDirectoryIntro(3)
+                                }
+                                } className={"current"}>
+                                笔记
+                            </span>
+                            </>
                 }
 
             </div>

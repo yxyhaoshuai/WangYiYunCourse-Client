@@ -3,6 +3,7 @@ import {BaseURL} from "../../config/serverConfig";
 require("./index.less")
 import React from "react";
 import {globalMessage} from "../../tools/globalMessage";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 
 
@@ -14,8 +15,7 @@ export default function Myinfo({userData}) {
         <div className={"my-info"}>
             <div className={"my-info-bx bx"}>
                 <div className={"my-img"}>
-                    <img src={BaseURL + userData.header_url} alt=""/>
-
+                    <LazyLoadImage src={BaseURL + userData.header_url}/>
                 </div>
                 <div className={"greet-sb"}>
                     <div className={"greet-sb-text"}>

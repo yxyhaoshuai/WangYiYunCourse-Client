@@ -5,6 +5,7 @@ import {BaseURL} from "../../config/serverConfig";
 import React from "react";
 import {Button, Result} from "antd";
 import {useRouter} from "next/router";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 export default function Seriescourseitem({data}) {
     const router = useRouter();
@@ -38,7 +39,7 @@ export default function Seriescourseitem({data}) {
                                     query: {"id": data.id}
                                 }}>
                                     <a>
-                                        <img src={BaseURL + data.img_url} alt=""/>
+                                        <LazyLoadImage src={BaseURL + data.img_url}/>
                                     </a>
                                 </Link>
                             </div>
@@ -82,7 +83,7 @@ export default function Seriescourseitem({data}) {
                                                                     query: {"id": item2.id}
                                                                 }}>
                                                                     <a>
-                                                                        <img src={BaseURL + item2.header_url} alt=""/>
+                                                                        <LazyLoadImage src={BaseURL + item2.header_url}/>
                                                                     </a>
                                                                 </Link>
                                                             </div>

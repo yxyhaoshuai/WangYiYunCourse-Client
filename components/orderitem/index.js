@@ -3,6 +3,7 @@ import {BaseURL} from "../../config/serverConfig";
 require("./index.less")
 import React, {Component} from "react";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 class Orderitem extends Component {
     render() {
@@ -18,7 +19,7 @@ class Orderitem extends Component {
                         query: {"id": item.id}
                     }}>
                         <a>
-                            <img src={BaseURL + item.img_url} alt=""/>
+                            <LazyLoadImage src={BaseURL + item.img_url}/>
                         </a>
                     </Link>
                 </div>

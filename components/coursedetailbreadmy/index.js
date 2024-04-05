@@ -6,6 +6,7 @@ import {Breadcrumb, message, Rate} from "antd";
 import React, {useEffect, useState} from "react";
 import {getUser} from "../../api/userApi";
 import Link from "next/link";
+import LazyLoadImage from "../lazyLoadImage/LazyLoadImage";
 
 
 export default function Coursedetailbreadmy({courseData, ismystudy, breadData,directoryIntro,setDirectoryIntro}) {
@@ -99,7 +100,7 @@ export default function Coursedetailbreadmy({courseData, ismystudy, breadData,di
             <div className={"course-intro-card bx"}>
                 <div className={"img-content"}>
                     <div className={"img"}>
-                        <img src={BaseURL + courseData.courseurl} alt=""/>
+                        <LazyLoadImage src={BaseURL + courseData.courseurl}/>
                     </div>
                     <div className={"content"}>
                         <div className={"course-title"}>

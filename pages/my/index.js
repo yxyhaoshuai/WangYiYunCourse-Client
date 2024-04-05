@@ -1,5 +1,5 @@
 import Navibar from "../../components/naviBar";
-import React, {useEffect, useState} from "react";
+import React, {Suspense, useEffect, useState} from "react";
 import Coverlogin from "../../components/coverlogin";
 import Fixedfield from "../../components/fixedfield";
 import Wangyiyunfooter from "../../components/wangyiyunfooter";
@@ -10,9 +10,9 @@ import Mypagelayout from "../../components/mypagelayout";
 import Mypagecard from "../../components/mypagecard";
 import {getMyCollect, getMyStudy, topMyCourse} from "../../api/myStudyApi";
 import {getUser} from "../../api/userApi";
-import MyPagesSearchresultCard from "../../components/myPagesSearchresultCard";
 import {getProgressBar} from "../../api/courseApi";
 import Head from "next/head";
+const MyPagesSearchresultCardLazy = React.lazy(() => import("../../components/myPagesSearchresultCard"));
 
 
 export default function ProviderSearch() {
@@ -62,8 +62,6 @@ export default function ProviderSearch() {
     },[userData])
 
 
-
-
     return (
         <>
             <Head>
@@ -78,21 +76,29 @@ export default function ProviderSearch() {
             <Mypagetabs setCurrentStateFunction={setCurrentStateFunction}/>
             <Mypagelayout>
                 {/*下面切代码用三目运算符切换卡片组件*/}
-                {
-                    currentState ===1? <>
-                        {
-                            myStudyData && myStudyData.map((item)=>{
-                                return <Mypagecard key={item.id} data={item}/>
-                            })
-                        }
-                    </>:<>
-                        {
-                            myCollectData.map((item)=>{
-                                return <MyPagesSearchresultCard key={item.id} data={item} count="column5" is_score/>
-                            })
-                        }
-                    </>
-                }
+                <Suspense fallback={<div>Loading...</div>}>
+                    {/*下面切代码用三目运算符切换卡片组件*/}
+                    {
+                        currentState ===1 ? (
+                            <>
+                                {
+                                    myStudyData && myStudyData.map((item)=>{
+                                        return <Mypagecard key={item.id} data={item}/>
+                                    })
+                                }
+                            </>
+                        ) : (
+                            <>
+                                {
+                                    myCollectData.map((item)=>{
+                                        return <MyPagesSearchresultCardLazy key={item.id} data={item} count="column5" is_score/>
+                                    })
+                                }
+                            </>
+                        )
+                    }
+                </Suspense>
+
             </Mypagelayout>
             <Fixedfield/>
             <Wangyiyunfooter/>

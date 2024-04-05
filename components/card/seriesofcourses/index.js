@@ -2,6 +2,7 @@ import {BaseURL} from "../../../config/serverConfig";
 
 require("./index.less")
 import React, {Component} from "react";
+import LazyLoadImage from "../../lazyLoadImage/LazyLoadImage";
 
 class Seriesofcourses extends Component{
 
@@ -13,7 +14,7 @@ class Seriesofcourses extends Component{
                 <a href={"/series?id=" + data.id} className={"j-href"}>
                     <div className={"card"}>
                         <div className={"img"}>
-                            <img src={BaseURL + data.series_fm_url} alt=""/>
+                            <LazyLoadImage src={BaseURL + data.series_fm_url}></LazyLoadImage>
                         </div>
 
 
