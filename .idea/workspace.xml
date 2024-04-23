@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/components/coursenotes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/coursenotes/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/lazyLoadImage/LazyLoadImage.js" afterDir="false" />
+    <list default="true" id="833d48c0-889b-4cb9-9f9a-6145482dbc59" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetailbread/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetailbread/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coursedetaillayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coursedetaillayout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/lazyLoadImage/LazyLoadImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/lazyLoadImage/LazyLoadImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/myPagesSearchresultCard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,29 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "graduation-project",
-    "last_opened_file_path": "/Users/sishamao/Documents/privateProject/WangYiYunCourse-Client/components",
-    "list.type.of.created.stylesheet": "Less",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;graduation-project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sishamao/Documents/privateProject/WangYiYunCourse-Client/components&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components" />
@@ -352,6 +346,18 @@
       <workItem from="1708130966823" duration="16904000" />
       <workItem from="1712055600661" duration="635000" />
       <workItem from="1712305696454" duration="4058000" />
+      <workItem from="1712312751302" duration="7503000" />
+      <workItem from="1712325212629" duration="1270000" />
+      <workItem from="1712333464045" duration="1295000" />
+      <workItem from="1712393161267" duration="612000" />
+      <workItem from="1713272949818" duration="551000" />
+      <workItem from="1713273886199" duration="8000" />
+      <workItem from="1713276896736" duration="8027000" />
+      <workItem from="1713292751249" duration="609000" />
+      <workItem from="1713426148702" duration="683000" />
+      <workItem from="1713512703901" duration="38000" />
+      <workItem from="1713516282402" duration="727000" />
+      <workItem from="1713613437111" duration="213000" />
     </task>
     <servers />
   </component>
@@ -374,7 +380,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="graduation-project" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -391,7 +397,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/components/searchschool/index.js</url>
-          <line>49</line>
+          <line>50</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
