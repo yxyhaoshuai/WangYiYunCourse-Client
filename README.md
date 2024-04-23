@@ -1,3 +1,4 @@
+# 抄袭了网易云课堂的UI和网站的业务逻辑,然后自己设计数据库结构、自己写前端和后端代码，独自从0到1构建网易云课堂
 # WangYiYunCourse-Client
 # 总共有20个动态数据渲染的页面，包含了网易云课堂所有基本功能架构！
 ![Alt text for image1](/public/website-screenshot/a.png)
