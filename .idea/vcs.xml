@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../撩课项目完结/LXT-App-Client-main" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../WangYiYunCourse-Server-main" vcs="Git" />
   </component>
 </project>
